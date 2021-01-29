@@ -766,7 +766,7 @@
 <pre class="highlight"><code>EquationOrder(K::NfAbs) -&gt; NfAbsOrd</code></pre>
 <p>Returns the equation order of the absolute number field <script type="math/tex">K</script>.</p>
 <hr />
-<pre class="highlight"><code class="language-julia">MaximalOrder(K::Union{AnticNumberField, NfAbsNS}; discriminant::fmpz, ramified_primes::Vector{fmpz}) -&gt; NfAbsOrd</code></pre>
+<pre class="highlight"><code class="language-julia">MaximalOrder(K::NumField{fmpq}; discriminant::fmpz, ramified_primes::Vector{fmpz}) -&gt; NfAbsOrd</code></pre>
 <p>Returns the maximal order of <script type="math/tex">K</script>. Additional information can be supplied if they are already known, as the ramified primes or the discriminant of the maximal order.</p>
 <p><strong>Example</strong></p>
 <pre class="highlight"><code class="language-julia-repl">julia&gt; Qx, x = FlintQQ["x"];
