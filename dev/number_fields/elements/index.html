@@ -801,23 +801,23 @@
 <p>Returns the norm of an element <script type="math/tex">a</script> of a number field extension <script type="math/tex">L/K</script>. This will be an element of <script type="math/tex">K</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">minpoly(a::NumFieldElem) -&gt; PolyElem</code></pre>
-<p>Given a number field element <code>a</code> of a number field <code>K</code>, this function returns the minimal polynomial of <code>a</code> over the base field of <code>K</code>.</p>
+<p>Given a number field element <script type="math/tex">a</script> of a number field <script type="math/tex">K</script>, this function returns the minimal polynomial of <script type="math/tex">a</script> over the base field of <script type="math/tex">K</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">absolute_minpoly(a::NumFieldElem) -&gt; PolyElem</code></pre>
-<p>Given a number field element <code>a</code> of a number field <code>K</code>, this function returns the minimal polynomial of <code>a</code> over the rationals <script type="math/tex">\mathbf{Q}</script>.</p>
+<p>Given a number field element <script type="math/tex">a</script> of a number field <script type="math/tex">K</script>, this function returns the minimal polynomial of <script type="math/tex">a</script> over the rationals <script type="math/tex">\mathbf{Q}</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">charpoly(a::NumFieldElem) -&gt; PolyElem</code></pre>
-<p>Given a number field element <code>a</code> of a number field <code>K</code>, this function returns the characteristic polynomial of <code>a</code> over the base field of <code>K</code>.</p>
+<p>Given a number field element <script type="math/tex">a</script> of a number field <script type="math/tex">K</script>, this function returns the characteristic polynomial of <script type="math/tex">a</script> over the base field of <script type="math/tex">K</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">absolute_charpoly(a::NumFieldElem) -&gt; PolyElem</code></pre>
-<p>Given a number field element <code>a</code> of a number field <code>K</code>, this function returns the characteristic polynomial of <code>a</code> over the rationals <script type="math/tex">\mathbf{Q}</script>.</p>
+<p>Given a number field element <script type="math/tex">a</script> of a number field <script type="math/tex">K</script>, this function returns the characteristic polynomial of <script type="math/tex">a</script> over the rationals <script type="math/tex">\mathbf{Q}</script>.</p>
 <p><a id='Implicit-Relative-Extensions'></a></p>
 <p><a id='Implicit-Relative-Extensions-1'></a></p>
 <h2 id="implicit-relative-extensions">Implicit Relative Extensions</h2>
 <p>Given two absolute fields <script type="math/tex">K</script> and <script type="math/tex">k</script> as well as an embedding <script type="math/tex">\phi:k \to K</script> we can regard <script type="math/tex">K</script> as an extension on <script type="math/tex">k</script>, hence invariante of <script type="math/tex">K</script> can be investigated relative to <script type="math/tex">k</script> rathern than over <script type="math/tex">Q</script>. Here we list functions achieving this without actually computing <script type="math/tex">K</script> as an extension of <script type="math/tex">k</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">minimum(m::T, I::NfOrdIdl) where T &lt;: Map{AnticNumberField, AnticNumberField} -&gt; NfOrdIdl</code></pre>
-<p>Given an embedding <script type="math/tex">m:k\to K</script> of number fields and an integral ideal in <script type="math/tex">K</script>, find the intersect <script type="math/tex">I \cap \Z_k</script>.</p>
+<p>Given an embedding <script type="math/tex">m:k\to K</script> of number fields and an integral ideal in <script type="math/tex">K</script>, find the intersect <script type="math/tex">I \cap \mathbf{Z}_k</script>.</p>
 <hr />
 <pre class="highlight"><code class="language-julia">norm(m::T, I::NfOrdIdl) where T &lt;: Map{AnticNumberField, AnticNumberField} -&gt; NfOrdIdl</code></pre>
 <p>Given an embedding <script type="math/tex">m:k\to K</script> of number fields and an integral ideal in <script type="math/tex">K</script>, find the norm <script type="math/tex">N_{K/k}(I)</script>.</p>

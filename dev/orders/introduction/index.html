@@ -786,7 +786,10 @@
 <p>Let <script type="math/tex">(r,s)</script> be the signature of <script type="math/tex">K</script>, that is, <script type="math/tex">K</script> has <script type="math/tex">r</script> real embeddings <script type="math/tex">\sigma_i \colon K \to \mathbf{R}</script>, <script type="math/tex">1 \leq i \leq r</script>, and <script type="math/tex">2s</script> complex embeddings <script type="math/tex">\sigma_i \colon K \to \mathbf{C}</script>, <script type="math/tex">1 \leq i \leq 2s</script>. In Hecke the complex embeddings are always ordered such that <script type="math/tex">\sigma_i = \overline{\sigma_{i+s}}</script> for <script type="math/tex">r + 1 \leq i \leq r + s</script>. The <script type="math/tex">\mathbf{Q}</script>-linear function</p>
 <p>
 <script type="math/tex; mode=display">
-K \longrightarrow \mathbf R^{d}, \ \alpha \longmapsto (\sigma_1(\alpha),\dotsc,\sigma_r(\alpha),\sqrt{2}\operatorname{Re}(\sigma_{r+1}(\alpha)),\sqrt{2}\operatorname{Im}(\sigma_{r+1}(\alpha)),\dotsc,\sqrt{2}\operatorname{Re}(\sigma_{r+s}(\alpha)),\sqrt{2}\operatorname{Im}(\sigma_{r+s}(\alpha))
+\begin{gather*}
+  K \longrightarrow \mathbf R^{d} \\
+  \alpha \longmapsto \Bigl( \sigma_1(\alpha), \dotsc, \sigma_r(\alpha), \sqrt{2}\operatorname{Re}\bigl(\sigma_{r+1}(\alpha)\bigr), \sqrt{2}\operatorname{Im}\bigl(\sigma_{r+1}(\alpha)\bigr), \dotsc, \sqrt{2}\operatorname{Re}\bigl(\sigma_{r+s}(\alpha)\bigr), \sqrt{2}\operatorname{Im}\bigl(\sigma_{r+s}(\alpha)\bigr) \Bigr)
+\end{gather*}
 </script>
 </p>
 <p>is called the <em>Minkowski map</em> (or <em>Minkowski embedding</em>).</p>
@@ -796,7 +799,7 @@ K \longrightarrow \mathbf R^{d}, \ \alpha \longmapsto (\sigma_1(\alpha),\dotsc,\
 <p>If <script type="math/tex">K = \mathbf Q(\alpha)</script> is an absolute number field, then an <em>order</em> <script type="math/tex">\mathcal O</script> of <script type="math/tex">K</script> is a subring of the ring of integers <script type="math/tex">\mathcal O_K</script>, which is free of rank <script type="math/tex">[ K : \mathbf Q]</script> as a <script type="math/tex">\mathbf Z</script>-module. The natural order <script type="math/tex">\mathbf Z[\alpha]</script> is called the <em>equation order</em> of <script type="math/tex">K</script>. In Hecke orders of absolute number fields are constructed (implicitely) by specifying a <script type="math/tex">\mathbf Z</script>-basis, which is refered to as the <em>basis</em> of <script type="math/tex">\mathcal O</script>. If <script type="math/tex">(\omega_1,\dotsc,\omega_d)</script> is the basis of <script type="math/tex">\mathcal O</script>, then the matrix <script type="math/tex">B \in \operatorname{Mat}_{d \times d}(\mathbf Q)</script> with</p>
 <p>
 <script type="math/tex; mode=display">
-\begin{pmatrix} \omega_1 \\\\ \vdots \\\\ \omega_d \end{pmatrix} = B \begin{pmatrix} 1 \\\\ \vdots \\\\ \alpha^{d - 1} \end{pmatrix}
+\begin{pmatrix} \omega_1 \\ \vdots \\ \omega_d \end{pmatrix} = B \begin{pmatrix} 1 \\ \vdots \\ \alpha^{d - 1} \end{pmatrix}
 </script>
 </p>
 <p>is called the <em>basis matrix</em> of <script type="math/tex">\mathcal O</script>. We call <script type="math/tex">\det(B)</script> the <em>generalized index</em> of <script type="math/tex">\mathcal O</script>.  In case <script type="math/tex">\mathbf Z[\alpha] \subseteq \mathcal O</script>, the determinant <script type="math/tex">\det(B)^{-1}</script> is in fact equal to <script type="math/tex">[ \mathcal O : \mathbf Z[\alpha]]</script> and is called the <em>index</em> of <script type="math/tex">\mathcal O</script>. The matrix</p>
@@ -805,7 +808,7 @@ K \longrightarrow \mathbf R^{d}, \ \alpha \longmapsto (\sigma_1(\alpha),\dotsc,\
 \begin{pmatrix} 
 \sigma_1(\omega_1) & \dotsc & \sigma_r(\omega_1) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_1)) & \sqrt{2}\operatorname{Im}(\sigma_{r+1}(\omega_1)) & \dotsc & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_1)) \\\\
 \sigma_1(\omega_2) & \dotsc & \sigma_r(\omega_2) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_2)) & \sqrt{2}\operatorname{Im}(\sigma_{r+1}(\omega_2)) & \dotsc  & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_2)) \\\\
-\vdots & \dotsc & \vdots & \vdots & \dotsc & \vdots & \vdots\\\\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots\\\\
 \sigma_1(\omega_d) & \dotsc & \sigma_r(\omega_d) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_d)) & \sqrt{2}\operatorname{Im}(\sigma_{r+2}(\omega_d)) & \dotsc & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_d))
 \end{pmatrix}
 \in \operatorname{Mat}_{d\times d}(\mathbf R).
