@@ -48,7 +48,7 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
     
     
       
@@ -817,10 +817,9 @@
 <p>is called the <em>Minkowski matrix</em> of <script type="math/tex">\mathcal O</script>.</p>
 <h2 id="examples">Examples</h2>
 <p>Usually, to create an order, one starts with a field (or a polynomial):</p>
-<pre class="highlight"><code class="language-julia-repl">
-julia&gt; Qx, x = PolynomialRing(FlintQQ, "x");
+<div class="highlight"><pre><span></span><code>julia&gt; Qx, x = PolynomialRing(FlintQQ, &quot;x&quot;);
 
-julia&gt; K, a = NumberField(x^2 - 10, "a");
+julia&gt; K, a = NumberField(x^2 - 10, &quot;a&quot;);
 
 julia&gt; E = EquationOrder(K)
 Maximal order of Number field over Rational Field with defining polynomial x^2 - 10
@@ -836,9 +835,10 @@ basis_matrix
 [1 0; 0 1]
 
 julia&gt; E == Z_K
-true</code></pre>
+true
+</code></pre></div>
 <p>Once orders are created, we can play with elements and ideals:</p>
-<pre class="highlight"><code class="language-julia-repl">julia&gt; lp = prime_decomposition(Z_K, 2)
+<div class="highlight"><pre><span></span><code>julia&gt; lp = prime_decomposition(Z_K, 2)
 1-element Array{Tuple{NfAbsOrdIdl{AnticNumberField,nf_elem},Int64},1}:
  (&lt;2, a&gt;
 Norm: 2
@@ -858,9 +858,10 @@ julia&gt; fl, alpha = isprincipal(p^2)
 (true, -2)
 
 julia&gt; norm(alpha)
-4</code></pre>
+4
+</code></pre></div>
 <p>It is possible to work with residue fields as well:</p>
-<pre class="highlight"><code class="language-julia-repl">julia&gt; Fp, mFp = ResidueField(Z_K, p)
+<div class="highlight"><pre><span></span><code>julia&gt; Fp, mFp = ResidueField(Z_K, p)
 (Finite field of degree 1 over F_2, Map with following data
 Domain:
 =======
@@ -874,7 +875,8 @@ Finite field of degree 1 over F_2
 julia&gt; [ mFp(x) for x = basis(Z_K)]
 2-element Array{fq,1}:
  1
- 0</code></pre>
+ 0
+</code></pre></div>
                 
               
               
@@ -971,7 +973,7 @@ julia&gt; [ mFp(x) for x = basis(Z_K)]
       
         <script src="../../assets/mathjaxhelper.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
