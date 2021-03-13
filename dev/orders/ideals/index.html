@@ -911,28 +911,64 @@
 julia&gt; zk = maximal_order(k);
 
 julia&gt; c, mc = class_group(zk)
-ERROR: MethodError: ^(::fmpz, ::fmpz) is ambiguous. Candidates:
-  ^(x::fmpz, y::Union{Int64, UInt64, fmpz}) in Nemo at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpz.jl:611
-  ^(a::T, n::fmpz) where T in Hecke.BitsMod at /home/runner/work/Hecke.jl/Hecke.jl/src/Misc/Integer.jl:1447
-Possible fix, define
-  ^(::fmpz, ::fmpz)
+(GrpAb: Z/9, ClassGroup map of
+Set of ideals of Maximal order of Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13
+with basis nf_elem[1, _$, 1//2*_$^2 + 1//2]
+)
 
 julia&gt; lp = prime_ideals_up_to(zk, 20);
 
 julia&gt; [ mc \ I for I = lp]
-ERROR: UndefVarError: mc not defined
+10-element Array{GrpAbFinGenElem,1}:
+ Element of
+GrpAb: Z/9
+with components [1]
+ Element of
+GrpAb: Z/9
+with components [7]
+ Element of
+GrpAb: Z/9
+with components [1]
+ Element of
+GrpAb: Z/9
+with components [8]
+ Element of
+GrpAb: Z/9
+with components [3]
+ Element of
+GrpAb: Z/9
+with components [5]
+ Element of
+GrpAb: Z/9
+with components [4]
+ Element of
+GrpAb: Z/9
+with components [7]
+ Element of
+GrpAb: Z/9
+with components [0]
+ Element of
+GrpAb: Z/9
+with components [5]
 
 julia&gt; mc(c[1])
-ERROR: UndefVarError: c not defined
+&lt;2, 1//2*_$^2 + 2*_$ + 5//2&gt;
+Norm: 2
+Minimum: 2
+two normal wrt: 2
 
 julia&gt; order(c[1])
-ERROR: UndefVarError: c not defined
+9
 
 julia&gt; mc(c[1])^Int(order(c[1]))
-ERROR: UndefVarError: c not defined
+&lt;512, 13217457633644257//2*_$^2 - 6559103588818597*_$ + 14309957929619471//2&gt;
+Norm: 512
+two normal wrt: 2
 
 julia&gt; mc \ ans
-ERROR: UndefVarError: mc not defined
+Element of
+GrpAb: Z/9
+with components [0]
 </code></pre></div>
 <p>The class group, or more precisely the information used to compute it also allows for principal ideal testing and related tasks.  In general, due to the size of the objetcs, the <code>fac_elem</code> versions are more effcient.</p>
 <hr />
@@ -962,19 +998,25 @@ ERROR: UndefVarError: mc not defined
 </code></pre></div>
 <p>Finds a number field element <script type="math/tex">\alpha</script> such that <script type="math/tex">\alpha I</script> factors over the factor base in <script type="math/tex">c</script>.</p>
 <div class="highlight"><pre><span></span><code>julia&gt; I = mc(c[1])
-ERROR: UndefVarError: c not defined
+&lt;2, 1//2*_$^2 + 2*_$ + 5//2&gt;
+Norm: 2
+Minimum: 2
+two normal wrt: 2
 
 julia&gt; Hecke.isprincipal(I)
-ERROR: UndefVarError: I not defined
+(false, 1)
 
 julia&gt; I = I^Int(order(c[1]))
-ERROR: UndefVarError: c not defined
+&lt;512, 13217457633644257//2*_$^2 - 6559103588818597*_$ + 14309957929619471//2&gt;
+Norm: 512
+two normal wrt: 2
 
 julia&gt; Hecke.isprincipal(I)
-ERROR: UndefVarError: I not defined
+(true, 1//2*_$^2 - 5*_$ - 17//2)
 
 julia&gt; Hecke.isprincipal_fac_elem(I)
-ERROR: UndefVarError: I not defined
+(true, Factored element with data
+Dict{nf_elem,fmpz}(1//2*_$^2 - 5*_$ - 17//2 =&gt; 1))
 </code></pre></div>
 <p>The computation of <script type="math/tex">S</script>-units is also tied to the class group:</p>
 <hr />
@@ -998,65 +1040,63 @@ ERROR: UndefVarError: I not defined
 </code></pre></div>
 <p>For an array <script type="math/tex">I</script> of (coprime prime) ideals, find the <script type="math/tex">S</script>-unit group defined by <script type="math/tex">I</script>, ie. the group of non-zero field elements which are only divisible by ideals in <script type="math/tex">I</script> modulo the units of the field. The map will return elements in factored form.</p>
 <div class="highlight"><pre><span></span><code>julia&gt; u, mu = unit_group(zk)
-ERROR: MethodError: ^(::fmpz, ::fmpz) is ambiguous. Candidates:
-  ^(x::fmpz, y::Union{Int64, UInt64, fmpz}) in Nemo at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpz.jl:611
-  ^(a::T, n::fmpz) where T in Hecke.BitsMod at /home/runner/work/Hecke.jl/Hecke.jl/src/Misc/Integer.jl:1447
-Possible fix, define
-  ^(::fmpz, ::fmpz)
+(GrpAb: Z/2 x Z, UnitGroup map of Maximal order of Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13
+with basis nf_elem[1, _$, 1//2*_$^2 + 1//2]
+)
 
 julia&gt; mu(u[2])
-ERROR: UndefVarError: u not defined
+-_$ + 12
 
 julia&gt; u, mu = unit_group_fac_elem(zk)
-ERROR: MethodError: ^(::fmpz, ::fmpz) is ambiguous. Candidates:
-  ^(x::fmpz, y::Union{Int64, UInt64, fmpz}) in Nemo at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpz.jl:611
-  ^(a::T, n::fmpz) where T in Hecke.BitsMod at /home/runner/work/Hecke.jl/Hecke.jl/src/Misc/Integer.jl:1447
-Possible fix, define
-  ^(::fmpz, ::fmpz)
+(GrpAb: Z/2 x Z, UnitGroup map of Factored elements over Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13
+)
 
 julia&gt; mu(u[2])
-ERROR: UndefVarError: u not defined
+Factored element with data
+Dict{nf_elem,fmpz}(_$ + 2 =&gt; -1,-3//2*_$^2 + 19*_$ - 55//2 =&gt; -1,-5//2*_$^2 + 31*_$ - 21//2 =&gt; 2)
 
 julia&gt; evaluate(ans)
-ERROR: MethodError: no method matching evaluate(::UndefVarError)
-Closest candidates are:
-  evaluate(!Matched::fmpq_poly, !Matched::nf_elem) at /home/runner/work/Hecke.jl/Hecke.jl/src/Map/NumberField.jl:80
-  evaluate(!Matched::fmpq_poly, !Matched::BigComplex) at /home/runner/work/Hecke.jl/Hecke.jl/src/conjugates.jl:63
-  evaluate(!Matched::fmpq_poly, !Matched::fmpz) at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpq_poly.jl:516
-  ...
+-_$ + 12
 
 julia&gt; lp = factor(6*zk)
 Dict{NfAbsOrdIdl{AnticNumberField,nf_elem},Int64} with 4 entries:
-  &lt;3, _$^2 + 1&gt;         =&gt; 1
-  &lt;2, 7//2*_$^2 + 5//2&gt; =&gt; 1
-  &lt;2, 3//2*_$^2 + 7//2&gt; =&gt; 2
-  &lt;3, _$ - 1&gt;           =&gt; 1
+  &lt;3, _$^2 + 1&gt;                =&gt; 1
+  &lt;2, 1//2*_$^2 + 2*_$ + 7//2&gt; =&gt; 1
+  &lt;2, 3//2*_$^2 + 7//2&gt;        =&gt; 2
+  &lt;3, _$ - 1&gt;                  =&gt; 1
 
 julia&gt; s, ms = Hecke.sunit_group(collect(keys(lp)))
-ERROR: MethodError: ^(::fmpz, ::fmpz) is ambiguous. Candidates:
-  ^(x::fmpz, y::Union{Int64, UInt64, fmpz}) in Nemo at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpz.jl:611
-  ^(a::T, n::fmpz) where T in Hecke.BitsMod at /home/runner/work/Hecke.jl/Hecke.jl/src/Misc/Integer.jl:1447
-Possible fix, define
-  ^(::fmpz, ::fmpz)
+(GrpAb: Z/2 x Z^(5), SUnits  map of Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13 for NfAbsOrdIdl{AnticNumberField,nf_elem}[&lt;3, _$^2 + 1&gt;
+Norm: 9
+Minimum: 3
+basis_matrix
+[3 0 0; 0 3 0; 0 0 1]
+two normal wrt: 3, &lt;2, 1//2*_$^2 + 2*_$ + 7//2&gt;
+Norm: 2
+Minimum: 2
+basis_matrix
+[2 0 0; 1 1 0; 1 0 1]
+two normal wrt: 2, &lt;2, 3//2*_$^2 + 7//2&gt;
+Norm: 2
+Minimum: 2
+basis_matrix
+[2 0 0; 1 1 0; 0 0 1]
+two normal wrt: 2, &lt;3, _$ - 1&gt;
+Norm: 3
+Minimum: 3
+basis_matrix
+[3 0 0; 2 1 0; 2 0 1]
+two normal wrt: 3]
+)
 
 julia&gt; ms(s[4])
-ERROR: UndefVarError: s not defined
+1//2*_$^2 - 6*_$ - 1//2
 
 julia&gt; norm(ans)
-ERROR: MethodError: no method matching iterate(::UndefVarError)
-Closest candidates are:
-  iterate(!Matched::Base.AsyncCollector, !Matched::Base.AsyncCollectorState) at asyncmap.jl:335
-  iterate(!Matched::Base.AsyncCollector) at asyncmap.jl:306
-  iterate(!Matched::FqFiniteField) at /home/runner/work/Hecke.jl/Hecke.jl/src/Misc/FiniteField.jl:97
-  ...
+-18
 
 julia&gt; factor(numerator(ans))
-ERROR: MethodError: no method matching numerator(::MethodError)
-Closest candidates are:
-  numerator(!Matched::fmpz) at /home/runner/.julia/packages/Nemo/qM6pm/src/flint/fmpz.jl:240
-  numerator(!Matched::FakeFmpqMat; copy) at /home/runner/work/Hecke.jl/Hecke.jl/src/LinearAlgebra/FakeFmpqMat.jl:9
-  numerator(!Matched::nf_elem) at /home/runner/work/Hecke.jl/Hecke.jl/src/NumField/NfAbs/Elem.jl:304
-  ...
+-1 * 2 * 3^2
 </code></pre></div>
 <p><a id='Miscaellenous'></a></p>
 <p><a id='Miscaellenous-1'></a></p>
