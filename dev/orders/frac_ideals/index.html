@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c772ddf0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
           
           
@@ -63,8 +63,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="bluey-grey">
-      
   
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,9 +109,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -770,16 +770,16 @@
 </code></pre></div>
 <p>Creates the principal fractional ideal <script type="math/tex">(a)</script> of <script type="math/tex">\mathcal O</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code>  <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdFracIdl</span>
-  <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdFracIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdFracIdl</span>
+<div class="highlight"><pre><span></span><code> <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">LocElem</span><span class="p">{</span><span class="n">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>  <span class="n">where</span> <span class="p">{</span><span class="n">T</span> <span class="o">&lt;:</span> <span class="n">RingElem</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
+<div class="highlight"><pre><span></span><code>  inv(a::NfRelOrdIdl) -&gt; NfRelOrdFracIdl
+  inv(a::NfRelOrdFracIdl) -&gt; NfRelOrdFracIdl
 </code></pre></div>
 <p>Computes the inverse of <script type="math/tex">a</script>, that is, the fractional ideal <script type="math/tex">b</script> such that <script type="math/tex">ab = O</script>, where <script type="math/tex">O</script> is the ambient order of <script type="math/tex">a</script>. <script type="math/tex">O</script> must be maximal.</p>
 <div class="highlight"><pre><span></span><code>inv(A::NfAbsOrdIdl) -&gt; NfOrdFracIdl
 </code></pre></div>
 <p>Computes the inverse of <script type="math/tex">A</script>, that is, the fractional ideal <script type="math/tex">B</script> such that <script type="math/tex">AB = \mathcal O_K</script>.</p>
-<div class="highlight"><pre><span></span><code> inv(a::LocElem{T}, checked::Bool = true)  where {T &lt;: RingElem}
-</code></pre></div>
-<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
 <p><a id='Arithmetic'></a></p>
 <p><a id='Arithmetic-1'></a></p>
 <h2 id="arithmetic">Arithmetic</h2>
@@ -788,16 +788,16 @@
 </code></pre></div>
 <p>Returns whether <script type="math/tex">x</script> and <script type="math/tex">y</script> are equal.</p>
 <hr />
-<div class="highlight"><pre><span></span><code>  <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdFracIdl</span>
-  <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdFracIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdFracIdl</span>
+<div class="highlight"><pre><span></span><code> <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">LocElem</span><span class="p">{</span><span class="n">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>  <span class="n">where</span> <span class="p">{</span><span class="n">T</span> <span class="o">&lt;:</span> <span class="n">RingElem</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
+<div class="highlight"><pre><span></span><code>  inv(a::NfRelOrdIdl) -&gt; NfRelOrdFracIdl
+  inv(a::NfRelOrdFracIdl) -&gt; NfRelOrdFracIdl
 </code></pre></div>
 <p>Computes the inverse of <script type="math/tex">a</script>, that is, the fractional ideal <script type="math/tex">b</script> such that <script type="math/tex">ab = O</script>, where <script type="math/tex">O</script> is the ambient order of <script type="math/tex">a</script>. <script type="math/tex">O</script> must be maximal.</p>
 <div class="highlight"><pre><span></span><code>inv(A::NfAbsOrdFracIdl) -&gt; NfAbsOrdFracIdl
 </code></pre></div>
 <p>Returns the fractional ideal <script type="math/tex">B</script> such that <script type="math/tex">AB = \mathcal O</script>.</p>
-<div class="highlight"><pre><span></span><code> inv(a::LocElem{T}, checked::Bool = true)  where {T &lt;: RingElem}
-</code></pre></div>
-<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">integral_split</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">NfAbsOrdFracIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span><span class="p">,</span> <span class="n">NfAbsOrdIdl</span>
 </code></pre></div>
@@ -855,6 +855,7 @@
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -928,7 +929,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.65ce87ac.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
