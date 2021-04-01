@@ -637,37 +637,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Source
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Source" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Source
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
       <a href="https://www.github.com/thofma/Hecke.jl" class="md-nav__link">
-        None
+        Source
       </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -777,9 +750,6 @@
 <div class="highlight"><pre><span></span><code>inv(A::NfAbsOrdIdl) -&gt; NfOrdFracIdl
 </code></pre></div>
 <p>Computes the inverse of <script type="math/tex">A</script>, that is, the fractional ideal <script type="math/tex">B</script> such that <script type="math/tex">AB = \mathcal O_K</script>.</p>
-<div class="highlight"><pre><span></span><code> inv(a::LocElem{T}, checked::Bool = true)  where {T &lt;: RingElem}
-</code></pre></div>
-<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
 <p><a id='Arithmetic'></a></p>
 <p><a id='Arithmetic-1'></a></p>
 <h2 id="arithmetic">Arithmetic</h2>
@@ -795,9 +765,6 @@
 <div class="highlight"><pre><span></span><code>inv(A::NfAbsOrdFracIdl) -&gt; NfAbsOrdFracIdl
 </code></pre></div>
 <p>Returns the fractional ideal <script type="math/tex">B</script> such that <script type="math/tex">AB = \mathcal O</script>.</p>
-<div class="highlight"><pre><span></span><code> inv(a::LocElem{T}, checked::Bool = true)  where {T &lt;: RingElem}
-</code></pre></div>
-<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the Fraction Field is returned.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">integral_split</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">NfAbsOrdFracIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span><span class="p">,</span> <span class="n">NfAbsOrdIdl</span>
 </code></pre></div>
@@ -936,8 +903,6 @@
         <script src="../../assets/mathjaxhelper.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      
-        <script src="../../javascripts/config.js"></script>
       
     
   </body>

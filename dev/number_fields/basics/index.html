@@ -660,37 +660,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Source
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Source" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Source
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
       <a href="https://www.github.com/thofma/Hecke.jl" class="md-nav__link">
-        None
+        Source
       </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -791,8 +764,18 @@
 <div class="highlight"><pre><span></span><code><span class="n">NumberField</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="n">Poly</span><span class="p">{</span><span class="n">NumFieldElem</span><span class="p">},</span> <span class="n">s</span><span class="o">::</span><span class="n">String</span><span class="p">;</span>
             <span class="n">cached</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">check</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span><span class="p">,</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
-<p>Given an irreducible polynomial <script type="math/tex">f \in K[x]</script> over some number field <script type="math/tex">K</script>, this function creates the simple number field <script type="math/tex">L = K[x]/(x)</script> and returns <script type="math/tex">(L, b)</script>, where <script type="math/tex">b</script> is the class of <script type="math/tex">x</script> in <script type="math/tex">L</script>. The string <code>s</code> is used only for printing the primitive element <script type="math/tex">b</script>.</p>
-<p>Testing that <script type="math/tex">f</script> is irreducible can be disabled by setting the keyword argument <code>check</code> to <code>false</code>.</p>
+<p>Given an irreducible polynomial <script type="math/tex">f \in K[x]</script> over some number field <script type="math/tex">K</script>, this function creates the simple number field <script type="math/tex">L = K[x]/(f)</script> and returns <script type="math/tex">(L, b)</script>, where <script type="math/tex">b</script> is the class of <script type="math/tex">x</script> in <script type="math/tex">L</script>. The string <code>s</code> is used only for printing the primitive element <script type="math/tex">b</script>.</p>
+<ul>
+<li><code>check</code>: Controls whether irreducibility of <script type="math/tex">f</script> is checked.</li>
+<li><code>cached</code>: Controls whether the result is cached.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>julia&gt; K, a = quadratic_field(5);
+
+julia&gt; Kt, t = K[&quot;t&quot;];
+
+julia&gt; L, b = NumberField(t^3 - 3, &quot;b&quot;);
+</code></pre></div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">cyclotomic_field</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnticNumberField</span><span class="p">,</span> <span class="n">nf_elem</span>
 </code></pre></div>
@@ -986,8 +969,6 @@
         <script src="../../assets/mathjaxhelper.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      
-        <script src="../../javascripts/config.js"></script>
       
     
   </body>
