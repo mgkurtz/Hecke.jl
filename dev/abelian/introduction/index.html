@@ -526,106 +526,46 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#elements" class="md-nav__link">
-    Elements
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creation" class="md-nav__link">
-    Creation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access" class="md-nav__link">
-    Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#predicates" class="md-nav__link">
-    Predicates
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invariants_1" class="md-nav__link">
-    Invariants
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterator" class="md-nav__link">
-    Iterator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maps" class="md-nav__link">
-    Maps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structural-computations" class="md-nav__link">
-    Structural Computations
-  </a>
-  
-    <nav class="md-nav" aria-label="Structural Computations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subgroups-and-quotients" class="md-nav__link">
-    Subgroups and Quotients
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#direct-products" class="md-nav__link">
-    Direct Products
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-producs" class="md-nav__link">
-    Tensor Producs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hom-group" class="md-nav__link">
-    Hom-Group
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        Elements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maps/" class="md-nav__link">
+        Maps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structural/" class="md-nav__link">
+        Structural Computations
+      </a>
     </li>
   
 
@@ -798,102 +738,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#elements" class="md-nav__link">
-    Elements
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creation" class="md-nav__link">
-    Creation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access" class="md-nav__link">
-    Access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#predicates" class="md-nav__link">
-    Predicates
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invariants_1" class="md-nav__link">
-    Invariants
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterator" class="md-nav__link">
-    Iterator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maps" class="md-nav__link">
-    Maps
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structural-computations" class="md-nav__link">
-    Structural Computations
-  </a>
-  
-    <nav class="md-nav" aria-label="Structural Computations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subgroups-and-quotients" class="md-nav__link">
-    Subgroups and Quotients
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#direct-products" class="md-nav__link">
-    Direct Products
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensor-producs" class="md-nav__link">
-    Tensor Producs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hom-group" class="md-nav__link">
-    Hom-Group
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -932,6 +776,11 @@
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">fmpz</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the abelian group with relation matrix <code>M</code>. That is, the group will have <code>ncols(M)</code> generators and each row of <code>M</code> describes one relation.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>julia&gt; abelian_group(fmpz[1 2; 3 4])
+(General) abelian group with relation matrix
+[1 2; 3 4]
+</code></pre></div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">Integer</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
@@ -942,10 +791,9 @@
 <span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="n">fmpz</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">}</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the direct product of the cyclic groups <script type="math/tex">\mathbf{Z}/m_i</script>, where <script type="math/tex">m_i</script> is the <script type="math/tex">i</script>th entry of <code>M</code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>abelian_group(M::Union{fmpz, Integer}...)</code>. Check Documenter's build log for details.</p>
-</div>
+<div class="highlight"><pre><span></span><code>julia&gt; G = abelian_group(2, 2, 6)
+GrpAb: (Z/2)^2 x Z/6
+</code></pre></div>
 <p>or even</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">free_abelian_group</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
@@ -955,6 +803,12 @@
 <div class="highlight"><pre><span></span><code><span class="n">abelian_groups</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">GrpAbFinGen</span><span class="p">}</span>
 </code></pre></div>
 <p>Given a positive integer <script type="math/tex">n</script>, return a list of all abelian groups of order <script type="math/tex">n</script>.</p>
+<div class="highlight"><pre><span></span><code>julia&gt; abelian_groups(8)
+3-element Vector{GrpAbFinGen}:
+ GrpAb: (Z/2)^3
+ GrpAb: Z/2 x Z/4
+ GrpAb: Z/8
+</code></pre></div>
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
 <h3 id="invariants">Invariants</h3>
@@ -998,10 +852,10 @@
 <div class="highlight"><pre><span></span><code><span class="n">istrivial</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">A</script> is the trivial group.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>istorsion(G::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">istorsion</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span>
+</code></pre></div>
+<p>Test if all elements have finite order, for finitely presented groups     thus if the group is finite.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">iscyclic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
@@ -1010,246 +864,6 @@
 <div class="highlight"><pre><span></span><code><span class="n">elementary_divisors</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Given <script type="math/tex">G</script>, returns the elementary divisors of <script type="math/tex">G</script>, that is, the unique positive integers <script type="math/tex">e_1,\dotsc,e_k</script> with <script type="math/tex">e_i \mid e_{i + 1}</script> and <script type="math/tex">G \cong \mathbf{Z}/e_1\mathbf{Z} \times \dotsb \times \mathbf{Z}/e_k\mathbf{Z}</script>.</p>
-<p><a id='Elements'></a></p>
-<p><a id='Elements-1'></a></p>
-<h2 id="elements">Elements</h2>
-<p><a id='Creation'></a></p>
-<p><a id='Creation-1'></a></p>
-<h3 id="creation">Creation</h3>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>id(G::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">gens</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
-</code></pre></div>
-<p>The sequence of generators of <script type="math/tex">G</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>(A::GrpAbFinGen)(x::Array{fmpz, 1})</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>(A::GrpAbFinGen)(x::fmpz_mat)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
-</code></pre></div>
-<p>Returns the element of <script type="math/tex">A</script> with components <script type="math/tex">(0,\dotsc,0,1,0,\dotsc,0)</script>, where the <script type="math/tex">1</script> is at the <script type="math/tex">i</script>-th position.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
-</code></pre></div>
-<p>Returns an element of <script type="math/tex">G</script> chosen uniformly at random.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="n">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
-</code></pre></div>
-<p>For a (potentially infinite) abelian group <script type="math/tex">G</script>, return an element chosen uniformly at random with coefficients bounded by <script type="math/tex">B</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">parent</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="n">GrpAbFinGenElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
-</code></pre></div>
-<p>Returns the parent of <script type="math/tex">x</script>.</p>
-<p><a id='Access'></a></p>
-<p><a id='Access-1'></a></p>
-<h3 id="access">Access</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
-</code></pre></div>
-<p>Returns the <script type="math/tex">i</script>-th component of the element <script type="math/tex">x</script>.</p>
-<p><a id='Predicates'></a></p>
-<p><a id='Predicates-1'></a></p>
-<h3 id="predicates">Predicates</h3>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>iszero(a::GrpAbFinGenElem)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>isone(a::GrpAbFinGenElem)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>isidentity(a::GrpAbFinGenElem)</code>. Check Documenter's build log for details.</p>
-</div>
-<p><a id='Invariants-2'></a></p>
-<h3 id="invariants_1">Invariants</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">order</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">GrpAbFinGenElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
-</code></pre></div>
-<p>Returns the order of <script type="math/tex">A</script>. It is assumed that the order is finite.</p>
-<p><a id='Iterator'></a></p>
-<p><a id='Iterator-1'></a></p>
-<h3 id="iterator">Iterator</h3>
-<p>One can iterate over the elements of a finite abelian group.</p>
-<p><a id='Maps'></a></p>
-<p><a id='Maps-1'></a></p>
-<h2 id="maps">Maps</h2>
-<p>Maps between abelian groups can be constructed via</p>
-<ul>
-<li>images of the generators</li>
-<li>pairs of elements</li>
-<li>via composition</li>
-<li>and isomorphism/ inclusion testing</li>
-</ul>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="n">Map</span><span class="p">{</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">GrpAbFinGen</span><span class="p">},</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Given groups <script type="math/tex">G</script> and <script type="math/tex">H</script> that are created as direct products as well as a matrix <script type="math/tex">A</script> containing maps <script type="math/tex">A[i,j] : G_i \to H_j</script>, return the induced homomorphism.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
-</code></pre></div>
-<p>Checks if <script type="math/tex">G</script> and <script type="math/tex">H</script> are isomorphic.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>+(f::GrpAbFinGenMap, g::GrpAbFinGenMap)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>-(f::GrpAbFinGenMap, g::GrpAbFinGenMap)</code>. Check Documenter's build log for details.</p>
-</div>
-<p><a id='Structural-Computations'></a></p>
-<p><a id='Structural-Computations-1'></a></p>
-<h2 id="structural-computations">Structural Computations</h2>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">snf</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Returns a pair <script type="math/tex">(G, f)</script>, where <script type="math/tex">G</script> is an abelian group in canonical Smith normal form isomorphic to <script type="math/tex">G</script> and an isomorphism <script type="math/tex">f : G \to A</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>find_isomorphism(G, op, A::GrpAb)</code>. Check Documenter's build log for details.</p>
-</div>
-<p><a id='Subgroups-and-Quotients'></a></p>
-<p><a id='Subgroups-and-Quotients-1'></a></p>
-<h3 id="subgroups-and-quotients">Subgroups and Quotients</h3>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>torsion_subgroup(G::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">s</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the subgroup <script type="math/tex">H</script> of <script type="math/tex">G</script> generated by the elements in <code>s</code> together with the injection <script type="math/tex">\iota : H \to G</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">s</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Assuming that the non-empty array <code>s</code> contains elements of an abelian group <script type="math/tex">G</script>, this functions returns the subgroup <script type="math/tex">H</script> of <script type="math/tex">G</script> generated by the elements in <code>s</code> together with the injection <script type="math/tex">\iota : H \to G</script>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">SMat</span><span class="p">,</span> <span class="n">r</span><span class="o">::</span><span class="kt">UnitRange</span><span class="p">,</span> <span class="n">c</span><span class="o">::</span><span class="kt">UnitRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
-</code></pre></div>
-<p>Return the submatrix of <script type="math/tex">A</script>, where the rows correspond to <script type="math/tex">r</script> and the columns correspond to <script type="math/tex">c</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="n">fmpz_mat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the subgroup <script type="math/tex">H</script> of <script type="math/tex">G</script> generated by the elements corresponding to the rows of <script type="math/tex">M</script> together with the injection <script type="math/tex">\iota : H \to G</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="n">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the subgroup <script type="math/tex">n \cdot G</script> of <script type="math/tex">G</script> together with the injection <script type="math/tex">\iota : n\cdot G \to G</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the subgroup <script type="math/tex">n \cdot G</script> of <script type="math/tex">G</script> together with the injection <script type="math/tex">\iota : n \cdot G \to G</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>psylow_subgroup(G::GrpAbFinGen, p::Union{fmpz, Integer})</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>has_quotient(G::GrpAbFinGen, invariant::Vector{Int})</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>has_complement(f::GrpAbFinGenMap)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">psubgroups</span><span class="p">(</span><span class="n">g</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Integer</span><span class="p">;</span>
-           <span class="n">subtype</span> <span class="o">=</span> <span class="o">:</span><span class="n">all</span><span class="p">,</span>
-           <span class="n">quotype</span> <span class="o">=</span> <span class="o">:</span><span class="n">all</span><span class="p">,</span>
-           <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-           <span class="n">order</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-<p>Return an iterator for the subgroups of <script type="math/tex">G</script> of the specific form. Note that <code>subtype</code> (and <code>quotype</code>) is the type of the subgroup as an abelian <script type="math/tex">p</script>-group.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">subgroups</span><span class="p">(</span><span class="n">g</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">;</span>
-          <span class="n">subtype</span> <span class="o">=</span> <span class="o">:</span><span class="n">all</span> <span class="p">,</span>
-          <span class="n">quotype</span> <span class="o">=</span> <span class="o">:</span><span class="n">all</span><span class="p">,</span>
-          <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-          <span class="n">order</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-<p>Return an iterator for the subgroups of <script type="math/tex">G</script> of the specific form.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">quo</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">s</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the quotient <script type="math/tex">H</script> of <script type="math/tex">G</script> by the subgroup generated by the elements in <script type="math/tex">s</script>, together with the projection <script type="math/tex">p : G \to H</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">quo</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="n">fmpz_mat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Create the quotient <script type="math/tex">H</script> of <script type="math/tex">G</script> by the subgroup generated by the elements corresponding to the rows of <script type="math/tex">M</script>, together with the projection <script type="math/tex">p : G \to H</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">intersect</span><span class="p">(</span><span class="n">mG</span><span class="o">::</span><span class="n">GrpAbFinGenMap</span><span class="p">,</span> <span class="n">mH</span><span class="o">::</span><span class="n">GrpAbFinGenMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Given two injective maps of abelian groups with the same codomain <script type="math/tex">G</script>, return the intersection of the images as a subgroup of <script type="math/tex">G</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>+(G::GrpAbFinGen, H::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>intersect(G::GrpAbFinGen, H::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">intersect</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdIdl</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="n">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdIdl</span>
-</code></pre></div>
-<p>Returns <script type="math/tex">a \cap b</script>.</p>
-<div class="highlight"><pre><span></span><code>intersect(a::AlgAssAbsOrdIdl, b::AlgAssAbsOrdIdl) -&gt; AlgAssAbsOrdIdl
-</code></pre></div>
-<p>Returns <script type="math/tex">a \cap b</script>.</p>
-<div class="highlight"><pre><span></span><code>intersect(a::AlgAssRelOrdIdl, b::AlgAssRelOrdIdl) -&gt; AlgAssRelOrdIdl
-</code></pre></div>
-<p>Returns <script type="math/tex">a \cap b</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>issubset(G::GrpAbFinGen, H::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>issubgroup(G::GrpAbFinGen, H::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
-</div>
-<p><a id='Direct-Products'></a></p>
-<p><a id='Direct-Products-1'></a></p>
-<h3 id="direct-products">Direct Products</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">direct_product</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="o">...</span><span class="p">;</span> <span class="n">task</span><span class="o">::</span><span class="kt">Symbol</span> <span class="o">=</span> <span class="o">:</span><span class="n">sum</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">GrpAbFinGenMap</span><span class="p">,</span> <span class="n">GrpAbFinGenMap</span>
-</code></pre></div>
-<p>Returns the direct product <script type="math/tex">D</script> of the abelian groups <script type="math/tex">G_i</script>. <code>task</code> can be ":sum", ":prod", ":both" or ":none" and determines which canonical maps are computed as well: ":sum" for the injections, ":prod" for the projections.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>canonical_injection(G::GrpAbFinGen, i::Int)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>canonical_projection(G::GrpAbFinGen, i::Int)</code>. Check Documenter's build log for details.</p>
-</div>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">flat</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Given a group <script type="math/tex">G</script> that is created using (iterated) direct products, or (iterated) tensor product, return a group that is a flat product: <script type="math/tex">(A \oplus B) \oplus C</script> is returned as <script type="math/tex">A \oplus B \oplus C</script>, (resp. <script type="math/tex">\otimes</script>) together with the  isomorphism.</p>
-<p><a id='Tensor-Producs'></a></p>
-<p><a id='Tensor-Producs-1'></a></p>
-<h3 id="tensor-producs">Tensor Producs</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">tensor_product</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="o">...</span><span class="p">;</span> <span class="n">task</span><span class="o">::</span><span class="kt">Symbol</span> <span class="o">=</span> <span class="o">:</span><span class="n">map</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Given groups <script type="math/tex">G_i</script>, compute the tensor product <script type="math/tex">G_1\otimes \cdots \otimes G_n</script>. If <code>task</code> is set to ":map", a map <script type="math/tex">\phi</script> is returned that maps tuples in <script type="math/tex">G_1 \times \cdots \times G_n</script> to pure tensors <script type="math/tex">g_1 \otimes \cdots \otimes g_n</script>. The map admits a preimage as well.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="n">Map</span><span class="p">{</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">GrpAbFinGen</span><span class="p">},</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Given groups <script type="math/tex">G = G_1 \otimes \cdots \otimes G_n</script> and <script type="math/tex">H = H_1 \otimes \cdot \otimes H_n</script> as well as maps <script type="math/tex">\phi_i: G_i\to H_i</script>, compute the tensor product of the maps.</p>
-<p><a id='Hom-Group'></a></p>
-<p><a id='Hom-Group-1'></a></p>
-<h3 id="hom-group">Hom-Group</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">;</span> <span class="n">task</span><span class="o">::</span><span class="kt">Symbol</span> <span class="o">=</span> <span class="o">:</span><span class="n">map</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
-</code></pre></div>
-<p>Computes the group of all homomorpisms from <script type="math/tex">G</script> to <script type="math/tex">H</script> as an abstract group. If <code>task</code> is ":map", then a map <script type="math/tex">\phi</script> is computed that can be used to obtain actual homomorphisms. This map also allows preimages. Set <code>task</code> to ":none" to not compute the map.</p>
                 
               
               
@@ -1283,13 +897,13 @@
         </a>
       
       
-        <a href="../../class_fields/intro/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../elements/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction
+              Elements
             </div>
           </div>
           <div class="md-footer__button md-icon">
