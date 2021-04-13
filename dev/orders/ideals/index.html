@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9299cb39.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -1017,11 +1017,11 @@ Norm: 512
 two normal wrt: 2
 
 julia&gt; Hecke.isprincipal(I)
-(true, -1//2*_$^2 + 5*_$ + 17//2)
+(true, 1//2*_$^2 - 5*_$ - 17//2)
 
 julia&gt; Hecke.isprincipal_fac_elem(I)
 (true, Factored element with data
-Dict{nf_elem, fmpz}(-1//2*_$^2 + 5*_$ + 17//2 =&gt; 1))
+Dict{nf_elem, fmpz}(1//2*_$^2 - 5*_$ - 17//2 =&gt; 1))
 </code></pre></div>
 <p>The computation of <script type="math/tex">S</script>-units is also tied to the class group:</p>
 <hr />
@@ -1058,7 +1058,7 @@ julia&gt; u, mu = unit_group_fac_elem(zk)
 
 julia&gt; mu(u[2])
 Factored element with data
-Dict{nf_elem, fmpz}(-29//2*_$^2 + 141*_$ + 491//2 =&gt; 1, _$ + 2 =&gt; -1, -66*_$ + 124 =&gt; -1, 33*_$ - 62 =&gt; -1, 95//2*_$^2 - 599*_$ + 997//2 =&gt; 1)
+Dict{nf_elem, fmpz}(_$ + 5 =&gt; 1, -23//2*_$^2 + 140*_$ + 151//2 =&gt; 1, _$ + 2 =&gt; -1, 1//2*_$^2 - 6*_$ + 5//2 =&gt; 1, 5 =&gt; 1, _$ - 3 =&gt; -1, 13*_$^2 - 151*_$ + 81 =&gt; -1, _$^2 + _$ + 2 =&gt; -1)
 
 julia&gt; evaluate(ans)
 _$ - 12
@@ -1066,7 +1066,7 @@ _$ - 12
 julia&gt; lp = factor(6*zk)
 Dict{NfOrdIdl, Int64} with 4 entries:
   &lt;3, _$^2 + 1&gt;                =&gt; 1
-  &lt;2, 1//2*_$^2 + _$ + 5//2&gt;   =&gt; 1
+  &lt;2, 7//2*_$^2 + 3*_$ + 3//2&gt; =&gt; 1
   &lt;2, 1//2*_$^2 + 2*_$ + 1//2&gt; =&gt; 2
   &lt;3, _$ - 1&gt;                  =&gt; 1
 
@@ -1076,7 +1076,7 @@ Norm: 9
 Minimum: 3
 basis_matrix
 [3 0 0; 0 3 0; 0 0 1]
-two normal wrt: 3, &lt;2, 1//2*_$^2 + _$ + 5//2&gt;
+two normal wrt: 3, &lt;2, 7//2*_$^2 + 3*_$ + 3//2&gt;
 Norm: 2
 Minimum: 2
 basis_matrix
@@ -1365,7 +1365,7 @@ julia&gt; factor(numerator(ans))
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7353b375.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
