@@ -798,10 +798,10 @@
 <p><a id='Subgroups-and-Quotients'></a></p>
 <p><a id='Subgroups-and-Quotients-1'></a></p>
 <h3 id="subgroups-and-quotients">Subgroups and Quotients</h3>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">torsion_subgroup</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span>
-</code></pre></div>
-<p>The subgroup of all elements of finite order of <code>G</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>torsion_subgroup(G::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
+</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">s</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
@@ -825,10 +825,10 @@
 <div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Create the subgroup <script type="math/tex">n \cdot G</script> of <script type="math/tex">G</script> together with the injection <script type="math/tex">\iota : n \cdot G \to G</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">psylow_subgroup</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="n">fmpz</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">})</span>
-</code></pre></div>
-<p>For a group <code>G</code> and prime <code>p</code>, return the <code>p</code>-Sylow subgroup of <code>G</code>, ie. the largest subgroup of order a power of <code>p</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>psylow_subgroup(G::GrpAbFinGen, p::Union{fmpz, Integer})</code>. Check Documenter's build log for details.</p>
+</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">has_quotient</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">invariant</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
@@ -886,7 +886,9 @@ julia&gt; for U = subgroups(G, quotype = [2])
          @show U[1], map(U[2], gens(U[1]))
        end
 (U[1], map(U[2], gens(U[1]))) = ((General) abelian group with relation matrix
-[4 0 0; 0 3 0; 0 0 3], GrpAbFinGenElem[Element of
+[4 0 0; 0 3 0; 0 0 3]
+with structure of GrpAb: Z/3 x Z/12
+, GrpAbFinGenElem[Element of
 GrpAb: Z/6 x Z/12
 with components [3 3], Element of
 GrpAb: Z/6 x Z/12
@@ -894,7 +896,9 @@ with components [0 4], Element of
 GrpAb: Z/6 x Z/12
 with components [2 0]])
 (U[1], map(U[2], gens(U[1]))) = ((General) abelian group with relation matrix
-[4 0 0; 0 3 0; 0 0 3], GrpAbFinGenElem[Element of
+[4 0 0; 0 3 0; 0 0 3]
+with structure of GrpAb: Z/3 x Z/12
+, GrpAbFinGenElem[Element of
 GrpAb: Z/6 x Z/12
 with components [0 3], Element of
 GrpAb: Z/6 x Z/12
@@ -902,7 +906,9 @@ with components [0 4], Element of
 GrpAb: Z/6 x Z/12
 with components [2 0]])
 (U[1], map(U[2], gens(U[1]))) = ((General) abelian group with relation matrix
-[2 0 0 0; 0 2 0 0; 0 0 3 0; 0 0 0 3], GrpAbFinGenElem[Element of
+[2 0 0 0; 0 2 0 0; 0 0 3 0; 0 0 0 3]
+with structure of GrpAb: (Z/6)^2
+, GrpAbFinGenElem[Element of
 GrpAb: Z/6 x Z/12
 with components [3 6], Element of
 GrpAb: Z/6 x Z/12

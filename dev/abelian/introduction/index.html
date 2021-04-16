@@ -776,11 +776,6 @@
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="n">fmpz</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the abelian group with relation matrix <code>M</code>. That is, the group will have <code>ncols(M)</code> generators and each row of <code>M</code> describes one relation.</p>
-<p><strong>Examples</strong></p>
-<div class="highlight"><pre><span></span><code>julia&gt; abelian_group(fmpz[1 2; 3 4])
-(General) abelian group with relation matrix
-[1 2; 3 4]
-</code></pre></div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">Integer</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
@@ -852,10 +847,10 @@ GrpAb: (Z/2)^2 x Z/6
 <div class="highlight"><pre><span></span><code><span class="n">istrivial</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">A</script> is the trivial group.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">istorsion</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span>
-</code></pre></div>
-<p>Test if all elements have finite order, for finitely presented groups     thus if the group is finite.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>istorsion(G::GrpAbFinGen)</code>. Check Documenter's build log for details.</p>
+</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">iscyclic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
