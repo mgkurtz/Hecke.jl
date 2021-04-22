@@ -105,6 +105,41 @@ export show, StepRange, domain, codomain, image, preimage, modord, resultant,
 #
 ###############################################################################
 
+function save_fmpz_mat(file::String, a::fmpz_mat, c)
+  open(file, "a") do f
+    print(f, c.delta, " ", c.eta, " ", c.gram_type, " ", c.rep_type, " ")
+    print(f, nrows(a), " ", ncols(a), " ")
+    for i in 1:nrows(a)
+      for j in 1:ncols(a)
+        print(f, a[i, j], " ")
+      end
+    end
+    print(f, "\n")
+  end
+end
+
+function save_fmpz_mat(a::fmpz_mat, ctx)
+  save_fmpz_mat("/tmp/dump_mat", a, ctx)
+end
+
+function save_fmpz_mat(a::fmpz_mat, ctx, b::fmpz)
+  save_fmpz_mat("/tmp/dump_mat_gradual", a, ctx, b)
+end
+
+function save_fmpz_mat_gradual(file::String, a::fmpz_mat, c, b::fmpz)
+  open(file, "a") do f
+    print(f, c.delta, " ", c.eta, " ", c.gram_type, " ", c.rep_type, " ")
+    print(f, b, " ")
+    print(f, nrows(a), " ", ncols(a), " ")
+    for i in 1:nrows(a)
+      for j in 1:ncols(a)
+        print(f, a[i, j], " ")
+      end
+    end
+    print(f, "\n")
+  end
+end
+
 const pkgdir = joinpath(dirname(pathof(Hecke)), "..")
 
 global const number_field = NumberField

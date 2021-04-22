@@ -145,6 +145,7 @@ function _lll(A::NfOrdIdl, v::fmpz_mat = zero_matrix(FlintZZ, 1, 1); prec::Int =
   ctx = Nemo.lll_ctx(0.99, 0.51, :gram)
 
   ccall((:fmpz_mat_one, libflint), Nothing, (Ref{fmpz_mat}, ), g)
+  save_fmpz_mat(g, ctx)
   ccall((:fmpz_lll, libflint), Nothing, (Ref{fmpz_mat}, Ref{fmpz_mat}, Ref{Nemo.lll_ctx}), d, g, ctx)
 
   l, t = d, g
@@ -551,6 +552,7 @@ function _lll_sublattice(M::NfAbsOrd, u::Vector{Int}; prec = 100)
       fmpz_mat_entry_add_ui!(d1, i, i, UInt(l))
     end
     ctx = Nemo.lll_ctx(0.99, 0.51, :gram)
+    save_fmpz_mat(g, ctx)
     @vtime :LLL 3 ccall((:fmpz_lll, libflint), Nothing, (Ref{fmpz_mat}, Ref{fmpz_mat}, Ref{Nemo.lll_ctx}), d1, g, ctx)
 
     if nbits(maximum(abs, g)) <= div(prec, 2)
@@ -613,6 +615,7 @@ function _lll_with_parameters(M::NfAbsOrd, parameters::Tuple{Float64, Float64}, 
     for i=1:n
       fmpz_mat_entry_add_ui!(d, i, i, UInt(nrows(d)))
     end
+    save_fmpz_mat(g, ctx)
     @vtime :LLL 3 ccall((:fmpz_lll, libflint), Nothing, (Ref{fmpz_mat}, Ref{fmpz_mat}, Ref{Nemo.lll_ctx}), d, g, ctx)
     
     if nbits(maximum(abs, g)) <= div(prec, 2)

@@ -510,6 +510,7 @@ global last_f = Ref{Any}()
 
 function lll_with_removal_knapsack(x::fmpz_mat, b::fmpz, ctx::lll_ctx = lll_ctx(0.99, 0.51))
    z = deepcopy(x)
+   save_fmpz_mat_gradual(z, ctx, b)
    d = Int(ccall((:fmpz_lll_wrapper_with_removal_knapsack, libflint), Cint,
     (Ref{fmpz_mat}, Ptr{nothing}, Ref{fmpz}, Ref{lll_ctx}), z, C_NULL, b, ctx))
    return d, z
