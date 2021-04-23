@@ -938,10 +938,6 @@
 <div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="n">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the dimension of the ambient space of <script type="math/tex">L</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>gram_matrix_of_basis(L::AbsLat)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">generators</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="n">AbsLat</span><span class="p">;</span> <span class="n">minimal</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">Vector</span><span class="p">}</span>
 </code></pre></div>
@@ -959,10 +955,6 @@
 <div class="highlight"><pre><span></span><code><span class="n">coefficient_ideals</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="n">Abs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">NfOrdIdl</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the coefficient ideals of the pseudo-basis of <script type="math/tex">L</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>basis_matrix(L::AbsLat)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">absolute_basis</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="n">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span>
 </code></pre></div>
@@ -1017,14 +1009,6 @@
 <p><a id='Module-operations'></a></p>
 <p><a id='Module-operations-1'></a></p>
 <h2 id="module-operations">Module operations</h2>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>Base.:(+)(::AbsLat, M::AbsLat)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>intersect(L::AbsLat, M::AbsLat)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NumFieldElem</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="n">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
@@ -1082,14 +1066,6 @@
 <li>If <code>type == :supermodule</code>, the lattice <script type="math/tex">L</script> will be a superlattice of <script type="math/tex">M</script>.</li>
 <li>If <code>type == :any</code>, there may not be any containment relation between <script type="math/tex">M</script> and <script type="math/tex">L</script>.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>ismodular(L::AbsLat, p)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>bad_primes(L::AbsLat; even::Bool = false)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">jordan_decomposition</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="n">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="n">NfOrdIdl</span><span class="p">)</span>
                             <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">MatElem</span><span class="p">},</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">MatElem</span><span class="p">},</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">Int</span><span class="p">}</span>

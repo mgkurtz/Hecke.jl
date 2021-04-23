@@ -799,23 +799,11 @@
 <span class="n">ideal</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">,</span> <span class="n">x</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="n">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span>
 </code></pre></div>
 <p>Creates the ideal <script type="math/tex">(x, y)</script> of <script type="math/tex">\mathcal O</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>ideal(::NfOrd, ::NfAbsOrdIdl)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">,</span> <span class="n">x</span><span class="o">::</span><span class="n">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span>
 <span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="n">NfAbsOrdElem</span><span class="p">,</span> <span class="n">O</span><span class="o">::</span><span class="n">NfAbsOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span>
 </code></pre></div>
 <p>Returns the principal ideal <script type="math/tex">(x)</script> of <script type="math/tex">\mathcal O</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>prime_decomposition(::NfOrd, ::Integer)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>prime_decomposition(::NfOrd, ::fmpz)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">factor</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="n">NfOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Dict</span><span class="p">{</span><span class="n">NfOrdIdl</span><span class="p">,</span> <span class="kt">Int</span><span class="p">}</span>
 </code></pre></div>
@@ -898,14 +886,10 @@
 <p><a id='Class-Group-1'></a></p>
 <h2 id="class-group">Class Group</h2>
 <p>The group of invertable ideals in any order forms a group and the principal ideals a subgroup.  The finite quotient is called class group for maximal orders and Picard group or ring class group in general.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>class_group(::NfOrd)</code>. Check Documenter's build log for details.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>class_group(::AnticNumberField)</code>. Check Documenter's build log for details.</p>
-</div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">class_group</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">;</span> <span class="n">bound</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">redo</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">large</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
+</code></pre></div>
+<p>Returns a group <script type="math/tex">A</script> and a map <script type="math/tex">f</script> from <script type="math/tex">A</script> to the set of ideals of <script type="math/tex">O</script>. The inverse of the map is the projection onto the group of ideals modulo the group of principal ideals. <code>redo</code> allows to trigger a re-computation, thus avoiding the cache. <code>bound</code>, when given, is the bound for the factor base.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">picard_group</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">MapClassGrp</span>
 </code></pre></div>
@@ -930,37 +914,37 @@ julia&gt; [ mc \ I for I = lp]
 10-element Vector{GrpAbFinGenElem}:
  Element of
 GrpAb: Z/9
-with components [4]
- Element of
-GrpAb: Z/9
-with components [1]
- Element of
-GrpAb: Z/9
-with components [4]
- Element of
-GrpAb: Z/9
-with components [5]
- Element of
-GrpAb: Z/9
-with components [3]
- Element of
-GrpAb: Z/9
-with components [2]
- Element of
-GrpAb: Z/9
 with components [7]
  Element of
 GrpAb: Z/9
 with components [1]
  Element of
 GrpAb: Z/9
+with components [1]
+ Element of
+GrpAb: Z/9
+with components [8]
+ Element of
+GrpAb: Z/9
+with components [3]
+ Element of
+GrpAb: Z/9
+with components [5]
+ Element of
+GrpAb: Z/9
+with components [4]
+ Element of
+GrpAb: Z/9
+with components [7]
+ Element of
+GrpAb: Z/9
 with components [0]
  Element of
 GrpAb: Z/9
-with components [2]
+with components [5]
 
 julia&gt; mc(c[1])
-&lt;2, 1//2*_$^2 + 3*_$ + 1//2&gt;
+&lt;2, 3//2*_$^2 + 2*_$ + 7//2&gt;
 Norm: 2
 Minimum: 2
 two normal wrt: 2
@@ -969,7 +953,7 @@ julia&gt; order(c[1])
 9
 
 julia&gt; mc(c[1])^Int(order(c[1]))
-&lt;512, 31548269513347771//2*_$^2 - 15655686102205887*_$ + 34155918784359271//2&gt;
+&lt;512, 45616403435015994675//2*_$^2 - 22636933952473144831*_$ + 49386866379765370909//2&gt;
 Norm: 512
 two normal wrt: 2
 
@@ -1006,7 +990,7 @@ with components [0]
 </code></pre></div>
 <p>Finds a number field element <script type="math/tex">\alpha</script> such that <script type="math/tex">\alpha I</script> factors over the factor base in <script type="math/tex">c</script>.</p>
 <div class="highlight"><pre><span></span><code>julia&gt; I = mc(c[1])
-&lt;2, 1//2*_$^2 + 3*_$ + 1//2&gt;
+&lt;2, 3//2*_$^2 + 2*_$ + 7//2&gt;
 Norm: 2
 Minimum: 2
 two normal wrt: 2
@@ -1015,16 +999,16 @@ julia&gt; Hecke.isprincipal(I)
 (false, 1)
 
 julia&gt; I = I^Int(order(c[1]))
-&lt;512, 31548269513347771//2*_$^2 - 15655686102205887*_$ + 34155918784359271//2&gt;
+&lt;512, 45616403435015994675//2*_$^2 - 22636933952473144831*_$ + 49386866379765370909//2&gt;
 Norm: 512
 two normal wrt: 2
 
 julia&gt; Hecke.isprincipal(I)
-(true, 1//2*_$^2 - 3*_$ + 9//2)
+(true, -1//2*_$^2 + 5*_$ + 17//2)
 
 julia&gt; Hecke.isprincipal_fac_elem(I)
 (true, Factored element with data
-Dict{nf_elem, fmpz}(1//2*_$^2 - 3*_$ + 9//2 =&gt; 1))
+Dict{nf_elem, fmpz}(-1//2*_$^2 + 5*_$ + 17//2 =&gt; 1))
 </code></pre></div>
 <p>The computation of <script type="math/tex">S</script>-units is also tied to the class group:</p>
 <hr />
@@ -1053,7 +1037,7 @@ with basis nf_elem[1, _$, 1//2*_$^2 + 1//2]
 )
 
 julia&gt; mu(u[2])
--_$ + 12
+_$ - 12
 
 julia&gt; u, mu = unit_group_fac_elem(zk)
 (GrpAb: Z/2 x Z, UnitGroup map of Factored elements over Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13
@@ -1061,16 +1045,16 @@ julia&gt; u, mu = unit_group_fac_elem(zk)
 
 julia&gt; mu(u[2])
 Factored element with data
-Dict{nf_elem, fmpz}(_$^2 + 6*_$ + 30 =&gt; -1, _$ - 1 =&gt; -1, -29*_$^2 + 383*_$ - 438 =&gt; 1)
+Dict{nf_elem, fmpz}(1//2*_$^2 - 19*_$ + 171//2 =&gt; 1, -35//2*_$^2 + 229*_$ - 957//2 =&gt; 1, _$ + 2 =&gt; -1, 31 =&gt; 1, _$ - 2 =&gt; -1, _$ + 6 =&gt; -1, 5 =&gt; 1, _$ - 4 =&gt; 1, 13//2*_$^2 - 88*_$ + 41//2 =&gt; -1, 23//2*_$^2 - 159*_$ + 309//2 =&gt; -1, 5//2*_$^2 - 55*_$ + 115//2 =&gt; -1, _$ - 14 =&gt; 1)
 
 julia&gt; evaluate(ans)
--_$ + 12
+_$ - 12
 
 julia&gt; lp = factor(6*zk)
 Dict{NfOrdIdl, Int64} with 4 entries:
   &lt;3, _$^2 + 1&gt;                =&gt; 1
-  &lt;2, 3//2*_$^2 + 2*_$ + 5//2&gt; =&gt; 1
-  &lt;2, 5//2*_$^2 + 5//2&gt;        =&gt; 2
+  &lt;2, 7//2*_$^2 + 5//2&gt;        =&gt; 1
+  &lt;2, 1//2*_$^2 + 2*_$ + 1//2&gt; =&gt; 2
   &lt;3, _$ - 1&gt;                  =&gt; 1
 
 julia&gt; s, ms = Hecke.sunit_group(collect(keys(lp)))
@@ -1079,12 +1063,12 @@ Norm: 9
 Minimum: 3
 basis_matrix
 [3 0 0; 0 3 0; 0 0 1]
-two normal wrt: 3, &lt;2, 3//2*_$^2 + 2*_$ + 5//2&gt;
+two normal wrt: 3, &lt;2, 7//2*_$^2 + 5//2&gt;
 Norm: 2
 Minimum: 2
 basis_matrix
 [2 0 0; 1 1 0; 1 0 1]
-two normal wrt: 2, &lt;2, 5//2*_$^2 + 5//2&gt;
+two normal wrt: 2, &lt;2, 1//2*_$^2 + 2*_$ + 1//2&gt;
 Norm: 2
 Minimum: 2
 basis_matrix
@@ -1098,13 +1082,13 @@ two normal wrt: 3]
 )
 
 julia&gt; ms(s[4])
-1//2*_$^2 - 6*_$ - 1//2
+-1//2*_$^2 + 6*_$ + 1//2
 
 julia&gt; norm(ans)
--18
+18
 
 julia&gt; factor(numerator(ans))
--1 * 2 * 3^2
+1 * 2 * 3^2
 </code></pre></div>
 <p><a id='Miscaellenous'></a></p>
 <p><a id='Miscaellenous-1'></a></p>

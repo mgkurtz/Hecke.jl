@@ -795,30 +795,9 @@ julia&gt; O = MaximalOrder(K);
 </code></pre></div>
 <p>Returns a maximal order of <script type="math/tex">A</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="n">maximal_order</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">AlgAssRelOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AlgAssRelOrd</span>
-</code></pre></div>
-<p>Returns a maximal order of the algebra of <script type="math/tex">O</script> containing itself.</p>
-<hr />
 <div class="highlight"><pre><span></span><code><span class="n">lll</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="n">NfAbsOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrd</span>
 </code></pre></div>
 <p>The same order, but with the basis now being LLL reduced wrt. the Minkowski metric.</p>
-<p>By Chistov's fundamental theorem, the computation of the maximal order is basically as hard as the factorisation of the discriminant. In order to help the computer, Hecke also provides the following signatures:</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>maximal_order(::AnticNumberField, ::Array{fmpz, 1})</code>. Check Documenter's build log for details.</p>
-</div>
-<p>It is also possible the execute the steps individually:</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">pradical</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="p">{</span><span class="n">fmpz</span><span class="o">|</span><span class="kt">Integer</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdIdl</span>
-</code></pre></div>
-<p>Given a prime number <script type="math/tex">p</script>, this function returns the <script type="math/tex">p</script>-radical <script type="math/tex">\sqrt{p\mathcal O}</script> of <script type="math/tex">\mathcal O</script>, which is just <script type="math/tex">\{ x \in \mathcal O \mid \exists k \in \mathbf Z_{\geq 0} \colon x^k \in p\mathcal O \}</script>. It is not checked that <script type="math/tex">p</script> is prime.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">ring_of_multipliers</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrd</span>
-</code></pre></div>
-<p>Computes the order <script type="math/tex">(a : a)</script>, which is the set of all <script type="math/tex">x \in K</script> with <script type="math/tex">xa \subseteq a</script>, where <script type="math/tex">K</script> is the ambient number field of <script type="math/tex">a</script>.</p>
-<div class="highlight"><pre><span></span><code>ring_of_multipliers(I::NfAbsOrdIdl) -&gt; NfAbsOrd
-</code></pre></div>
-<p>Computes the order <script type="math/tex">(I : I)</script>, which is the set of all <script type="math/tex">x \in K</script> with <script type="math/tex">xI \subseteq I</script>.</p>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><code>julia&gt; Qx, x = PolynomialRing(FlintQQ, &quot;x&quot;);
 
@@ -907,10 +886,6 @@ with Z-basis NfOrdElem[1, a]
 <div class="highlight"><pre><span></span><code><span class="kp">in</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="n">nf_elem</span><span class="p">,</span> <span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks whether <script type="math/tex">a</script> lies in <script type="math/tex">\mathcal O</script>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Missing docstring.</p>
-<p>Missing docstring for <code>denominator(::nf_elem, ::NfOrd)</code>. Check Documenter's build log for details.</p>
-</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">norm_change_const</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="n">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Float64</span><span class="p">,</span> <span class="kt">Float64</span><span class="p">)</span>
 </code></pre></div>
