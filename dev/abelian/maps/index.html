@@ -722,52 +722,52 @@
 <li>and isomorphism/ inclusion testing</li>
 </ul>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="n">Map</span><span class="p">{</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">GrpAbFinGen</span><span class="p">},</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
+<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="kt">Map</span><span class="p">{</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="kt">GrpAbFinGen</span><span class="p">},</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Given groups <script type="math/tex">G</script> and <script type="math/tex">H</script> that are created as direct products as well as a matrix <script type="math/tex">A</script> containing maps <script type="math/tex">A[i,j] : G_i \to H_j</script>, return the induced homomorphism.</p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="n">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+<div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">G</script> and <script type="math/tex">H</script> are isomorphic.</p>
-<div class="highlight"><pre><span></span><code>julia&gt; G = free_abelian_group(2)
-GrpAb: Z^2
+<div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">GrpAb: Z^2</span>
 
-julia&gt; h = hom(G, G, [gen(G, 2), 3*gen(G, 1)])
-Map with following data
-Domain:
-=======
-Abelian group with structure: Z^2
-Codomain:
-=========
-Abelian group with structure: Z^2
+<span class="gp">julia&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="go">Map with following data</span>
+<span class="go">Domain:</span>
+<span class="go">=======</span>
+<span class="go">Abelian group with structure: Z^2</span>
+<span class="go">Codomain:</span>
+<span class="go">=========</span>
+<span class="go">Abelian group with structure: Z^2</span>
 
-julia&gt; h(gen(G, 1))
-Element of
-GrpAb: Z^2
-with components [0 1]
+<span class="gp">julia&gt;</span> <span class="n">h</span><span class="p">(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">Element of</span>
+<span class="go">GrpAb: Z^2</span>
+<span class="go">with components [0 1]</span>
 
-julia&gt; h(gen(G, 2))
-Element of
-GrpAb: Z^2
-with components [3 0]
+<span class="gp">julia&gt;</span> <span class="n">h</span><span class="p">(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">Element of</span>
+<span class="go">GrpAb: Z^2</span>
+<span class="go">with components [3 0]</span>
 </code></pre></div>
 <p>Homomorphisms also allow addition and subtraction corresponding to the pointwise operation:</p>
-<div class="highlight"><pre><span></span><code>julia&gt; G = free_abelian_group(2)
-GrpAb: Z^2
+<div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">GrpAb: Z^2</span>
 
-julia&gt; h = hom(G, G, [2*gen(G, 2), 3*gen(G, 1)])
-Map with following data
-Domain:
-=======
-Abelian group with structure: Z^2
-Codomain:
-=========
-Abelian group with structure: Z^2
+<span class="gp">julia&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="go">Map with following data</span>
+<span class="go">Domain:</span>
+<span class="go">=======</span>
+<span class="go">Abelian group with structure: Z^2</span>
+<span class="go">Codomain:</span>
+<span class="go">=========</span>
+<span class="go">Abelian group with structure: Z^2</span>
 
-julia&gt; (h+h)(gen(G, 1))
-Element of
-GrpAb: Z^2
-with components [0 4]
+<span class="gp">julia&gt;</span> <span class="p">(</span><span class="n">h</span><span class="o">+</span><span class="n">h</span><span class="p">)(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">Element of</span>
+<span class="go">GrpAb: Z^2</span>
+<span class="go">with components [0 4]</span>
 </code></pre></div>
                 
               
