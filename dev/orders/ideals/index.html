@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -914,37 +914,37 @@
 <span class="go">10-element Vector{GrpAbFinGenElem}:</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
-<span class="go">with components [7]</span>
+<span class="go">with components [4]</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
 <span class="go">with components [1]</span>
-<span class="go"> Element of</span>
-<span class="go">GrpAb: Z/9</span>
-<span class="go">with components [1]</span>
-<span class="go"> Element of</span>
-<span class="go">GrpAb: Z/9</span>
-<span class="go">with components [8]</span>
-<span class="go"> Element of</span>
-<span class="go">GrpAb: Z/9</span>
-<span class="go">with components [3]</span>
-<span class="go"> Element of</span>
-<span class="go">GrpAb: Z/9</span>
-<span class="go">with components [5]</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
 <span class="go">with components [4]</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
+<span class="go">with components [5]</span>
+<span class="go"> Element of</span>
+<span class="go">GrpAb: Z/9</span>
+<span class="go">with components [3]</span>
+<span class="go"> Element of</span>
+<span class="go">GrpAb: Z/9</span>
+<span class="go">with components [2]</span>
+<span class="go"> Element of</span>
+<span class="go">GrpAb: Z/9</span>
 <span class="go">with components [7]</span>
+<span class="go"> Element of</span>
+<span class="go">GrpAb: Z/9</span>
+<span class="go">with components [1]</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
 <span class="go">with components [0]</span>
 <span class="go"> Element of</span>
 <span class="go">GrpAb: Z/9</span>
-<span class="go">with components [5]</span>
+<span class="go">with components [2]</span>
 
 <span class="gp">julia&gt;</span> <span class="n">mc</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="go">&lt;2, 7//2*_$^2 + 2*_$ + 7//2&gt;</span>
+<span class="go">&lt;2, 1//2*_$^2 + 3//2&gt;</span>
 <span class="go">Norm: 2</span>
 <span class="go">Minimum: 2</span>
 <span class="go">two normal wrt: 2</span>
@@ -953,7 +953,7 @@
 <span class="go">9</span>
 
 <span class="gp">julia&gt;</span> <span class="n">mc</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">^</span><span class="kt">Int</span><span class="p">(</span><span class="n">order</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="go">&lt;512, 51324932762088712549357//2*_$^2 - 25469765820220196858689*_$ + 55567239093774188249155//2&gt;</span>
+<span class="go">&lt;512, 949353250304611//2*_$^2 - 471112258013202*_$ + 1027822857336369//2&gt;</span>
 <span class="go">Norm: 512</span>
 <span class="go">two normal wrt: 2</span>
 
@@ -990,7 +990,7 @@
 </code></pre></div>
 <p>Finds a number field element <script type="math/tex">\alpha</script> such that <script type="math/tex">\alpha I</script> factors over the factor base in <script type="math/tex">c</script>.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">I</span> <span class="o">=</span> <span class="n">mc</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="go">&lt;2, 7//2*_$^2 + 2*_$ + 7//2&gt;</span>
+<span class="go">&lt;2, 1//2*_$^2 + 3//2&gt;</span>
 <span class="go">Norm: 2</span>
 <span class="go">Minimum: 2</span>
 <span class="go">two normal wrt: 2</span>
@@ -999,16 +999,16 @@
 <span class="go">(false, 1)</span>
 
 <span class="gp">julia&gt;</span> <span class="n">I</span> <span class="o">=</span> <span class="n">I</span><span class="o">^</span><span class="kt">Int</span><span class="p">(</span><span class="n">order</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="go">&lt;512, 51324932762088712549357//2*_$^2 - 25469765820220196858689*_$ + 55567239093774188249155//2&gt;</span>
+<span class="go">&lt;512, 949353250304611//2*_$^2 - 471112258013202*_$ + 1027822857336369//2&gt;</span>
 <span class="go">Norm: 512</span>
 <span class="go">two normal wrt: 2</span>
 
 <span class="gp">julia&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">isprincipal</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
-<span class="go">(true, 1//2*_$^2 - 5*_$ - 17//2)</span>
+<span class="go">(true, 1//2*_$^2 - 3*_$ + 9//2)</span>
 
 <span class="gp">julia&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">isprincipal_fac_elem</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
 <span class="go">(true, Factored element with data</span>
-<span class="go">Dict{nf_elem, fmpz}(1//2*_$^2 - 5*_$ - 17//2 =&gt; 1))</span>
+<span class="go">Dict{nf_elem, fmpz}(1//2*_$^2 - 3*_$ + 9//2 =&gt; 1))</span>
 </code></pre></div>
 <p>The computation of <script type="math/tex">S</script>-units is also tied to the class group:</p>
 <hr />
@@ -1037,7 +1037,7 @@
 <span class="go">)</span>
 
 <span class="gp">julia&gt;</span> <span class="n">mu</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="go">_$ - 12</span>
+<span class="go">-_$ + 12</span>
 
 <span class="gp">julia&gt;</span> <span class="n">u</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">unit_group_fac_elem</span><span class="p">(</span><span class="n">zk</span><span class="p">)</span>
 <span class="go">(GrpAb: Z/2 x Z, UnitGroup map of Factored elements over Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13</span>
@@ -1045,17 +1045,17 @@
 
 <span class="gp">julia&gt;</span> <span class="n">mu</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <span class="go">Factored element with data</span>
-<span class="go">Dict{nf_elem, fmpz}(_$^2 + 1 =&gt; -1, _$ + 2 =&gt; -1, 3 =&gt; 1, 1//2*_$^2 - 6*_$ + 5//2 =&gt; 1, 2 =&gt; 1)</span>
+<span class="go">Dict{nf_elem, fmpz}(_$ - 10 =&gt; 1, 5*_$^2 - 94*_$ + 419 =&gt; 1, -49//2*_$^2 + 267*_$ + 109//2 =&gt; -1, _$ - 1 =&gt; -1)</span>
 
 <span class="gp">julia&gt;</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
-<span class="go">_$ - 12</span>
+<span class="go">-_$ + 12</span>
 
 <span class="gp">julia&gt;</span> <span class="n">lp</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">zk</span><span class="p">)</span>
 <span class="go">Dict{NfOrdIdl, Int64} with 4 entries:</span>
-<span class="go">  &lt;3, _$^2 + 1&gt;              =&gt; 1</span>
-<span class="go">  &lt;2, 5//2*_$^2 + _$ + 1//2&gt; =&gt; 1</span>
-<span class="go">  &lt;2, 7//2*_$^2 + 3//2&gt;      =&gt; 2</span>
-<span class="go">  &lt;3, _$ - 1&gt;                =&gt; 1</span>
+<span class="go">  &lt;3, _$^2 + 1&gt;                =&gt; 1</span>
+<span class="go">  &lt;2, 7//2*_$^2 + _$ + 7//2&gt;   =&gt; 1</span>
+<span class="go">  &lt;2, 3//2*_$^2 + 2*_$ + 7//2&gt; =&gt; 2</span>
+<span class="go">  &lt;3, _$ - 1&gt;                  =&gt; 1</span>
 
 <span class="gp">julia&gt;</span> <span class="n">s</span><span class="p">,</span> <span class="n">ms</span> <span class="o">=</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">sunit_group</span><span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="n">keys</span><span class="p">(</span><span class="n">lp</span><span class="p">)))</span>
 <span class="go">(GrpAb: Z/2 x Z^(5), SUnits  map of Number field over Rational Field with defining polynomial x^3 - 13*x^2 + 13*x - 13 for NfOrdIdl[&lt;3, _$^2 + 1&gt;</span>
@@ -1063,12 +1063,12 @@
 <span class="go">Minimum: 3</span>
 <span class="go">basis_matrix</span>
 <span class="go">[3 0 0; 0 3 0; 0 0 1]</span>
-<span class="go">two normal wrt: 3, &lt;2, 5//2*_$^2 + _$ + 1//2&gt;</span>
+<span class="go">two normal wrt: 3, &lt;2, 7//2*_$^2 + _$ + 7//2&gt;</span>
 <span class="go">Norm: 2</span>
 <span class="go">Minimum: 2</span>
 <span class="go">basis_matrix</span>
 <span class="go">[2 0 0; 1 1 0; 1 0 1]</span>
-<span class="go">two normal wrt: 2, &lt;2, 7//2*_$^2 + 3//2&gt;</span>
+<span class="go">two normal wrt: 2, &lt;2, 3//2*_$^2 + 2*_$ + 7//2&gt;</span>
 <span class="go">Norm: 2</span>
 <span class="go">Minimum: 2</span>
 <span class="go">basis_matrix</span>
@@ -1082,13 +1082,13 @@
 <span class="go">)</span>
 
 <span class="gp">julia&gt;</span> <span class="n">ms</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-<span class="go">-1//2*_$^2 + 6*_$ + 1//2</span>
+<span class="go">1//2*_$^2 - 6*_$ - 1//2</span>
 
 <span class="gp">julia&gt;</span> <span class="n">norm</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
-<span class="go">18</span>
+<span class="go">-18</span>
 
 <span class="gp">julia&gt;</span> <span class="n">factor</span><span class="p">(</span><span class="n">numerator</span><span class="p">(</span><span class="n">ans</span><span class="p">))</span>
-<span class="go">1 * 2 * 3^2</span>
+<span class="go">-1 * 2 * 3^2</span>
 </code></pre></div>
 <p><a id='Miscaellenous'></a></p>
 <p><a id='Miscaellenous-1'></a></p>
@@ -1349,10 +1349,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
