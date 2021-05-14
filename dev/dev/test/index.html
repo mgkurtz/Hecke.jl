@@ -18,7 +18,7 @@
     
     
       
-        <title>Maps - Hecke</title>
+        <title>Testing - Hecke</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maps" class="md-skip">
+        <a href="#testing" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Maps
+              Testing
             
           </span>
         </div>
@@ -444,14 +444,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
       <label class="md-nav__link" for="__nav_2_4">
         Abelian groups
@@ -469,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../abelian/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -481,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elements/" class="md-nav__link">
+      <a href="../../abelian/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -491,47 +489,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Maps
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../abelian/maps/" class="md-nav__link">
         Maps
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#maps" class="md-nav__link">
-    Maps
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -541,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structural/" class="md-nav__link">
+      <a href="../../abelian/structural/" class="md-nav__link">
         Structural Computations
       </a>
     </li>
@@ -647,12 +609,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
       
       <label class="md-nav__link" for="__nav_2_7">
         Developer
@@ -668,11 +632,98 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../dev/test/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Testing
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tests" class="md-nav__link">
+    Adding tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-long-tests" class="md-nav__link">
+    Adding long tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-tests" class="md-nav__link">
+    Running the tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-all-tests" class="md-nav__link">
+    Running all tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-subset-of-tests" class="md-nav__link">
+    Running a subset of tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -720,6 +771,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -728,9 +781,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#maps" class="md-nav__link">
-    Maps
+  <a href="#structure" class="md-nav__link">
+    Structure
   </a>
+  
+    <nav class="md-nav" aria-label="Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tests" class="md-nav__link">
+    Adding tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-long-tests" class="md-nav__link">
+    Adding long tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-tests" class="md-nav__link">
+    Running the tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-all-tests" class="md-nav__link">
+    Running all tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-subset-of-tests" class="md-nav__link">
+    Running a subset of tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -747,66 +847,80 @@
               
                 
                 
-                  <h1>Maps</h1>
-                
-                <p>Maps between abelian groups are mainly of type <code>GrpAbFinGenMap</code>. They allow normal map operations such as <code>image</code>, <code>preimage</code>, <code>domain</code>, <code>codomain</code> and can be created in a variety of situations.</p>
-<p><a id='Maps'></a></p>
-<p><a id='Maps-1'></a></p>
-<h2 id="maps">Maps</h2>
-<p>Maps between abelian groups can be constructed via</p>
+                <p><a id='Testing'></a></p>
+<p><a id='Testing-1'></a></p>
+<h1 id="testing">Testing</h1>
+<p><a id='Structure'></a></p>
+<p><a id='Structure-1'></a></p>
+<h2 id="structure">Structure</h2>
+<p>The Hecke tests can be found in <code>Hecke/test/</code> and are organized in such a way that the file hierarchy mirrors the source directory <code>Hecke/src/</code>. For example, here is a subset of the <code>src/QuadForm</code> and the <code>test/QuadForm</code> directories:</p>
+<div class="highlight"><pre><span></span><code>├── src
+│   ├── QuadForm
+│   │   ├── Enumeration.jl
+│   │   ├── Herm
+│   │   │   ├── Genus.jl
+│   │   ├── Quad
+│   │   │   ├── Genus.jl
+│   │   │   ├── GenusRep.jl
+│   │   │   ├── NormalForm.jl
+│   │   │   ├── Spaces.jl
+│   │   │   ├── Types.jl
+│   │   │   ├── ZGenus.jl
+│   │   │   └── ZLattices.jl
+│   │   ├── QuadBin.jl
+│   │   ├── Torsion.jl
+│   ├── QuadForm.jl
+│
+│
+│
+├── test
+│   ├── QuadForm
+│   │   ├── Enumeration.jl
+│   │   ├── Herm
+│   │   │   ├── Genus.jl
+│   │   ├── Quad
+│   │   │   ├── Genus.jl
+│   │   │   ├── GenusRep.jl
+│   │   │   ├── NormalForm.jl
+│   │   │   ├── Spaces.jl
+│   │   │   ├── ZGenus.jl
+│   │   │   └── ZLattices.jl
+│   │   ├── QuadBin.jl
+│   │   └── Torsion.jl
+│   ├── QuadForm.jl
+</code></pre></div>
+<p><a id='Adding-tests'></a></p>
+<p><a id='Adding-tests-1'></a></p>
+<h3 id="adding-tests">Adding tests</h3>
 <ul>
-<li>images of the generators</li>
-<li>pairs of elements</li>
-<li>via composition</li>
-<li>and isomorphism/ inclusion testing</li>
+<li>If one adds functionality to a file, say <code>src/QuadForm/Quad/Genus.jl</code>, a corresponding a test should be added to the corresponding test file. In this case this would be <code>test/QuadForm/Quad/Genus.jl</code>.</li>
+<li>Assume one adds a new file, say <code>src/QuadForm/New.jl</code>, which is included in <code>src/QuadForm.jl</code>. Then a corresponding file <code>test/QuadForm/Test.jl</code> containing the tests must be added. This new file must then also be included in <code>test/QuadForm.jl</code>.</li>
+<li>Similar to the above, if a new directory in <code>src/</code> is added, the same must apply in <code>test/</code>.</li>
 </ul>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="kt">Map</span><span class="p">{</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="kt">GrpAbFinGen</span><span class="p">},</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
+<p><a id='Adding-long-tests'></a></p>
+<p><a id='Adding-long-tests-1'></a></p>
+<h3 id="adding-long-tests">Adding long tests</h3>
+<p>If one knows that running a particular test will take a long time, one can use <code>@long_test</code> instead of <code>@test</code> inside the test suite. When running the test suite, tests annotated with <code>@long_test</code> will not be run, unless specifically asked for (see below). The continuous integration servers will run at least one job including the long tests.</p>
+<p><a id='Running-the-tests'></a></p>
+<p><a id='Running-the-tests-1'></a></p>
+<h2 id="running-the-tests">Running the tests</h2>
+<p><a id='Running-all-tests'></a></p>
+<p><a id='Running-all-tests-1'></a></p>
+<h3 id="running-all-tests">Running all tests</h3>
+<p>All tests can be run as usual with <code>Pkg.test("Hecke")</code>. The whole test suite can be run in parallel using the following options:</p>
+<ul>
+<li>Set the environment variable <code>HECKE_TEST_VARIABLE=n</code>, where <code>n</code> is the number of processes.</li>
+<li>On julia &gt;= 1.3, run <code>Pkg.test("Hecke", test_args = ["-j$(n)"])</code>, where <code>n</code> is the number of processes.</li>
+</ul>
+<p>The tests annotated with <code>@long_test</code> can be invoked by setting <code>HECKE_TESTLONG=1</code> or adding "long" to the <code>test_args</code> keyword argument on julia &gt;= 1.3.</p>
+<p><a id='Running-a-subset-of-tests'></a></p>
+<p><a id='Running-a-subset-of-tests-1'></a></p>
+<h3 id="running-a-subset-of-tests">Running a subset of tests</h3>
+<p>Because the test structure mirrors the source directory, it is easy to run only a subset of tests. For example, to run all the tests in <code>test/QuadForm/Quad/Genus.jl</code>, one can invoke:</p>
+<div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">test_module</span><span class="p">(</span><span class="s">&quot;QuadForm/Quad/Genus&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Given groups <script type="math/tex">G</script> and <script type="math/tex">H</script> that are created as direct products as well as a matrix <script type="math/tex">A</script> containing maps <script type="math/tex">A[i,j] : G_i \to H_j</script>, return the induced homomorphism.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
-</code></pre></div>
-<p>Checks if <script type="math/tex">G</script> and <script type="math/tex">H</script> are isomorphic.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="go">GrpAb: Z^2</span>
-
-<span class="gp">julia&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
-<span class="go">Map with following data</span>
-<span class="go">Domain:</span>
-<span class="go">=======</span>
-<span class="go">Abelian group with structure: Z^2</span>
-<span class="go">Codomain:</span>
-<span class="go">=========</span>
-<span class="go">Abelian group with structure: Z^2</span>
-
-<span class="gp">julia&gt;</span> <span class="n">h</span><span class="p">(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="go">Element of</span>
-<span class="go">GrpAb: Z^2</span>
-<span class="go">with components [0 1]</span>
-
-<span class="gp">julia&gt;</span> <span class="n">h</span><span class="p">(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="go">Element of</span>
-<span class="go">GrpAb: Z^2</span>
-<span class="go">with components [3 0]</span>
-</code></pre></div>
-<p>Homomorphisms also allow addition and subtraction corresponding to the pointwise operation:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="go">GrpAb: Z^2</span>
-
-<span class="gp">julia&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">3</span><span class="o">*</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
-<span class="go">Map with following data</span>
-<span class="go">Domain:</span>
-<span class="go">=======</span>
-<span class="go">Abelian group with structure: Z^2</span>
-<span class="go">Codomain:</span>
-<span class="go">=========</span>
-<span class="go">Abelian group with structure: Z^2</span>
-
-<span class="gp">julia&gt;</span> <span class="p">(</span><span class="n">h</span><span class="o">+</span><span class="n">h</span><span class="p">)(</span><span class="n">gen</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="go">Element of</span>
-<span class="go">GrpAb: Z^2</span>
-<span class="go">with components [0 4]</span>
+<p>This also works on the directory level. If one wants to add run all tests for quadratic forms, one can just run</p>
+<div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">test_module</span><span class="p">(</span><span class="s">&quot;QuadForm&quot;</span><span class="p">)</span>
 </code></pre></div>
                 
               
@@ -826,7 +940,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../elements/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../sparse/intro/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -835,25 +949,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Elements
+              Sparse Linear Algebra
             </div>
           </div>
         </a>
       
-      
-        <a href="../structural/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Structural Computations
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
