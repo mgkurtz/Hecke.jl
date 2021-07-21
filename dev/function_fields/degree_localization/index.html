@@ -13,19 +13,19 @@
         <meta name="author" content="Tommy Hofmann">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
     
     
       
-        <title>Hecke</title>
+        <title>Degree localization - Hecke</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3754935a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3754935a.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -44,9 +44,9 @@
     
     
     
-      <link rel="stylesheet" href="assets/Documenter.css">
+      <link rel="stylesheet" href="../../assets/Documenter.css">
     
-      <link rel="stylesheet" href="css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
     
@@ -67,7 +67,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="bluey-grey">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hecke" class="md-skip">
+        <a href="#degree-localization-of-a-rational-function-field" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Hecke" class="md-header__button md-logo" aria-label="Hecke" data-md-component="logo">
+    <a href="../.." title="Hecke" class="md-header__button md-logo" aria-label="Hecke" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Degree localization
             
           </span>
         </div>
@@ -166,7 +166,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Hecke" class="md-nav__button md-logo" aria-label="Hecke" data-md-component="logo">
+    <a href="../.." title="Hecke" class="md-nav__button md-logo" aria-label="Hecke" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -183,65 +183,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          About
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         About
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    Quick start
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -252,12 +198,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Documentation
@@ -296,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="number_fields/intro/" class="md-nav__link">
+      <a href="../../number_fields/intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -308,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="number_fields/basics/" class="md-nav__link">
+      <a href="../../number_fields/basics/" class="md-nav__link">
         Creation and basics
       </a>
     </li>
@@ -320,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="number_fields/elements/" class="md-nav__link">
+      <a href="../../number_fields/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -332,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="number_fields/internal/" class="md-nav__link">
+      <a href="../../number_fields/internal/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -348,12 +296,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
         Function fields
@@ -371,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="function_fields/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -383,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="function_fields/basics/" class="md-nav__link">
+      <a href="../basics/" class="md-nav__link">
         Creation and basics
       </a>
     </li>
@@ -395,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="function_fields/elements/" class="md-nav__link">
+      <a href="../elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -407,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="function_fields/internal/" class="md-nav__link">
+      <a href="../internal/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -417,11 +367,78 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="function_fields/degree_localization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Degree localization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Degree localization
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#degree-localization" class="md-nav__link">
+    Degree localization
+  </a>
+  
+    <nav class="md-nav" aria-label="Degree localization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction-of-the-degree-localization" class="md-nav__link">
+    Construction of the degree localization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-of-the-degree-localization" class="md-nav__link">
+    Elements of the degree localization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#element-functionality" class="md-nav__link">
+    Element functionality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -458,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="orders/introduction/" class="md-nav__link">
+      <a href="../../orders/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -470,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="orders/orders/" class="md-nav__link">
+      <a href="../../orders/orders/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -482,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="orders/elements/" class="md-nav__link">
+      <a href="../../orders/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -494,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="orders/ideals/" class="md-nav__link">
+      <a href="../../orders/ideals/" class="md-nav__link">
         Ideals
       </a>
     </li>
@@ -506,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="orders/frac_ideals/" class="md-nav__link">
+      <a href="../../orders/frac_ideals/" class="md-nav__link">
         Fractional Ideals
       </a>
     </li>
@@ -545,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quad_forms/introduction/" class="md-nav__link">
+      <a href="../../quad_forms/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -557,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quad_forms/basics/" class="md-nav__link">
+      <a href="../../quad_forms/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -569,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quad_forms/lattices/" class="md-nav__link">
+      <a href="../../quad_forms/lattices/" class="md-nav__link">
         Lattices
       </a>
     </li>
@@ -608,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abelian/introduction/" class="md-nav__link">
+      <a href="../../abelian/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -620,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abelian/elements/" class="md-nav__link">
+      <a href="../../abelian/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -632,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abelian/maps/" class="md-nav__link">
+      <a href="../../abelian/maps/" class="md-nav__link">
         Maps
       </a>
     </li>
@@ -644,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abelian/structural/" class="md-nav__link">
+      <a href="../../abelian/structural/" class="md-nav__link">
         Structural Computations
       </a>
     </li>
@@ -683,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="class_fields/intro/" class="md-nav__link">
+      <a href="../../class_fields/intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -722,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FacElem/" class="md-nav__link">
+      <a href="../../FacElem/" class="md-nav__link">
         Factored Elements
       </a>
     </li>
@@ -734,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sparse/intro/" class="md-nav__link">
+      <a href="../../sparse/intro/" class="md-nav__link">
         Sparse Linear Algebra
       </a>
     </li>
@@ -773,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev/test/" class="md-nav__link">
+      <a href="../../dev/test/" class="md-nav__link">
         Testing
       </a>
     </li>
@@ -833,23 +850,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
+  <a href="#degree-localization" class="md-nav__link">
+    Degree localization
+  </a>
+  
+    <nav class="md-nav" aria-label="Degree localization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction-of-the-degree-localization" class="md-nav__link">
+    Construction of the degree localization
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+        
+          <li class="md-nav__item">
+  <a href="#elements-of-the-degree-localization" class="md-nav__link">
+    Elements of the degree localization
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    Quick start
+        
+          <li class="md-nav__item">
+  <a href="#element-functionality" class="md-nav__link">
+    Element functionality
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -866,79 +896,92 @@
               
                 
                 
-                <p><a id='Hecke'></a></p>
-<p><a id='Hecke-1'></a></p>
-<h1 id="hecke">Hecke</h1>
-<p><a id='About'></a></p>
-<p><a id='About-1'></a></p>
-<h2 id="about">About</h2>
-<p>Hecke is a software package for algebraic number theory maintained by Claus Fieker, Carlo Sircana and Tommy Hofmann. It is written in <a href="https://www.julialang.org">julia</a> and is based on the computer algebra package <a href="http://www.nemocas.org">Nemo</a>.</p>
+                <p><a id='Degree-localization-of-a-rational-function-field'></a></p>
+<p><a id='Degree-localization-of-a-rational-function-field-1'></a></p>
+<h1 id="degree-localization-of-a-rational-function-field">Degree localization of a rational function field</h1>
+<p><a id='Degree-localization'></a></p>
+<p><a id='Degree-localization-1'></a></p>
+<h2 id="degree-localization">Degree localization</h2>
+<p>Given <script type="math/tex">k(x)</script> a (univariate) rational function field, there are two rings of interest, both of which are Euclidean:</p>
 <ul>
-<li><a href="https://github.com/thofma/Hecke.jl">https://github.com/thofma/Hecke.jl</a> (Source code)</li>
-<li><a href="https://thofma.github.io/Hecke.jl/dev/">https://thofma.github.io/Hecke.jl/dev/</a> (Online documentation)</li>
+<li>
+<script type="math/tex; mode=display">
+    k[x]
+    </script>
+</li>
+<li>
+<p>:k_</p>
+<p>\infty(x) = {a/b | a, b \in k[x] \;\;\mbox{where}\;\; \deg(a) \leq \deg(b)}</p>
+</li>
 </ul>
-<p>So far, Hecke provides the following features:</p>
-<ul>
-<li>Orders (including element and ideal arithmetic) in number fields</li>
-<li>Computation of maximal orders</li>
-<li>Verified residue computations of Dedekind zeta functions</li>
-<li>Class and Unit group computation, S-units, PID testing</li>
-<li>Lattice enumeration</li>
-<li>Sparse linear algebra</li>
-<li>Normal forms for modules over maximal orders</li>
-<li>Extensions of number fields, non-simple extensions of number fields</li>
-<li>Orders and ideals in extensions of fields</li>
-<li>Abelian groups</li>
-<li>Ray class groups, quotients of ray class groups</li>
-<li>Invariant subgroups</li>
-<li>Class Field Theory</li>
-<li>Associative Algebras</li>
-</ul>
-<p><a id='Installation'></a></p>
-<p><a id='Installation-1'></a></p>
-<h2 id="installation">Installation</h2>
-<p>To use Hecke, a julia version of 1.0 is necessary (the latest stable julia version will do). Please see <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a> for instructions on how to obtain julia for your system. Once a suitable julia version is installed, use the following steps at the julia prompt to install Hecke:</p>
-<div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">Pkg</span>
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Hecke&quot;</span><span class="p">)</span>
+<p>The second of these rings is the localization of <script type="math/tex">k[1/x]</script> at <script type="math/tex">(1/x)</script> inside the rational function field <script type="math/tex">k(x)</script>, i.e. the localization of the function field at the point at infinity, i.e. the valuation ring for valuation <script type="math/tex">-</script>degree<script type="math/tex">(x)</script>.</p>
+<p>We refer to this ring as the <em>degree localization</em> of the rational function field <script type="math/tex">k(x)</script>.</p>
+<p><a id='Construction-of-the-degree-localization'></a></p>
+<p><a id='Construction-of-the-degree-localization-1'></a></p>
+<h3 id="construction-of-the-degree-localization">Construction of the degree localization</h3>
+<p>The degree localization of a rational function field <script type="math/tex">k(x)</script> can be constructed using a <code>Localization</code> constructor, passing in the <code>degree</code> function as argument.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">Localization</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">RationalFunctionField</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="o">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">degree</span><span class="p">))</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
 </code></pre></div>
-<p><a id='Quick-start'></a></p>
-<p><a id='Quick-start-1'></a></p>
-<h2 id="quick-start">Quick start</h2>
-<p>Here is a quick example of using Hecke:</p>
-<div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">Hecke</span>
-<span class="o">...</span>
+<p>Return the localization of <script type="math/tex">k[1/x]</script> at <script type="math/tex">(1/x)</script> inside the rational function field <script type="math/tex">k(x)</script>, i.e. the localization of the function field at the point at infinity, i.e. the valuation ring for valuation <script type="math/tex">-</script>degree<script type="math/tex">(x)</script>. This is the ring <script type="math/tex">k_\infty(x) = \{ f/g | \deg(f) \leq \deg(g)\}</script>.</p>
+<hr />
+<details class="note"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">RationalFunctionField</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
-<span class="n">Welcome</span> <span class="n">to</span> 
-
-  <span class="n">_</span>    <span class="n">_</span>           <span class="n">_</span>        
- <span class="o">|</span> <span class="o">|</span>  <span class="o">|</span> <span class="o">|</span>         <span class="o">|</span> <span class="o">|</span>       
- <span class="o">|</span> <span class="o">|</span><span class="n">__</span><span class="o">|</span> <span class="o">|</span> <span class="n">___</span>  <span class="n">___</span><span class="o">|</span> <span class="o">|</span> <span class="n">_____</span> 
- <span class="o">|</span>  <span class="n">__</span>  <span class="o">|/</span> <span class="n">_</span> <span class="o">\/</span> <span class="n">__</span><span class="o">|</span> <span class="o">|/</span> <span class="o">/</span> <span class="n">_</span> <span class="o">\</span>
- <span class="o">|</span> <span class="o">|</span>  <span class="o">|</span> <span class="o">|</span>  <span class="n">__</span><span class="o">/</span> <span class="p">(</span><span class="n">__</span><span class="o">|</span>   <span class="o">&lt;</span>  <span class="n">__</span><span class="o">/</span>
- <span class="o">|</span><span class="n">_</span><span class="o">|</span>  <span class="o">|</span><span class="n">_</span><span class="o">|\</span><span class="n">___</span><span class="o">|\</span><span class="n">___</span><span class="o">|</span><span class="n">_</span><span class="o">|\</span><span class="n">_</span><span class="o">\</span><span class="n">___</span><span class="o">|</span>
-  
-<span class="n">Version</span> <span class="mf">0.9.0</span> <span class="o">...</span> 
- <span class="o">...</span> <span class="n">which</span> <span class="n">comes</span> <span class="n">with</span> <span class="n">absolutely</span> <span class="n">no</span> <span class="n">warranty</span> <span class="n">whatsoever</span>
-<span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">2018</span> <span class="n">by</span> <span class="n">Claus</span> <span class="n">Fieker</span><span class="p">,</span> <span class="n">Tommy</span> <span class="n">Hofmann</span> <span class="n">and</span> <span class="n">Carlo</span> <span class="n">Sircana</span>
-
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">);</span>
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">O</span> <span class="o">=</span> <span class="n">maximal_order</span><span class="p">(</span><span class="n">K</span><span class="p">);</span>
-<span class="n">julia</span><span class="o">&gt;</span> <span class="n">O</span>
-<span class="n">Maximal</span> <span class="n">order</span> <span class="n">of</span> <span class="kt">Number</span> <span class="n">field</span> <span class="n">over</span> <span class="kt">Rational</span> <span class="n">Field</span> <span class="n">with</span> <span class="n">defining</span> <span class="n">polynomial</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> 
-<span class="n">with</span> <span class="n">basis</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">R</span> <span class="o">=</span> <span class="n">Localization</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+<span class="n">Degree</span> <span class="n">localization</span> <span class="n">of</span> <span class="kt">Rational</span> <span class="k">function</span> <span class="n">field</span> <span class="n">over</span> <span class="kt">Rational</span> <span class="n">Field</span>
 </code></pre></div>
-<p>The documentation of the single functions can also be accessed at the julia prompt. Here is an example:</p>
-<div class="highlight"><pre><span></span><code>help?&gt; signature
-search: signature
+</details>
+<p><a id='Elements-of-the-degree-localization'></a></p>
+<p><a id='Elements-of-the-degree-localization-1'></a></p>
+<h3 id="elements-of-the-degree-localization">Elements of the degree localization</h3>
+<p>Elements of the degree localization are created using the parent object <script type="math/tex">R</script> representing the degree localization</p>
+<hr />
+<details class="note"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">RationalFunctionField</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
-  ----------------------------------------------------------------------------
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">R</span> <span class="o">=</span> <span class="n">Localization</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+<span class="n">Degree</span> <span class="n">localization</span> <span class="n">of</span> <span class="kt">Rational</span> <span class="k">function</span> <span class="n">field</span> <span class="n">over</span> <span class="kt">Rational</span> <span class="n">Field</span>
 
-  signature(O::NfMaximalOrder) -&gt; Tuple{Int, Int}
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">R</span><span class="p">()</span>
+<span class="mi">0</span>
 
-  |  Returns the signature of the ambient number field of \mathcal O.
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">R</span><span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">x</span><span class="p">)</span>
+<span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="n">x</span>
 </code></pre></div>
+</details>
+<p>Note that the degree of the denominator of the function field element passed to the constructor must be at least that of the numerator or an exception is raised.</p>
+<p><a id='Element-functionality'></a></p>
+<p><a id='Element-functionality-1'></a></p>
+<h3 id="element-functionality">Element functionality</h3>
+<hr />
+<div class="highlight"><pre><span></span><code> <span class="n">degree</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">)</span>
+</code></pre></div>
+<p>Return the degree of the given element, i.e. <code>degree(numerator) - degree(denominator)</code>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">valuation</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">)</span>
+</code></pre></div>
+<p>Return the degree valuation of the given element, i.e. <code>-degree(a)</code>.</p>
+<p>One can test whether a given element of a rational function field is in the degree localization.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="k">in</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">Generic</span><span class="o">.</span><span class="kt">Rat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">R</span><span class="o">::</span><span class="kt">KInftyRing</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
+</code></pre></div>
+<p>Return <code>true</code> if the given element of the rational function field is an element of <code>k_\infty(x)</code>, i.e. if <code>degree(numerator) &lt;= degree(denominator)</code>.</p>
+<p>All basic arithmetic operations are provided for elements of the degree localization. In addition the following are provided.</p>
+<hr />
+<div class="highlight"><pre><span></span><code> <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>  <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
+</code></pre></div>
+<p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the rational function field is returned.</p>
+<hr />
+<div class="highlight"><pre><span></span><code> <span class="n">divides</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
+</code></pre></div>
+<p>Returns tuple <code>(flag, c)</code> where <code>flag = true</code> if <script type="math/tex">b</script> divides <script type="math/tex">a</script> and <script type="math/tex">a = bc</script>, otherwise <code>flag = false</code> and <script type="math/tex">c = 0</script>. If <code>checked = false</code> the corresponding element of the rational function field is returned and it is not checked whether it is an element of the given localization.</p>
+<hr />
+<div class="highlight"><pre><span></span><code> <span class="n">divexact</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>  <span class="k">where</span> <span class="p">{</span><span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">nf_elem</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns element 'c' of given localization such that <script type="math/tex">a = bc</script> if such element exists. If <code>checked = false</code> the corresponding element of the rational function field is returned and it is not checked whether it is an element of the given localization.</p>
+<p>As the degree localization is a Euclidean ring, all standard Euclidean functions, including <code>div</code>, <code>divrem</code>, <code>mod</code>, <code>gcd</code>, <code>gcdx</code>, are provided.</p>
                 
               
               
@@ -957,9 +1000,24 @@ search: signature
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../internal/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Internals" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Internals
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="number_fields/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../../orders/introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1007,14 +1065,14 @@ search: signature
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
-        <script src="assets/mathjaxhelper.js"></script>
+        <script src="../../assets/mathjaxhelper.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       
