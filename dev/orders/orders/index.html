@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#orders" class="md-skip">
+        <a href="#absolute-orders" class="md-skip">
           Skip to content
         </a>
       
@@ -476,6 +476,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#invariants" class="md-nav__link">
+    Invariants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -748,6 +762,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pmat/introduction/" class="md-nav__link">
+        Pseudo-Matrices
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -859,6 +885,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#invariants" class="md-nav__link">
+    Invariants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -872,10 +912,10 @@
               
                 
                 
-                <p><a id='Orders'></a></p>
-<p><a id='Orders-1'></a></p>
-<h1 id="orders">Orders</h1>
-<p>Orders, ie. unitary subrings that are free <script type="math/tex">Z</script>-modules of rank equal to the degree of the number field, are at the core of the arithmetic of number fields. In Hecke, orders are always represented using the module structure, be it the <script type="math/tex">Z</script>-module structure for orders in absolute fields, of the structure as a module over the maximal order of the base field in the case of relative extensions. In this chapter we only deal with orders in absolute fields. There are more general definitions of orders in number fields available, but those are (currently) not implemented in Hecke.</p>
+                <p><a id='(Absolute)-Orders'></a></p>
+<p><a id='(Absolute)-Orders-1'></a></p>
+<h1 id="absolute-orders">(Absolute) Orders</h1>
+<p>Orders, ie. unitary subrings that are free <script type="math/tex">Z</script>-modules of rank equal to the degree of the number field, are at the core of the arithmetic of number fields. In Hecke, orders are always represented using the module structure, be it the <script type="math/tex">Z</script>-module structure for orders in absolute fields, of the structure as a module over the maximal order of the base field in the case of relative extensions. In this chapter we mainly deal with orders in absolute fields. However, many functions apply in same way to relative extensions. There are more general definitions of orders in number fields available, but those are (currently) not implemented in Hecke.</p>
 <p>Among all orders in a fixed field, there is a unique maximal one, called the maximal order, or ring of integers of the field. It is well known that this is the only order that is a Dedekind domain, hence has a rich ideal structure as well. The maximal order is also the integral closure of <script type="math/tex">Z</script> in the number field and can also be interpreted as a normalisation of any other order.</p>
 <p><a id='Creation-and-basic-properties'></a></p>
 <p><a id='Creation-and-basic-properties-1'></a></p>
@@ -889,10 +929,7 @@
 </code></pre></div>
 <p>Returns the order which has basis matrix <script type="math/tex">A</script> with respect to the power basis of <script type="math/tex">K</script>. If <code>check</code> is set, it is checked whether <script type="math/tex">A</script> defines an order.</p>
 <hr />
-<div class="highlight"><pre><span></span><code>  <span class="n">Order</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrd</span>
-</code></pre></div>
-<p>Returns the order which has basis pseudo-matrix <script type="math/tex">M</script> with respect to the power basis of <script type="math/tex">K</script>.</p>
-<div class="highlight"><pre><span></span><code>Order(K::AnticNumberField, A::fmpz_mat, check::Bool = true) -&gt; NfOrd
+<div class="highlight"><pre><span></span><code><span class="n">Order</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">fmpz_mat</span><span class="p">,</span> <span class="n">check</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
 </code></pre></div>
 <p>Returns the order which has basis matrix <script type="math/tex">A</script> with respect to the power basis of <script type="math/tex">K</script>. If <code>check</code> is set, it is checked whether <script type="math/tex">A</script> defines an order.</p>
 <div class="highlight"><pre><span></span><code>Order(A::AbsAlgAss{&lt;: NumFieldElem}, M::PMat{&lt;: NumFieldElem, T})
@@ -900,13 +937,10 @@
 </code></pre></div>
 <p>Returns the order of <script type="math/tex">A</script> with basis pseudo-matrix <script type="math/tex">M</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code>  <span class="n">EquationOrder</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrd</span>
-  <span class="n">equation_order</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrd</span>
+<div class="highlight"><pre><span></span><code><span class="n">EquationOrder</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
+<span class="n">equation_order</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
 </code></pre></div>
-<p>Returns the equation order of the number field <script type="math/tex">L</script>.</p>
-<div class="highlight"><pre><span></span><code>EquationOrder(K::NfAbs) -&gt; NfAbsOrd
-</code></pre></div>
-<p>Returns the equation order of the absolute number field <script type="math/tex">K</script>.</p>
+<p>Returns the equation order of the number field <script type="math/tex">K</script>.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">MaximalOrder</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">{</span><span class="kt">fmpq</span><span class="p">};</span> <span class="n">discriminant</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">,</span> <span class="n">ramified_primes</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrd</span>
 </code></pre></div>
@@ -930,6 +964,10 @@
 <div class="highlight"><pre><span></span><code><span class="n">lll</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">NfAbsOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrd</span>
 </code></pre></div>
 <p>The same order, but with the basis now being LLL reduced wrt. the Minkowski metric.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">any_order</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumberField</span><span class="p">)</span>
+</code></pre></div>
+<p>Return some order in <script type="math/tex">K</script>. In case the defining polynomial for <script type="math/tex">K</script> is monic and integral, this just returns the equation order.  In the other case <script type="math/tex">\mathbb Z[\alpha]\cap \mathbb Z[1/\alpha]</script> is returned.</p>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
@@ -952,16 +990,9 @@
 </code></pre></div>
 <p>Returns the signature of the ambient number field of <script type="math/tex">\mathcal O</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code>  <span class="n">nf</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfRelOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span>
+<div class="highlight"><pre><span></span><code><span class="n">nf</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfAbsOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnticNumberField</span>
 </code></pre></div>
 <p>Returns the ambient number field of <script type="math/tex">\mathcal O</script>.</p>
-<div class="highlight"><pre><span></span><code>nf(O::NfAbsOrd) -&gt; AnticNumberField
-</code></pre></div>
-<p>Returns the ambient number field of <script type="math/tex">\mathcal O</script>.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
-</code></pre></div>
-<p>Returns the degree of <script type="math/tex">\mathcal O</script>.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">basis</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">NfOrdElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
@@ -969,10 +1000,30 @@
 <div class="highlight"><pre><span></span><code><span class="n">basis</span><span class="p">(</span><span class="n">I</span><span class="o">::</span><span class="kt">NfAbsOrdFracIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the <script type="math/tex">\mathbf Z</script>-basis of <script type="math/tex">I</script>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>absolute_basis(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">basis</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the <script type="math/tex">\mathbf Z</script>-basis elements of <script type="math/tex">\mathcal O</script> as elements of the ambient number field.</p>
+<hr />
+<div class="highlight"><pre><span></span><code>  <span class="n">pseudo_basis</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfRelOrd</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="kt">S</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">Tuple</span><span class="p">{</span><span class="kt">NumFieldElem</span><span class="p">{</span><span class="kt">T</span><span class="p">}{</span><span class="kt">T</span><span class="p">},</span> <span class="kt">S</span><span class="p">}}</span>
+</code></pre></div>
+<p>Returns the pseudo-basis of <script type="math/tex">\mathcal O</script>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code>  <span class="n">basis_pmatrix</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfRelOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PMat</span>
+</code></pre></div>
+<p>Returns the basis pseudo-matrix of <script type="math/tex">\mathcal O</script> with respect to the power basis of the ambient number field.</p>
+<hr />
+<div class="highlight"><pre><span></span><code>  <span class="n">basis_nf</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfRelOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">NumFieldElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns the elements of the pseudo-basis of <script type="math/tex">\mathcal O</script> as elements of the ambient number field.</p>
+<hr />
+<div class="highlight"><pre><span></span><code>  <span class="n">inv_coeff_ideals</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfRelOrd</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="kt">S</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">S</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns the inverses of the coefficient ideals of the pseudo basis of <script type="math/tex">O</script>.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">basis_matrix</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FakeFmpqMat</span>
 </code></pre></div>
@@ -985,26 +1036,9 @@
 </code></pre></div>
 <p>Returns the inverse basis matrix of <script type="math/tex">A</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
-</code></pre></div>
-<p>Returns the discriminant of <script type="math/tex">\mathcal O</script>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">B</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
-</code></pre></div>
-<p>Returns the discriminant of the family <script type="math/tex">B</script>.</p>
-<div class="highlight"><pre><span></span><code>discriminant(E::EllCrv{T}) -&gt; T
-</code></pre></div>
-<p>Computes the discriminant of <script type="math/tex">E</script>.</p>
-<div class="highlight"><pre><span></span><code>discriminant(O::AlgssRelOrd)
-</code></pre></div>
-<p>Returns the discriminant of <script type="math/tex">O</script>.</p>
-<hr />
 <div class="highlight"><pre><span></span><code><span class="n">gen_index</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpq</span>
 </code></pre></div>
 <p>Returns the generalized index of <script type="math/tex">\mathcal O</script> with respect to the equation order of the ambient number field.</p>
-<hr />
-<div class="highlight"><pre><span></span><code><span class="n">index</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
-</code></pre></div>
-<p>Assuming that the order <script type="math/tex">\mathcal O</script> contains the equation order <script type="math/tex">\mathbf Z[\alpha]</script> of the ambient number field, this function returns the index <script type="math/tex">[ \mathcal O : \mathbf Z]</script>.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">isindex_divisor</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">d</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 <span class="n">isindex_divisor</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">d</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
@@ -1036,10 +1070,116 @@
 </code></pre></div>
 <p>This function tries to find an order that is locally larger than <script type="math/tex">\mathcal O</script> at the prime <script type="math/tex">p</script>: If <script type="math/tex">p</script> divides the index <script type="math/tex">[ \mathcal O_K : \mathcal O]</script>, this function will return an order <script type="math/tex">R</script> such that <script type="math/tex">v_p([ \mathcal O_K : R]) < v_p([ \mathcal O_K : \mathcal O])</script>. Otherwise <script type="math/tex">\mathcal O</script> is returned.</p>
 <hr />
+<div class="highlight"><pre><span></span><code><span class="n">poverorders</span><span class="p">(</span><span class="n">O</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">Ord</span><span class="p">}</span>
+</code></pre></div>
+<p>Returns all <code>p</code>-overorders of <code>O</code>, that is all overorders <code>M</code>, such that the index of <code>O</code> in <code>M</code> is a <code>p</code>-power.</p>
+<hr />
 <div class="highlight"><pre><span></span><code><span class="n">pmaximal_overorder</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
 <span class="n">pmaximal_overorder</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
 </code></pre></div>
 <p>This function finds a <script type="math/tex">p</script>-maximal order <script type="math/tex">R</script> containing <script type="math/tex">\mathcal O</script>. That is, the index <script type="math/tex">[ \mathcal O_K : R]</script> is not divisible by <script type="math/tex">p</script>.</p>
+<p><a id='Invariants'></a></p>
+<p><a id='Invariants-1'></a></p>
+<h2 id="invariants">Invariants</h2>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>absolute_discriminant(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Returns the discriminant of <script type="math/tex">\mathcal O</script>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">B</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Returns the discriminant of the family <script type="math/tex">B</script>.</p>
+<div class="highlight"><pre><span></span><code>discriminant(E::EllCrv{T}) -&gt; T
+</code></pre></div>
+<p>Computes the discriminant of <script type="math/tex">E</script>.</p>
+<div class="highlight"><pre><span></span><code>discriminant(O::AlgssRelOrd)
+</code></pre></div>
+<p>Returns the discriminant of <script type="math/tex">O</script>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
+</code></pre></div>
+<p>Returns the degree of <script type="math/tex">\mathcal O</script>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">index</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Assuming that the order <script type="math/tex">\mathcal O</script> contains the equation order <script type="math/tex">\mathbf Z[\alpha]</script> of the ambient number field, this function returns the index <script type="math/tex">[ \mathcal O : \mathbf Z]</script>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">different</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span>
+</code></pre></div>
+<p>The differnt ideal of <script type="math/tex">R</script>, that is, the ideal generated by all differents of elements in <script type="math/tex">R</script>. For Gorenstein orders, this is also the inverse ideal of the co-different.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">codifferent</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span>
+</code></pre></div>
+<p>The codiffernt ideal of <script type="math/tex">R</script>, i.e. the trace-dual of <script type="math/tex">R</script>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>isgorenstein(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>isbass(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>isequation_order(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">zeta_log_residue</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">error</span><span class="o">::</span><span class="kt">Float64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arb</span>
+</code></pre></div>
+<p>Computes the residue of the zeta function of <script type="math/tex">\mathcal O</script> at <script type="math/tex">1</script>. The output will be an element of type <code>arb</code> with radius less then <code>error</code>.</p>
+<p><a id='Arithmetic'></a></p>
+<p><a id='Arithmetic-1'></a></p>
+<h2 id="arithmetic">Arithmetic</h2>
+<p>Progress and intermediate results of the functions mentioned here can be obtained via <code>verbose_level</code>, supported are</p>
+<ul>
+<li><code>ClassGroup</code></li>
+<li><code>UnitGroup</code></li>
+</ul>
+<p>All of the functions have a very similar interface: they return an abelian group and a map converting elements of the group into the objects required. The maps also allow a point-wise inverse to server as the <em>discrete logarithm</em> map. For more information on abelian group, see <a href="../../abelian/introduction/#AbelianGroupLink">here</a>,  for ideals, <a href="../ideals/#NfOrdIdlLink">here</a>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">torsion_unit_group</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAb</span><span class="p">,</span> <span class="n">Map</span>
+</code></pre></div>
+<p>Given an order <script type="math/tex">\mathcal O</script>, returns the torsion units as an abelian group <script type="math/tex">G</script> together with a map <script type="math/tex">G \to \mathcal O^\times</script>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>unit_group(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>unit_group_fac_elem(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>sunit_group(I::Vector{NfOrdIdl})</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>sunit_group_fac_elem(I::Vector{NfOrdIdl})</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>sunits_mod_units_fac_elem(I::Vector{NfOrdIdl})</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>class_group(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Missing docstring.</p>
+<p>Missing docstring for <code>picard_group(::NfOrd)</code>. Check Documenter's build log for details.</p>
+</div>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">narrow_class_group</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
+</code></pre></div>
+<p>Comeputes the narrow (or strict) class group of <script type="math/tex">O</script>, ie. the group of invertable ideals modulo principal ideals generated by elements that are positive at all real places.</p>
+<p>For the processing of units, there are a couple of helper functions also available:</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="kt">isindependent</span><span class="p">{</span><span class="kt">T</span><span class="p">}(</span><span class="n">x</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+</code></pre></div>
+<p>Given an array of non-zero units in a number field, returns whether they are multiplicatively independent.</p>
                 
               
               

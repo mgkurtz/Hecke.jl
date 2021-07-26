@@ -756,6 +756,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pmat/introduction/" class="md-nav__link">
+        Pseudo-Matrices
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -997,6 +1009,10 @@
 </code></pre></div>
 <p>Reduces the coefficient vector of <script type="math/tex">a</script> modulo <script type="math/tex">m</script> and returns the corresponding element. The coefficient vector of the result will have entries <script type="math/tex">x</script> with <script type="math/tex">0 \leq x \leq m</script>.</p>
 <hr />
+<div class="highlight"><pre><span></span><code><span class="n">mod_sym</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</code></pre></div>
+<p>Reduces the coefficients of <script type="math/tex">a</script> modulo <script type="math/tex">m</script>, using the symmetric residue system.</p>
+<hr />
 <div class="highlight"><pre><span></span><code><span class="n">powermod</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns the element <script type="math/tex">a^i</script> modulo <script type="math/tex">m</script>.</p>
@@ -1015,9 +1031,9 @@
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script> considered as an element of the ambient number field <script type="math/tex">K</script>. It is assumed that <script type="math/tex">K</script> is the ambient number field of the order of <script type="math/tex">a</script>.</p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="n">tr</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+<div class="highlight"><pre><span></span><code><span class="n">tr</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span>
 </code></pre></div>
-<p>Returns the trace of <script type="math/tex">a</script>.</p>
+<p>Returns the trace of <script type="math/tex">a</script> as an element of the base ring.</p>
 <div class="highlight"><pre><span></span><code>tr(x::AbsAlgAssElem{T}) where T -&gt; T
 </code></pre></div>
 <p>Returns the trace of <script type="math/tex">x</script>.</p>
@@ -1028,9 +1044,9 @@
 <div class="highlight"><pre><span></span><code>norm(a::NfRelOrdFracIdl{T, S}) -&gt; S
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script>.</p>
-<div class="highlight"><pre><span></span><code>norm(a::NfAbsOrdElem) -&gt; fmpz
+<div class="highlight"><pre><span></span><code>norm(a::NfOrdElem)
 </code></pre></div>
-<p>Returns the norm of <script type="math/tex">a</script>.</p>
+<p>Returns the norm of <script type="math/tex">a</script> as an element in the base ring.</p>
 <div class="highlight"><pre><span></span><code>norm(a::AlgAssAbsOrdIdl, O::AlgAssAbsOrd; copy::Bool = true) -&gt; fmpq
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script> considered as an (possibly fractional) ideal of <script type="math/tex">O</script>.</p>
@@ -1038,6 +1054,14 @@
   where { S, T, U } -&gt; T
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script> considered as an (possibly fractional) ideal of <script type="math/tex">O</script>.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">absolute_norm</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Return the absolute norm as an integer.    </p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">absolute_re</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Return the absolute trace as an integer.    </p>
 <hr />
 <div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">Integer</span><span class="p">,</span> <span class="kt">fmpz</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
@@ -1076,6 +1100,10 @@
 </code></pre></div>
 <p>Computes a factorization of <script type="math/tex">a</script> into irreducible elements. The return value is a factorization <code>fac</code>, which satisfies <code>a = unit(fac) * prod(p^e for (p, e) in fac)</code>.</p>
 <p>The function requires that <script type="math/tex">a</script> is non-zero and that all prime ideals containing <script type="math/tex">a</script> are principal, which is for example satisfied if class group of the order of <script type="math/tex">a</script> is trivial.</p>
+<hr />
+<div class="highlight"><pre><span></span><code><span class="n">denominator</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">,</span> <span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
+</code></pre></div>
+<p>Returns the smallest positive integer <script type="math/tex">k</script> such that <script type="math/tex">k \cdot a</script> is contained in <script type="math/tex">\mathcal O</script>.</p>
                 
               
               

@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#number-fields" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -259,52 +259,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Introduction
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Introduction
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#types" class="md-nav__link">
-    Types
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -748,6 +705,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pmat/introduction/" class="md-nav__link">
+        Pseudo-Matrices
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -833,34 +802,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#types" class="md-nav__link">
-    Types
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -872,22 +813,15 @@
               
                 
                 
-                <p><a id='Number-Fields'></a></p>
-<p><a id='Number-Fields-1'></a></p>
-<h1 id="number-fields">Number Fields</h1>
-<p><a id='NumberFieldsLink'></a></p>
+                <p><a id='NumberFieldsLink'></a></p>
 <p><a id='NumberFieldsLink-1'></a></p>
-<h2 id="introduction">Introduction</h2>
+<h1 id="introduction">Introduction</h1>
 <p>By definition, mathematically a number field is just a finite extension of the rational <script type="math/tex">\mathbf{Q}</script>. In Hecke, a number field <script type="math/tex">L</script> is recursively defined as being the field of rational numbers <script type="math/tex">\mathbf{Q}</script> or a finite extension of a number field <script type="math/tex">K</script>. In the second case, the extension can be defined in the one of the following two ways:</p>
 <ul>
 <li>We have <script type="math/tex">L = K[x]/(f)</script>, where <script type="math/tex">f \in K[x]</script> is an irreducible polynomial (<em>simple extension</em>), or</li>
 <li>We have <script type="math/tex">L = K[x_1,\dotsc,x_n]/(f_1(x_1),\dotsc,f_n(x_n))</script>, where <script type="math/tex">f_1,\dotsc,f_n \in K[x]</script> are univariate polynomials (<em>non-simple extension</em>).</li>
 </ul>
 <p>In both cases we refer to <script type="math/tex">K</script> as the <em>base field</em> of the number field <script type="math/tex">L</script>. Another useful dichotomy comes from the type of the base field. We call <script type="math/tex">L</script> an <em>absolute</em> number field, if the base field is equal to the rational numbers <script type="math/tex">\mathbf{Q}</script>.</p>
-<p><a id='Types'></a></p>
-<p><a id='Types-1'></a></p>
-<h3 id="types">Types</h3>
-<p>The abstract type for number fields is <code>NumField</code>. For simple number fields the type is <code>SimpleNumField</code>, where as for non-simple number fields the type is <code>NonSimpleNumField</code>.</p>
                 
               
               
