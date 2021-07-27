@@ -915,36 +915,48 @@
    \sum_{i=1}^n m_{i,j} e_j = 0.
 </script>
 </p>
-<p><strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
+<p><a id='Hecke.abelian_group-Tuple{fmpz_mat}' href='#Hecke.abelian_group-Tuple{fmpz_mat}'>#</a>
+<strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">fmpz_mat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the abelian group with relation matrix <code>M</code>. That is, the group will have <code>ncols(M)</code> generators and each row of <code>M</code> describes one relation.</p>
-<p><strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L64' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.abelian_group-Tuple{Matrix{fmpz}}' href='#Hecke.abelian_group-Tuple{Matrix{fmpz}}'>#</a>
+<strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the abelian group with relation matrix <code>M</code>. That is, the group will have <code>ncols(M)</code> generators and each row of <code>M</code> describes one relation.</p>
-<p><strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L86' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.abelian_group-Tuple{Matrix{Integer}}' href='#Hecke.abelian_group-Tuple{Matrix{Integer}}'>#</a>
+<strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">Integer</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the abelian group with relation matrix <code>M</code>. That is, the group will have <code>ncols(M)</code> generators and each row of <code>M</code> describes one relation.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L100' class='documenter-source'>source</a><br></p>
 <p>Alternatively, there are shortcuts to create products of cyclic groups:</p>
-<p><strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
+<p><a id='Hecke.abelian_group-Tuple{Vector{Union{Integer, fmpz}}}' href='#Hecke.abelian_group-Tuple{Vector{Union{Integer, fmpz}}}'>#</a>
+<strong><code>Hecke.abelian_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Union</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">}})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 <span class="n">abelian_group</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">}</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the direct product of the cyclic groups <script type="math/tex">\mathbf{Z}/m_i</script>, where <script type="math/tex">m_i</script> is the <script type="math/tex">i</script>th entry of <code>M</code>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L133' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="go">GrpAb: (Z/2)^2 x Z/6</span>
 </code></pre></div>
 <p>or even</p>
-<p><strong><code>Hecke.free_abelian_group</code></strong> &mdash; <em>Method</em>.</p>
+<p><a id='Hecke.free_abelian_group-Tuple{Int64}' href='#Hecke.free_abelian_group-Tuple{Int64}'>#</a>
+<strong><code>Hecke.free_abelian_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">free_abelian_group</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Creates the free abelian group of rank <code>n</code>.</p>
-<p><strong><code>Hecke.abelian_groups</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L164' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.abelian_groups-Tuple{Int64}' href='#Hecke.abelian_groups-Tuple{Int64}'>#</a>
+<strong><code>Hecke.abelian_groups</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">abelian_groups</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">GrpAbFinGen</span><span class="p">}</span>
 </code></pre></div>
 <p>Given a positive integer <script type="math/tex">n</script>, return a list of all abelian groups of order <script type="math/tex">n</script>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L1688' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">abelian_groups</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 <span class="go">3-element Vector{GrpAbFinGen}:</span>
 <span class="go"> GrpAb: (Z/2)^3</span>
@@ -954,58 +966,84 @@
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
 <h3 id="invariants">Invariants</h3>
-<p><strong><code>AbstractAlgebra.issnf</code></strong> &mdash; <em>Method</em>.</p>
+<p><a id='AbstractAlgebra.issnf-Tuple{GrpAbFinGen}' href='#AbstractAlgebra.issnf-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>AbstractAlgebra.issnf</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">issnf</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the current relation matrix of the group <script type="math/tex">G</script> is in Smith normal form.</p>
-<p><strong><code>AbstractAlgebra.Generic.ngens</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L291' class='documenter-source'>source</a><br></p>
+<p><a id='AbstractAlgebra.Generic.ngens-Tuple{GrpAbFinGen}' href='#AbstractAlgebra.Generic.ngens-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>AbstractAlgebra.Generic.ngens</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ngens</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the number of generators of <script type="math/tex">G</script> in the current representation.</p>
-<p><strong><code>Hecke.nrels</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L299' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.nrels-Tuple{GrpAbFinGen}' href='#Hecke.nrels-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.nrels</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">nrels</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the number of relations of <script type="math/tex">G</script> in the current representation.</p>
-<p><strong><code>AbstractAlgebra.Generic.rels</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L312' class='documenter-source'>source</a><br></p>
+<p><a id='AbstractAlgebra.Generic.rels-Tuple{GrpAbFinGen}' href='#AbstractAlgebra.Generic.rels-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>AbstractAlgebra.Generic.rels</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rels</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_mat</span>
 </code></pre></div>
 <p>Returns the currently used relations of <script type="math/tex">G</script> as a single matrix.</p>
-<p><strong><code>Base.isfinite</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L325' class='documenter-source'>source</a><br></p>
+<p><a id='Base.isfinite-Tuple{GrpAbFinGen}' href='#Base.isfinite-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Base.isfinite</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isfinite</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">A</script> is finite.</p>
-<p><strong><code>Hecke.isinfinite</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L451' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.isinfinite-Tuple{GrpAbFinGen}' href='#Hecke.isinfinite-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.isinfinite</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isinfinite</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">A</script> is infinite.</p>
-<p><strong><code>LinearAlgebra.rank</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L462' class='documenter-source'>source</a><br></p>
+<p><a id='LinearAlgebra.rank-Tuple{GrpAbFinGen}' href='#LinearAlgebra.rank-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>LinearAlgebra.rank</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rank</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the rank of <script type="math/tex">A</script>, that is, the dimension of the <script type="math/tex">\mathbf{Q}</script>-vectorspace <script type="math/tex">A \otimes_{\mathbf Z} \mathbf Q</script>.</p>
-<p><strong><code>AbstractAlgebra.Generic.order</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L475' class='documenter-source'>source</a><br></p>
+<p><a id='AbstractAlgebra.Generic.order-Tuple{GrpAbFinGen}' href='#AbstractAlgebra.Generic.order-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>AbstractAlgebra.Generic.order</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">order</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the order of <script type="math/tex">A</script>. It is assumed that <script type="math/tex">A</script> is finite.</p>
-<p><strong><code>Base.Math.exponent</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L507' class='documenter-source'>source</a><br></p>
+<p><a id='Base.Math.exponent-Tuple{GrpAbFinGen}' href='#Base.Math.exponent-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Base.Math.exponent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">exponent</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the exponent of <script type="math/tex">A</script>. It is assumed that <script type="math/tex">A</script> is finite.</p>
-<p><strong><code>Hecke.istrivial</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L527' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.istrivial-Tuple{GrpAbFinGen}' href='#Hecke.istrivial-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.istrivial</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">istrivial</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">A</script> is the trivial group.</p>
-<p><strong><code>Hecke.istorsion</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L562' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.istorsion-Tuple{GrpAbFinGen}' href='#Hecke.istorsion-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.istorsion</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">istorsion</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns true if and only if <code>G</code> is a torsion group.</p>
-<p><strong><code>Hecke.iscyclic</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L849' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.iscyclic-Tuple{GrpAbFinGen}' href='#Hecke.iscyclic-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.iscyclic</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">iscyclic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">G</script> is cyclic.</p>
-<p><strong><code>Hecke.elementary_divisors</code></strong> &mdash; <em>Method</em>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L1367' class='documenter-source'>source</a><br></p>
+<p><a id='Hecke.elementary_divisors-Tuple{GrpAbFinGen}' href='#Hecke.elementary_divisors-Tuple{GrpAbFinGen}'>#</a>
+<strong><code>Hecke.elementary_divisors</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">elementary_divisors</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Given <script type="math/tex">G</script>, returns the elementary divisors of <script type="math/tex">G</script>, that is, the unique positive integers <script type="math/tex">e_1,\dotsc,e_k</script> with <script type="math/tex">e_i \mid e_{i + 1}</script> and <script type="math/tex">G \cong \mathbf{Z}/e_1\mathbf{Z} \times \dotsb \times \mathbf{Z}/e_k\mathbf{Z}</script>.</p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/b326c79c4e54b04bd8de38100885164ef8be6ceb/src/GrpAb/GrpAbFinGen.jl#L1778' class='documenter-source'>source</a><br></p>
                 
               
               
