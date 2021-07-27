@@ -1052,67 +1052,67 @@
 <p><a id='Creation'></a></p>
 <p><a id='Creation-1'></a></p>
 <h3 id="creation">Creation</h3>
-<hr />
+<p><strong><code>Hecke.sparse_row</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_row</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">J</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Tuple</span><span class="p">{</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">T</span><span class="p">}})</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Constructs the sparse row <script type="math/tex">(a_i)_i</script> with <script type="math/tex">a_{i_j} = x_j</script>, where <script type="math/tex">J = (i_j, x_j)_j</script>. The elements <script type="math/tex">x_i</script> must belong to the ring <script type="math/tex">R</script>.</p>
-<hr />
+<p><strong><code>Hecke.sparse_row</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_row</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">J</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Tuple</span><span class="p">{</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">T</span><span class="p">}})</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Constructs the sparse row <script type="math/tex">(a_i)_i</script> with <script type="math/tex">a_{i_j} = x_j</script>, where <script type="math/tex">J = (i_j, x_j)_j</script>. The elements <script type="math/tex">x_i</script> must belong to the ring <script type="math/tex">R</script>.</p>
 <div class="highlight"><pre><span></span><code>sparse_row(R::Ring, J::Vector{Tuple{Int, Int}}) -&gt; SRow
 </code></pre></div>
 <p>Constructs the sparse row <script type="math/tex">(a_i)_i</script> over <script type="math/tex">R</script> with <script type="math/tex">a_{i_j} = x_j</script>, where <script type="math/tex">J = (i_j, x_j)_j</script>.</p>
-<hr />
+<p><strong><code>Hecke.sparse_row</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_row</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">J</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int</span><span class="p">},</span> <span class="n">V</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Constructs the sparse row <script type="math/tex">(a_i)_i</script> over <script type="math/tex">R</script> with <script type="math/tex">a_{i_j} = x_j</script>, where <script type="math/tex">J = (i_j)_j</script> and <script type="math/tex">V = (x_j)_j</script>.</p>
 <p><a id='Basic-operations'></a></p>
 <p><a id='Basic-operations-1'></a></p>
 <h3 id="basic-operations">Basic operations</h3>
-<hr />
+<p><strong><code>Base.:==</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">==</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">SRow</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">SRow</span><span class="p">)</span>
 </code></pre></div>
 <p>Checks whether <script type="math/tex">x</script> and <script type="math/tex">y</script> are the same sparse row, that is, whether <script type="math/tex">x</script> and <script type="math/tex">y</script> have the same non-zero entries.</p>
-<hr />
+<p><strong><code>Base.:+</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">+</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SRow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Returns the sum of <script type="math/tex">A</script> and <script type="math/tex">B</script>.</p>
-<hr />
+<p><strong><code>Base.getindex</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">,</span> <span class="n">j</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RingElem</span>
 </code></pre></div>
 <p>Given a sparse row <script type="math/tex">(a_i)_{i}</script> and an index <script type="math/tex">j</script> return <script type="math/tex">a_j</script>.</p>
-<hr />
+<p><strong><code>Base.:*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">::</span><span class="kt">T</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Return the sparse row obtained by multiplying all elements of <script type="math/tex">A</script> by <script type="math/tex">b</script>.</p>
-<hr />
+<p><strong><code>Base.div</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">div</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Return the sparse row obtained by dividing all elements of <script type="math/tex">A</script> by <script type="math/tex">b</script> using <code>div</code>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.divexact</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">divexact</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Return the sparse row obtained by dividing all elements of <script type="math/tex">A</script> by <script type="math/tex">b</script> using <code>divexact</code>.</p>
-<hr />
+<p><strong><code>Hecke.add_scaled_row</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">add_scaled_row</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">B</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">c</span><span class="o">::</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the row <script type="math/tex">c A + B</script>.</p>
 <p><a id='Change-of-base-ring'></a></p>
 <p><a id='Change-of-base-ring-1'></a></p>
 <h3 id="change-of-base-ring">Change of base ring</h3>
-<hr />
+<p><strong><code>AbstractAlgebra.change_base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">change_base_ring</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Create a new sparse row by coercing all elements into the ring <script type="math/tex">R</script>.</p>
 <p><a id='Maximum,-minimum-and-2-norm'></a></p>
 <p><a id='Maximum,-minimum-and-2-norm-1'></a></p>
 <h3 id="maximum-minimum-and-2-norm">Maximum, minimum and 2-norm</h3>
-<hr />
+<p><strong><code>Base.maximum</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">maximum</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">T</span>
 </code></pre></div>
 <p>Returns the largest entry of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Base.minimum</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code>  <span class="n">minimum</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span>
   <span class="n">minimum</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfRelOrdIdl</span>
 </code></pre></div>
@@ -1120,26 +1120,26 @@
 <div class="highlight"><pre><span></span><code>minimum(A::SRow{T}) -&gt; T
 </code></pre></div>
 <p>Returns the smallest entry of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Hecke.norm2</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">norm2</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="n">T</span>
 </code></pre></div>
 <p>Returns <script type="math/tex">A \cdot A^t</script>.</p>
 <p><a id='Functionality-for-integral-sparse-rows'></a></p>
 <p><a id='Functionality-for-integral-sparse-rows-1'></a></p>
 <h3 id="functionality-for-integral-sparse-rows">Functionality for integral sparse rows</h3>
-<hr />
+<p><strong><code>AbstractAlgebra.lift</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">lift</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">nmod</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the sparse row obtained by lifting all entries in <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Hecke.mod!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mod!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">},</span> <span class="n">n</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Inplace reduction of all entries of <script type="math/tex">A</script> modulo <script type="math/tex">n</script> to the positive residue system.</p>
-<hr />
+<p><strong><code>Hecke.mod_sym!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mod_sym!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">},</span> <span class="n">n</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Inplace reduction of all entries of <script type="math/tex">A</script> modulo <script type="math/tex">n</script> to the symmetric residue system.</p>
-<hr />
+<p><strong><code>Base.maximum</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">maximum</span><span class="p">(</span><span class="n">abs</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the largest, in absolute value, entry of <script type="math/tex">A</script>.</p>
@@ -1151,121 +1151,121 @@
 <p><a id='Construction'></a></p>
 <p><a id='Construction-1'></a></p>
 <h3 id="construction">Construction</h3>
-<hr />
+<p><strong><code>Hecke.sparse_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_matrix</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Return an empty sparse matrix with base ring <script type="math/tex">R</script>.</p>
 <p>Sparse matrices can also be created from dense matrices as well as from julia arrays:</p>
-<hr />
+<p><strong><code>Hecke.sparse_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_matrix</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">MatElem</span><span class="p">;</span> <span class="n">keepzrows</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>
 </code></pre></div>
 <p>Constructs the sparse matrix corresponding to the dense matrix <script type="math/tex">A</script>. If <code>keepzrows</code> is false, then the constructor will drop any zero row of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Hecke.sparse_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_matrix</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Constructs the sparse matrix over <script type="math/tex">R</script> corresponding to <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Hecke.sparse_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparse_matrix</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Constructs the sparse matrix over <script type="math/tex">R</script> corresponding to <script type="math/tex">A</script>.</p>
 <p>The normal way however, is to add rows:</p>
-<hr />
+<p><strong><code>Base.push!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">push!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">B</span><span class="o">::</span><span class="kt">SRow</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="k">where</span> <span class="kt">T</span>
 </code></pre></div>
 <p>Appends the sparse row <code>B</code> to <code>A</code>.</p>
 <p>Sparse matrices can also be concatenated to form larger ones:</p>
-<hr />
+<p><strong><code>Hecke.vcat!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vcat!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Vertically joins <script type="math/tex">A</script> and <script type="math/tex">B</script> inplace, that is, the rows of <script type="math/tex">B</script> are appended to <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Base.vcat</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vcat</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Vertically joins <script type="math/tex">A</script> and <script type="math/tex">B</script>.</p>
-<hr />
+<p><strong><code>Hecke.hcat!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">hcat!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Horizontally concatenates <script type="math/tex">A</script> and <script type="math/tex">B</script>, inplace, changing <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Base.hcat</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">hcat</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Horizontally concatenates <script type="math/tex">A</script> and <script type="math/tex">B</script>.</p>
 <p>(Normal julia <script type="math/tex">cat</script> is also supported)</p>
 <p>There are special constructors:</p>
-<hr />
+<p><strong><code>AbstractAlgebra.identity_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">identity_matrix</span><span class="p">(</span><span class="o">::</span><span class="kt">Type</span><span class="p">{</span><span class="kt">SMat</span><span class="p">},</span> <span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Return a sparse <script type="math/tex">n</script> times <script type="math/tex">n</script> identity matrix over <script type="math/tex">R</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.zero_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">zero_matrix</span><span class="p">(</span><span class="o">::</span><span class="kt">Type</span><span class="p">{</span><span class="kt">SMat</span><span class="p">},</span> <span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Return a sparse <script type="math/tex">n</script> times <script type="math/tex">n</script> zero matrix over <script type="math/tex">R</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.zero_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">zero_matrix</span><span class="p">(</span><span class="o">::</span><span class="kt">Type</span><span class="p">{</span><span class="kt">SMat</span><span class="p">},</span> <span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Return a sparse <script type="math/tex">n</script> times <script type="math/tex">m</script> zero matrix over <script type="math/tex">R</script>.</p>
 <p>Slices:</p>
-<hr />
+<p><strong><code>AbstractAlgebra.sub</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sub</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">r</span><span class="o">::</span><span class="kt">UnitRange</span><span class="p">,</span> <span class="n">c</span><span class="o">::</span><span class="kt">UnitRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Return the submatrix of <script type="math/tex">A</script>, where the rows correspond to <script type="math/tex">r</script> and the columns correspond to <script type="math/tex">c</script>.</p>
 <p>Transpose:</p>
-<hr />
+<p><strong><code>Base.transpose</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Returns the transpose of <script type="math/tex">A</script>.</p>
 <p><a id='Elementary-Properties'></a></p>
 <p><a id='Elementary-Properties-1'></a></p>
 <h3 id="elementary-properties">Elementary Properties</h3>
-<hr />
+<p><strong><code>Hecke.sparsity</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">sparsity</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float64</span>
 </code></pre></div>
 <p>Return the sparsity of <code>A</code>, that is, the number of zero-valued elements divided by the number of all elements.</p>
-<hr />
+<p><strong><code>Hecke.density</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">density</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float64</span>
 </code></pre></div>
 <p>Return the density of <code>A</code>, that is, the number of nonzero-valued elements divided by the number of all elements.</p>
-<hr />
+<p><strong><code>SparseArrays.nnz</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">nnz</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Return the number of non-zero entries of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.nrows</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">nrows</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Return the number of rows of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.ncols</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ncols</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Return the number of columns of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Base.isone</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isone</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">A</script> is an identity matrix.</p>
-<hr />
+<p><strong><code>Base.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">iszero</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">A</script> is a zero matrix.</p>
 <p><a id='Manipulation/-Access'></a></p>
 <p><a id='Manipulation/-Access-1'></a></p>
 <h3 id="manipulation-access">Manipulation/ Access</h3>
-<hr />
+<p><strong><code>Base.getindex</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">j</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Given a sparse matrix <script type="math/tex">A = (a_{ij})_{i, j}</script>, return the entry <script type="math/tex">a_{ij}</script>.</p>
-<hr />
+<p><strong><code>Base.getindex</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Given a sparse matrix <script type="math/tex">A</script> and an index <script type="math/tex">i</script>, return the <script type="math/tex">i</script>-th row of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>Base.setindex!</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">setindex!</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="kt">SRow</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Given a sparse matrix <script type="math/tex">A</script>, a sparse row <script type="math/tex">b</script> and an index <script type="math/tex">i</script>, set the <script type="math/tex">i</script>-th row of <script type="math/tex">A</script> equal to <script type="math/tex">b</script>.</p>
 <p>Changing of the ring:</p>
-<hr />
+<p><strong><code>AbstractAlgebra.map_entries</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">map_entries</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Given a sparse matrix <script type="math/tex">A</script> and a callable object <script type="math/tex">f</script>, this function will construct a new sparse matrix by applying <script type="math/tex">f</script> to all elements of <script type="math/tex">A</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.change_base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">change_base_ring</span><span class="p">(</span><span class="n">R</span><span class="o">::</span><span class="kt">Ring</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span>
 </code></pre></div>
 <p>Create a new sparse matrix by coercing all elements into the ring <script type="math/tex">R</script>.</p>
@@ -1273,44 +1273,44 @@
 <p><a id='Arithmetic-1'></a></p>
 <h3 id="arithmetic">Arithmetic</h3>
 <p>Various products:</p>
-<hr />
+<p><strong><code>Hecke.mul</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mul</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">A \cdot b</script> as a dense vector.</p>
-<hr />
+<p><strong><code>Hecke.mul</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mul</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">AbstractArray</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">T</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">A \cdot b</script> as a dense array.</p>
-<hr />
+<p><strong><code>Hecke.mul</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mul</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">MatElem</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">A \cdot b</script> as a dense matrix.</p>
-<hr />
+<p><strong><code>Hecke.mul</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mul</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SRow</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SRow</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">A\cdot B</script> as a sparse row.</p>
-<hr />
+<p><strong><code>Base.:*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">::</span><span class="kt">T</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">b \cdot A</script>.</p>
-<hr />
+<p><strong><code>Base.:*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">::</span><span class="kt">Integer</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">b \cdot A</script>.</p>
-<hr />
+<p><strong><code>Base.:*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">SMat</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the product <script type="math/tex">b \cdot A</script>.</p>
 <p>Other:</p>
-<hr />
+<p><strong><code>Base.:+</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">+</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Return the sum <script type="math/tex">A + B</script>.</p>
-<hr />
+<p><strong><code>Base.:-</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">-</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SMat</span>
 </code></pre></div>
 <p>Return the difference <script type="math/tex">A - B</script>.</p>
-<hr />
+<p><strong><code>Base.:==</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">==</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">SMat</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">SMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Return whether <script type="math/tex">A</script> is equal to <script type="math/tex">B</script>.</p>

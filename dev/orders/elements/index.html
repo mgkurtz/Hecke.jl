@@ -908,7 +908,7 @@
 <p><a id='Creation-1'></a></p>
 <h2 id="creation">Creation</h2>
 <p>Elements are constructed either as linear combinations of basis elements or via explicit coercion. Elements will be of type <code>NfOrdElem</code>,  the type if actually parametrized by the type of the surrounding field and the type of the field elements. E.g. the type of any element in any order of an absolute simple field will be <code>NfAbsOrdElem{AnticNumberField,nf_elem}</code></p>
-<hr />
+<p><strong><code>Hecke.NfAbsOrd</code></strong> &mdash; <em>Type</em>.</p>
 <div class="highlight"><pre><span></span><code>  <span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)(</span><span class="n">a</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Given an element <script type="math/tex">a</script> of type <code>fmpz</code> or <code>Integer</code>, this function coerces the element into <script type="math/tex">\mathcal O</script>. It will be checked that <script type="math/tex">a</script> is contained in <script type="math/tex">\mathcal O</script> if and only if <code>check</code> is <code>true</code>.</p>
@@ -921,19 +921,19 @@
 <p><a id='Basic-properties'></a></p>
 <p><a id='Basic-properties-1'></a></p>
 <h2 id="basic-properties">Basic properties</h2>
-<hr />
+<p><strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">parent</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrd</span>
 </code></pre></div>
 <p>Returns the order of which <script type="math/tex">a</script> is an element.</p>
-<hr />
+<p><strong><code>Hecke.elem_in_nf</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">elem_in_nf</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nf_elem</span>
 </code></pre></div>
 <p>Returns the element <script type="math/tex">a</script> considered as an element of the ambient number field.</p>
-<hr />
+<p><strong><code>Hecke.coordinates</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">coordinates</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the coefficient vector of <script type="math/tex">a</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">B</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the discriminant of the family <script type="math/tex">B</script>.</p>
@@ -943,30 +943,30 @@
 <div class="highlight"><pre><span></span><code>discriminant(O::AlgssRelOrd)
 </code></pre></div>
 <p>Returns the discriminant of <script type="math/tex">O</script>.</p>
-<hr />
+<p><strong><code>Base.:==</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">==</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">x</script> and <script type="math/tex">y</script> are equal.</p>
-<hr />
+<p><strong><code>Base.zero</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">zero</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns the zero element of <script type="math/tex">\mathcal O</script>.</p>
-<hr />
+<p><strong><code>Base.one</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">one</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns the one element of <script type="math/tex">\mathcal O</script>.</p>
-<hr />
+<p><strong><code>Base.iszero</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">iszero</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">a</script> is zero.</p>
-<hr />
+<p><strong><code>Base.isone</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isone</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">a</script> is one.</p>
 <p><a id='Arithmetic'></a></p>
 <p><a id='Arithmetic-1'></a></p>
 <h2 id="arithmetic">Arithmetic</h2>
-<hr />
+<p><strong><code>Base.:-</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns the additive inverse of <script type="math/tex">x</script>.</p>
@@ -988,56 +988,56 @@
 <div class="highlight"><pre><span></span><code>-(a::AlgMatElem, b::AlgMatElem) -&gt; AlgMatElem
 </code></pre></div>
 <p>Return <script type="math/tex">a - b</script>.</p>
-<hr />
+<p><strong><code>Base.:+</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns <script type="math/tex">x + y</script>.</p>
-<hr />
+<p><strong><code>Base.:-</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns <script type="math/tex">x - y</script>.</p>
-<hr />
+<p><strong><code>Base.:*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns <script type="math/tex">x \cdot y</script>.</p>
-<hr />
+<p><strong><code>Base.:^</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">^</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Returns <script type="math/tex">x^y</script>.</p>
-<hr />
+<p><strong><code>Base.mod</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mod</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="kt">Int</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Reduces the coefficient vector of <script type="math/tex">a</script> modulo <script type="math/tex">m</script> and returns the corresponding element. The coefficient vector of the result will have entries <script type="math/tex">x</script> with <script type="math/tex">0 \leq x \leq m</script>.</p>
-<hr />
+<p><strong><code>Hecke.mod_sym</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mod_sym</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 </code></pre></div>
 <p>Reduces the coefficients of <script type="math/tex">a</script> modulo <script type="math/tex">m</script>, using the symmetric residue system.</p>
-<hr />
+<p><strong><code>Base.powermod</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">powermod</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Integer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Returns the element <script type="math/tex">a^i</script> modulo <script type="math/tex">m</script>.</p>
 <p><a id='Miscellaneous'></a></p>
 <p><a id='Miscellaneous-1'></a></p>
 <h2 id="miscellaneous">Miscellaneous</h2>
-<hr />
+<p><strong><code>Nemo.representation_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">representation_matrix</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_mat</span>
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">representation_matrix</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FakeFmpqMat</span>
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script> considered as an element of the ambient number field <script type="math/tex">K</script>. It is assumed that <script type="math/tex">K</script> is the ambient number field of the order of <script type="math/tex">a</script>.</p>
-<hr />
+<p><strong><code>Nemo.representation_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">representation_matrix</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FakeFmpqMat</span>
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script> considered as an element of the ambient number field <script type="math/tex">K</script>. It is assumed that <script type="math/tex">K</script> is the ambient number field of the order of <script type="math/tex">a</script>.</p>
-<hr />
+<p><strong><code>LinearAlgebra.tr</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">tr</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span>
 </code></pre></div>
 <p>Returns the trace of <script type="math/tex">a</script> as an element of the base ring.</p>
 <div class="highlight"><pre><span></span><code>tr(x::AbsAlgAssElem{T}) where T -&gt; T
 </code></pre></div>
 <p>Returns the trace of <script type="math/tex">x</script>.</p>
-<hr />
+<p><strong><code>LinearAlgebra.norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfRelOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span>
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script>.</p>
@@ -1054,53 +1054,53 @@
   where { S, T, U } -&gt; T
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script> considered as an (possibly fractional) ideal of <script type="math/tex">O</script>.</p>
-<hr />
+<p><strong><code>Hecke.absolute_norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_norm</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Return the absolute norm as an integer.    </p>
-<hr />
+<p><strong><code>Hecke.absolute_tr</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_re</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Return the absolute trace as an integer.    </p>
-<hr />
+<p><strong><code>Base.rand</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">Integer</span><span class="p">,</span> <span class="kt">fmpz</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Computes a coefficient vector with entries uniformly distributed in <script type="math/tex">\{-n,\dotsc,-1,0,1,\dotsc,n\}</script> and returns the corresponding element of the order <script type="math/tex">\mathcal O</script>.</p>
-<hr />
+<p><strong><code>Hecke.minkowski_map</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">minkowski_map</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">arb</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the image of <script type="math/tex">a</script> under the Minkowski embedding. Every entry of the array returned is of type <code>arb</code> with radius less then <code>2^-abs_tol</code>.</p>
-<hr />
+<p><strong><code>Hecke.conjugates_arb</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conjugates_arb</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">acb</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Compute the conjugates of <script type="math/tex">x</script> as elements of type <code>acb</code>. Recall that we order the complex conjugates <script type="math/tex">\sigma_{r+1}(x),...,\sigma_{r+2s}(x)</script> such that <script type="math/tex">\sigma_{i}(x) = \overline{\sigma_{i + s}(x)}</script> for <script type="math/tex">r + 2 \leq i \leq r + s</script>.</p>
 <p>Every entry <script type="math/tex">y</script> of the array returned satisfies <code>radius(real(y)) &lt; 2^-abs_tol</code>, <code>radius(imag(y)) &lt; 2^-abs_tol</code> respectively.</p>
-<hr />
+<p><strong><code>Hecke.conjugates_arb_log</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conjugates_arb_log</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">arb</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the elements <script type="math/tex">(\log(\lvert \sigma_1(x) \rvert),\dotsc,\log(\lvert\sigma_r(x) \rvert), \dotsc,2\log(\lvert \sigma_{r+1}(x) \rvert),\dotsc, 2\log(\lvert \sigma_{r+s}(x)\rvert))</script> as elements of type <code>arb</code> radius less then <code>2^-abs_tol</code>.</p>
-<hr />
+<p><strong><code>Hecke.t2</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">t2</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arb</span>
 </code></pre></div>
 <p>Return the <script type="math/tex">T_2</script>-norm of <script type="math/tex">x</script>. The radius of the result will be less than <code>2^-abs_tol</code>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.minpoly</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">minpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfRelElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PolyElem</span>
 </code></pre></div>
 <p>Given an element <script type="math/tex">a</script> in an extension <script type="math/tex">L/K</script>, this function returns the minimal polynomial of <script type="math/tex">a</script> over <script type="math/tex">K</script>.</p>
 <div class="highlight"><pre><span></span><code>minpoly(a::NfAbsOrdElem) -&gt; fmpz_poly
 </code></pre></div>
 <p>The minimal polynomial of <script type="math/tex">a</script>.</p>
-<hr />
+<p><strong><code>AbstractAlgebra.charpoly</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">charpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_poly</span>
 <span class="n">charpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">FlintZZ</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_poly</span>
 </code></pre></div>
 <p>The characteristic polynomial of <script type="math/tex">a</script>.</p>
-<hr />
+<p><strong><code>Hecke.factor</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">factor</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fac</span><span class="p">{</span><span class="kt">NfOrdElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Computes a factorization of <script type="math/tex">a</script> into irreducible elements. The return value is a factorization <code>fac</code>, which satisfies <code>a = unit(fac) * prod(p^e for (p, e) in fac)</code>.</p>
 <p>The function requires that <script type="math/tex">a</script> is non-zero and that all prime ideals containing <script type="math/tex">a</script> are principal, which is for example satisfied if class group of the order of <script type="math/tex">a</script> is trivial.</p>
-<hr />
+<p><strong><code>Base.denominator</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">denominator</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">,</span> <span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the smallest positive integer <script type="math/tex">k</script> such that <script type="math/tex">k \cdot a</script> is contained in <script type="math/tex">\mathcal O</script>.</p>

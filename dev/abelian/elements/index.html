@@ -944,38 +944,38 @@
 <p><a id='Creation-1'></a></p>
 <h3 id="creation">Creation</h3>
 <p>In addition to the standard function <code>id</code>, <code>zero</code> and <code>one</code> that can be used to create the neutral element, we also support more targeted creation:</p>
-<hr />
+<p><strong><code>AbstractAlgebra.gens</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">gens</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">GrpAbFinGenElem</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>The sequence of generators of <script type="math/tex">G</script>.</p>
-<hr />
+<p><strong><code>Hecke.GrpAbFinGen</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)(</span><span class="n">x</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
 </code></pre></div>
 <p>Given an array <code>x</code> of elements of type <code>fmpz</code> of the same length as ngens(<script type="math/tex">A</script>), this function returns the element of <script type="math/tex">A</script> with components <code>x</code>.</p>
-<hr />
+<p><strong><code>Hecke.GrpAbFinGen</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)(</span><span class="n">x</span><span class="o">::</span><span class="kt">fmpz_mat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
 </code></pre></div>
 <p>Given a matrix over the integers with <script type="math/tex">1</script> row and <code>ngens(A)</code> columns, this function returns the element of <script type="math/tex">A</script> with components <code>x</code>.</p>
-<hr />
+<p><strong><code>Base.getindex</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
 </code></pre></div>
 <p>Returns the element of <script type="math/tex">A</script> with components <script type="math/tex">(0,\dotsc,0,1,0,\dotsc,0)</script>, where the <script type="math/tex">1</script> is at the <script type="math/tex">i</script>-th position.</p>
-<hr />
+<p><strong><code>Base.rand</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
 </code></pre></div>
 <p>Returns an element of <script type="math/tex">G</script> chosen uniformly at random.</p>
-<hr />
+<p><strong><code>Base.rand</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGenElem</span>
 </code></pre></div>
 <p>For a (potentially infinite) abelian group <script type="math/tex">G</script>, return an element chosen uniformly at random with coefficients bounded by <script type="math/tex">B</script>.</p>
-<hr />
+<p><strong><code>Base.parent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">parent</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">GrpAbFinGenElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span>
 </code></pre></div>
 <p>Returns the parent of <script type="math/tex">x</script>.</p>
 <p><a id='Access'></a></p>
 <p><a id='Access-1'></a></p>
 <h3 id="access">Access</h3>
-<hr />
+<p><strong><code>Base.getindex</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">getindex</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">GrpAbFinGenElem</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the <script type="math/tex">i</script>-th component of the element <script type="math/tex">x</script>.</p>
@@ -986,7 +986,7 @@
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
 <h3 id="invariants">Invariants</h3>
-<hr />
+<p><strong><code>AbstractAlgebra.Generic.order</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">order</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">GrpAbFinGenElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the order of <script type="math/tex">A</script>. It is assumed that the order is finite.</p>
