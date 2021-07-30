@@ -972,26 +972,26 @@
 
 <span class="gp">julia&gt;</span> <span class="n">L</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/Field.jl#L103' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/Field.jl#L103' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.cyclotomic_field-Tuple{Int64}' href='#Hecke.cyclotomic_field-Tuple{Int64}'>#</a>
 <strong><code>Hecke.cyclotomic_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">cyclotomic_field</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnticNumberField</span><span class="p">,</span> <span class="n">nf_elem</span>
 </code></pre></div>
 <p>The <script type="math/tex">n</script>-th cyclotomic field defined by the <script type="math/tex">n</script>-th cyclotomic polynomial.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NfAbs/NfAbs.jl#L88' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NfAbs/NfAbs.jl#L88' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.wildanger_field-Tuple{Int64, fmpz}' href='#Hecke.wildanger_field-Tuple{Int64, fmpz}'>#</a>
 <strong><code>Hecke.wildanger_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">wildanger_field</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">fmpz</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnticNumberField</span><span class="p">,</span> <span class="n">nf_elem</span>
 </code></pre></div>
 <p>Returns the field with defining polynomial <script type="math/tex">x^n + \sum_{i=0}^{n-1} (-1)^{n-i}Bx^i</script>. These fields tend to have non-trivial class groups.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NfAbs/NfAbs.jl#L98-L103' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NfAbs/NfAbs.jl#L98-L103' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.radical_extension-Tuple{Int64, NumFieldElem}' href='#Hecke.radical_extension-Tuple{Int64, NumFieldElem}'>#</a>
 <strong><code>Hecke.radical_extension</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">radical_extension</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;_$&quot;</span><span class="p">,</span>
                <span class="n">check</span> <span class="o">=</span> <span class="nb">true</span><span class="p">,</span> <span class="n">cached</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span><span class="p">,</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
 <p>Given an element <script type="math/tex">a</script> of a number field <script type="math/tex">K</script> and an integer <script type="math/tex">n</script>, create the simple extension of <script type="math/tex">K</script> with the defining polynomial <script type="math/tex">x^n - a</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L53' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L53' class='documenter-source'>source</a><br></p>
 <hr />
 <p>Many of the constructors have arguments of type <code>Symbol</code> or <code>AbstractString</code>, if used, they define the appearance in printing, and printing only. The named parameter <code>check</code> can be <code>true</code> or <code>false</code>, the default being <code>true</code>. This parameter controls is the polynomial defining the number field is tested for irreducibility or not. Given that this can be potentially  very time consuming if the degree if large, one can disable this test. Note however, that the behaviour of Hecke is undefined if a reducible polynomial is used to define a <em>field</em>.</p>
 <p>The named boolean parameter <code>cached</code> is inherited from the underlying Nemo system. Two number fields defined using the same polynomial from the identical polynomial ring and the same (identical) symbol/ string will be identical if <code>cached == true</code> and different if <code>cached == false</code>.</p>
@@ -1010,7 +1010,7 @@
                                           <span class="o">-&gt;</span> <span class="n">NumField</span><span class="p">,</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Given a list <script type="math/tex">f_1, \ldots, f_n</script> of univariate polynomials in <script type="math/tex">K[x]</script> over some number field <script type="math/tex">K</script>, constructs the extension <script type="math/tex">K[x_1, \ldots, x_n]/(f_1(x_1), \ldots, f_n(x_n))</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NonSimpleNumField/Field.jl#L9' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NonSimpleNumField/Field.jl#L9' class='documenter-source'>source</a><br></p>
 <hr />
 <details class="note"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
@@ -1032,13 +1032,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">absolute_simple_field</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">L</script>, this function returns an absolute simple number field <script type="math/tex">M/\mathbf{Q}</script> together with a <script type="math/tex">\mathbf{Q}</script>-linear isomorphism <script type="math/tex">M \to K</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NfRel/absolute_field.jl#L91' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NfRel/absolute_field.jl#L91' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.simple_extension-Tuple{NonSimpleNumField}' href='#Hecke.simple_extension-Tuple{NonSimpleNumField}'>#</a>
 <strong><code>Hecke.simple_extension</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">simple_extension</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NonSimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SimpleNumField</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Given a non-simple extension <script type="math/tex">L/K</script>, this function computes a simple extension <script type="math/tex">M/K</script> and a <script type="math/tex">K</script>-linear isomorphism <script type="math/tex">M \to L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NonSimpleNumField/Field.jl#L40' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NonSimpleNumField/Field.jl#L40' class='documenter-source'>source</a><br></p>
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
 <h3 id="invariants">Invariants</h3>
@@ -1047,49 +1047,49 @@
 <div class="highlight"><pre><span></span><code><span class="n">basis</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the canonical basis of a simple extension <script type="math/tex">L/K</script>, that is, the elements <script type="math/tex">1,a,\dotsc,a^{d - 1}</script>, where <script type="math/tex">d</script> is the degree of <script type="math/tex">K</script> and <script type="math/tex">a</script> the primitive element.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L80' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L80' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.Generic.basis-Tuple{NonSimpleNumField}' href='#AbstractAlgebra.Generic.basis-Tuple{NonSimpleNumField}'>#</a>
 <strong><code>AbstractAlgebra.Generic.basis</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">basis</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NonSimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the canonical basis of a non-simple extension <script type="math/tex">L/K</script>. If <script type="math/tex">L = K(a_1,\dotsc,a_n)</script> where each <script type="math/tex">a_i</script> has degree <script type="math/tex">d_i</script>, then the basis will be <script type="math/tex">a_1^{i_1}\dotsm a_d^{i_d}</script> with <script type="math/tex">0 \leq i_j d_j - 1</script> for <script type="math/tex">1 \leq j \leq n</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NonSimpleNumField/Field.jl#L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/NonSimpleNumField/Field.jl#L25' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.issimple-Tuple{NumField}' href='#Hecke.issimple-Tuple{NumField}'>#</a>
 <strong><code>Hecke.issimple</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">issimple</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">L/K</script> this function returns whether <script type="math/tex">L</script> is simple, that is, whether <script type="math/tex">L/K</script> is defined by a univariate polynomial$.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/Field.jl#L89' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/Field.jl#L89' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.isabsolute-Tuple{NumField}' href='#Hecke.isabsolute-Tuple{NumField}'>#</a>
 <strong><code>Hecke.isabsolute</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isabsolute</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">L</script> is an absolute extension, that is, whether the base field of <script type="math/tex">L</script> is <script type="math/tex">\mathbf{Q}</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/Field.jl#L29' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/Field.jl#L29' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.degree-Tuple{NumField}' href='#AbstractAlgebra.degree-Tuple{NumField}'>#</a>
 <strong><code>AbstractAlgebra.degree</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">L/K</script>, this function returns the degree of <script type="math/tex">L</script> over <script type="math/tex">K</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/Field.jl#L54' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/Field.jl#L54' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.discriminant-Tuple{SimpleNumField}' href='#AbstractAlgebra.discriminant-Tuple{SimpleNumField}'>#</a>
 <strong><code>AbstractAlgebra.discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
 <p>The discriminant of the defining polynomial of <script type="math/tex">L</script>, <em>not</em> the discriminant of the maximal order of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L113' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L113' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.absolute_discriminant-Tuple{SimpleNumField}' href='#Hecke.absolute_discriminant-Tuple{SimpleNumField}'>#</a>
 <strong><code>Hecke.absolute_discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_discriminant</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">,</span> <span class="n">QQ</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpq</span>
 </code></pre></div>
 <p>The absolute discriminant of the defining polynomial of <script type="math/tex">L</script>, <em>not</em> the discriminant of the maximal order of <script type="math/tex">L</script>. This is the norm of the discriminant times the <script type="math/tex">d</script>-th power of the discriminant of the base field, where <script type="math/tex">d</script> is the degree of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L129' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L129' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.Generic.defining_polynomial-Tuple{SimpleNumField}' href='#AbstractAlgebra.Generic.defining_polynomial-Tuple{SimpleNumField}'>#</a>
 <strong><code>AbstractAlgebra.Generic.defining_polynomial</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">defining_polynomial</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PolyElem</span>
 </code></pre></div>
 <p>Given a simple number field <script type="math/tex">L/K</script>, constructed as <script type="math/tex">L = K[x]/(f)</script>, this function returns <script type="math/tex">f</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L97' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L97' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Subfields'></a></p>
 <p><a id='Subfields-1'></a></p>
@@ -1099,13 +1099,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">issubfield</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">,</span> <span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Returns <code>true</code> and an injection from <script type="math/tex">K</script> to <script type="math/tex">L</script> if <script type="math/tex">K</script> is a subfield of <script type="math/tex">L</script>. Otherwise the function returns <code>false</code> and a morphism mapping everything to <script type="math/tex">0</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L158' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L158' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.isisomorphic-Tuple{SimpleNumField, SimpleNumField}' href='#AbstractAlgebra.isisomorphic-Tuple{SimpleNumField, SimpleNumField}'>#</a>
 <strong><code>AbstractAlgebra.isisomorphic</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">,</span> <span class="n">L</span><span class="o">::</span><span class="kt">SimpleNumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Returns <code>true</code> and an isomorphism from <script type="math/tex">K</script> to <script type="math/tex">L</script> if <script type="math/tex">K</script> and <script type="math/tex">L</script> are isomorphic. Otherwise the function returns <code>false</code> and a morphism mapping everything to <script type="math/tex">0</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/SimpleNumField/Field.jl#L167' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/7403093a3a39f13e883e4fefd0f9d79a30363c42/src/NumField/SimpleNumField/Field.jl#L167' class='documenter-source'>source</a><br></p>
 <hr />
                 
               
