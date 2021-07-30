@@ -984,13 +984,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">ray_class_group</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">NfOrdIdl</span><span class="p">,</span> <span class="n">inf_plc</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">};</span> <span class="n">n_quo</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">lp</span><span class="o">::</span><span class="kt">Dict</span><span class="p">{</span><span class="kt">NfOrdIdl</span><span class="p">,</span> <span class="kt">Int</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">MapRayClassGrp</span>
 </code></pre></div>
 <p>Given an ideal <script type="math/tex">m</script> and a set of infinite places of <script type="math/tex">K</script>, this function returns the corresponding ray class group as an abstract group <script type="math/tex">\mathcal {Cl}_m</script> and a map going from the group into the group of ideals of <script type="math/tex">K</script> that are coprime to <script type="math/tex">m</script>. If <code>n_quo</code> is set, it will return the group modulo <code>n_quo</code>. The factorization of <script type="math/tex">m</script> can be given with the keyword argument <code>lp</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/NfOrd/RayClassGrp.jl#L621' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NfOrd/RayClassGrp.jl#L621' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.class_group-Tuple{AnticNumberField}' href='#Hecke.class_group-Tuple{AnticNumberField}'>#</a>
 <strong><code>Hecke.class_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">class_group</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GrpAbFinGen</span><span class="p">,</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Shortcut for <code>class_group(maximal_order(K))</code>: returns the class group as an abelian group and a map from this group to the set of ideals of the maximal order.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/NumField/NfAbs/NfAbs.jl#L190' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/NumField/NfAbs/NfAbs.jl#L190' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.norm_group-Tuple{PolyElem, MapRayClassGrp, Bool}' href='#Hecke.norm_group-Tuple{PolyElem, MapRayClassGrp, Bool}'>#</a>
 <strong><code>Hecke.norm_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">norm_group</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Nemo</span><span class="o">.</span><span class="n">PolyElem</span><span class="p">,</span> <span class="n">mR</span><span class="o">::</span><span class="kt">Hecke</span><span class="o">.</span><span class="n">MapRayClassGrp</span><span class="p">,</span> <span class="n">isabelian</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="n">of_closure</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAb</span><span class="p">,</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAbMap</span>
@@ -998,7 +998,7 @@
 <span class="n">norm_group</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">PolyElem</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">}},</span> <span class="n">mR</span><span class="o">::</span><span class="kt">Hecke</span><span class="o">.</span><span class="n">MapRayClassGrp</span><span class="p">,</span> <span class="n">isabelian</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="n">of_closure</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAb</span><span class="p">,</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAbMap</span>
 </code></pre></div>
 <p>Computes the subgroup of the Ray Class Group <script type="math/tex">R</script> given by the norm of the extension generated by a/the roots of <script type="math/tex">f</script>. If <code>isabelian</code> is set to true, then the code assumes the field to be abelian, hence the algorithm stops when the quotient by the norm group has the correct order. Even though the algorithm is probabilistic by nature, in this case the result is guaranteed. If <code>of_closure</code> is given, then the norm group of the splitting field of the polynomial(s) is computed. It is the callers responsibility to ensure that the ray class group passed in is large enough.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L644' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L644' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.norm_group-Tuple{Hecke.NfRel{nf_elem}, MapRayClassGrp, Bool}' href='#Hecke.norm_group-Tuple{Hecke.NfRel{nf_elem}, MapRayClassGrp, Bool}'>#</a>
 <strong><code>Hecke.norm_group</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">norm_group</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NfRel</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">},</span> <span class="n">mR</span><span class="o">::</span><span class="kt">Hecke</span><span class="o">.</span><span class="n">MapRayClassGrp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAb</span><span class="p">,</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAbMap</span>
@@ -1006,7 +1006,7 @@
 <span class="n">norm_group</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NfRelNS</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">},</span> <span class="n">mR</span><span class="o">::</span><span class="kt">Hecke</span><span class="o">.</span><span class="n">MapRayClassGrp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAb</span><span class="p">,</span> <span class="n">Hecke</span><span class="o">.</span><span class="n">FinGenGrpAbMap</span>
 </code></pre></div>
 <p>Computes the subgroup of the Ray Class Group <script type="math/tex">R</script> given by the norm of the extension.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L627' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L627' class='documenter-source'>source</a><br></p>
 <p><a id='Ray-Class-Fields'></a></p>
 <p><a id='Ray-Class-Fields-1'></a></p>
 <h2 id="ray-class-fields">Ray Class Fields</h2>
@@ -1018,37 +1018,37 @@
 <span class="n">ray_class_field</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">MapRayClassGrp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>Creates the (formal) abelian extension defined by the map <script type="math/tex">m: A \to I</script> where <script type="math/tex">I</script> is the set of ideals coprime to the modulus defining <script type="math/tex">m</script> and <script type="math/tex">A</script>  is a quotient of the ray class group (or class group). The map <script type="math/tex">m</script> must be the map returned from a call to {class<em>group} or {ray</em>class_group}.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L355' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L355' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.ray_class_field-Tuple{Union{Hecke.MapClassGrp, MapRayClassGrp}, GrpAbFinGenMap}' href='#Hecke.ray_class_field-Tuple{Union{Hecke.MapClassGrp, MapRayClassGrp}, GrpAbFinGenMap}'>#</a>
 <strong><code>Hecke.ray_class_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ray_class_field</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">MapClassGrp</span><span class="p">,</span> <span class="kt">MapRayClassGrp</span><span class="p">},</span> <span class="n">quomap</span><span class="o">::</span><span class="kt">GrpAbFinGenMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>For <script type="math/tex">m</script> a map computed by either {ray<em>class</em>group} or {class_group} and <script type="math/tex">q</script> a canonical projection (quotient map) as returned by {quo} for q  quotient of the domain of <script type="math/tex">m</script> and a subgroup of <script type="math/tex">m</script>, create the (formal) abelian extension where the (relative) automorphism group is canonically isomorphic to the codomain of <script type="math/tex">q</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L368' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L368' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.ray_class_field-Tuple{NfAbsOrdIdl}' href='#Hecke.ray_class_field-Tuple{NfAbsOrdIdl}'>#</a>
 <strong><code>Hecke.ray_class_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ray_class_field</span><span class="p">(</span><span class="n">I</span><span class="o">::</span><span class="kt">NfAbsOrdIdl</span><span class="p">;</span> <span class="n">n_quo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The ray class field modulo <script type="math/tex">I</script>. If <code>n_quo</code> is given, then the largest subfield of exponent <script type="math/tex">n</script> is computed.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L397' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L397' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.ray_class_field-Tuple{NfAbsOrdIdl, Vector{InfPlc}}' href='#Hecke.ray_class_field-Tuple{NfAbsOrdIdl, Vector{InfPlc}}'>#</a>
 <strong><code>Hecke.ray_class_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ray_class_field</span><span class="p">(</span><span class="n">I</span><span class="o">::</span><span class="kt">NfAbsOrdIdl</span><span class="p">,</span> <span class="n">inf</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span> <span class="n">n_quo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The ray class field modulo <script type="math/tex">I</script> and the infinite places given. If <code>n_quo</code> is given, then the largest subfield of exponent <script type="math/tex">n</script> is computed.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L407' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L407' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.hilbert_class_field-Tuple{AnticNumberField}' href='#Hecke.hilbert_class_field-Tuple{AnticNumberField}'>#</a>
 <strong><code>Hecke.hilbert_class_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">hilbert_class_field</span><span class="p">(</span><span class="n">k</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The Hilbert class field of <script type="math/tex">k</script> as a formal (ray-) class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L388' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L388' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.ring_class_field-Tuple{NfAbsOrd}' href='#Hecke.ring_class_field-Tuple{NfAbsOrd}'>#</a>
 <strong><code>Hecke.ring_class_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ring_class_field</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfAbsOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The ring class field of <script type="math/tex">O</script>, i.e. the maximal abelian extension ramified only at primes dividing the conductor with the automorphism group isomorphic to the Picard group.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/rcf.jl#L1116' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/rcf.jl#L1116' class='documenter-source'>source</a><br></p>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
@@ -1075,7 +1075,7 @@
 </code></pre></div>
 <p>Given a (formal) abelian extension, compute the class field by finding defining polynomials for all prime power cyclic subfields.</p>
 <p>Note, the return type is always a non-simple extension.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/rcf.jl#L13' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/rcf.jl#L13' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
 <span class="gp">julia&gt;</span> <span class="n">k</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">NumberField</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">);</span>
@@ -1104,25 +1104,25 @@
 <div class="highlight"><pre><span></span><code><span class="n">ray_class_field</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NfRel</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>For a (relative) abelian extension, compute an abstract representation as a class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1071' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1071' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.genus_field-Tuple{ClassField, AnticNumberField}' href='#Hecke.genus_field-Tuple{ClassField, AnticNumberField}'>#</a>
 <strong><code>Hecke.genus_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">genus_field</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">k</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The maximal extension contained in <script type="math/tex">A</script> that is the compositum of <script type="math/tex">K</script> with an abelian extension of <script type="math/tex">k</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1086' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1086' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.maximal_abelian_subfield-Tuple{ClassField, AnticNumberField}' href='#Hecke.maximal_abelian_subfield-Tuple{ClassField, AnticNumberField}'>#</a>
 <strong><code>Hecke.maximal_abelian_subfield</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">maximal_abelian_subfield</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">k</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The maximal abelian extension of <script type="math/tex">k</script> contained in <script type="math/tex">A</script>. <script type="math/tex">k</script> must be a subfield of the base field of <script type="math/tex">A</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L960' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L960' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.maximal_abelian_subfield-Tuple{Hecke.NfRel{nf_elem}}' href='#Hecke.maximal_abelian_subfield-Tuple{Hecke.NfRel{nf_elem}}'>#</a>
 <strong><code>Hecke.maximal_abelian_subfield</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">maximal_abelian_subfield</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NfRel</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">};</span> <span class="n">of_closure</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>Using a probabilistic algorithm for the norm group computation, determine the maximal abelian subfield in <script type="math/tex">K</script> over its base field. If <code>of_closure</code> is set to true, then the algorithm is applied to the normal closure of <script type="math/tex">K</script> (without computing it).</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L935' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L935' class='documenter-source'>source</a><br></p>
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
 <h2 id="invariants">Invariants</h2>
@@ -1131,61 +1131,61 @@
 <div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>The degree of <script type="math/tex">A</script> over its base field, i.e. the size of the defining ideal group.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L88' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L88' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.base_ring-Tuple{ClassField}' href='#AbstractAlgebra.base_ring-Tuple{ClassField}'>#</a>
 <strong><code>AbstractAlgebra.base_ring</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">base_ring</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>The maximal order of the field that <script type="math/tex">A</script> is defined over.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L56' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L56' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.Generic.base_field-Tuple{ClassField}' href='#AbstractAlgebra.Generic.base_field-Tuple{ClassField}'>#</a>
 <strong><code>AbstractAlgebra.Generic.base_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">base_field</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>The number field that <script type="math/tex">A</script> is defined over.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L65' class='documenter-source'>source</a><br></p>
 <p><a id='AbstractAlgebra.discriminant-Tuple{ClassField}' href='#AbstractAlgebra.discriminant-Tuple{ClassField}'>#</a>
 <strong><code>AbstractAlgebra.discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span>
 </code></pre></div>
 <p>Using the conductor-discriminant formula, compute the (relative) discriminant of <script type="math/tex">C</script>. This does not use the defining equations.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L452' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L452' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.conductor-Tuple{ClassField}' href='#Hecke.conductor-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.conductor</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conductor</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span><span class="p">,</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the conductor of the abelian extension corresponding to <script type="math/tex">C</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L193' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L193' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.defining_modulus-Tuple{ClassField}' href='#Hecke.defining_modulus-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.defining_modulus</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">defining_modulus</span><span class="p">(</span><span class="n">CF</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>The modulus, i.e. an ideal of the set of real places, used to create the class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L28' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L28' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.iscyclic-Tuple{ClassField}' href='#Hecke.iscyclic-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.iscyclic</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">iscyclic</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>Tests if the (relative) automorphism group of <script type="math/tex">C</script> is cyclic (by checking the defining ideal group).</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L242' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L242' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.isconductor-Tuple{ClassField, NfOrdIdl, Vector{InfPlc}}' href='#Hecke.isconductor-Tuple{ClassField, NfOrdIdl, Vector{InfPlc}}'>#</a>
 <strong><code>Hecke.isconductor</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isconductor</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">Hecke</span><span class="o">.</span><span class="n">ClassField</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">NfOrdIdl</span><span class="p">,</span> <span class="n">inf_plc</span><span class="o">::</span><span class="kt">Array</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span><span class="o">=</span><span class="n">InfPlc</span><span class="p">[];</span> <span class="n">check</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdIdl</span><span class="p">,</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Checks if (m, inf_plc) is the conductor of the abelian extension corresponding to <script type="math/tex">C</script>. If <code>check</code> is <code>false</code>, it assumes that the given modulus is a multiple of the conductor. This is usually faster than computing the conductor.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L310' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L310' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.isnormal-Tuple{ClassField}' href='#Hecke.isnormal-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.isnormal</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isnormal</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>For a class field <script type="math/tex">C</script> defined over a normal base field <script type="math/tex">k</script>, decide if <script type="math/tex">C</script> is normal over <script type="math/tex">Q</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1176' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1176' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.iscentral-Tuple{ClassField}' href='#Hecke.iscentral-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.iscentral</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">iscentral</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>For a class field <script type="math/tex">C</script> defined over a normal base field <script type="math/tex">k</script>, decide if <script type="math/tex">C</script> is central over <script type="math/tex">Q</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1268' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1268' class='documenter-source'>source</a><br></p>
 <p><a id='Operations'></a></p>
 <p><a id='Operations-1'></a></p>
 <h2 id="operations">Operations</h2>
@@ -1194,67 +1194,67 @@
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The compositum of <script type="math/tex">a</script> and <script type="math/tex">b</script> as a (formal) class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L152' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L152' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.compositum-Tuple{ClassField, ClassField}' href='#Hecke.compositum-Tuple{ClassField, ClassField}'>#</a>
 <strong><code>Hecke.compositum</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">compositum</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The compositum of <script type="math/tex">a</script> and <script type="math/tex">b</script> as a (formal) class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L133' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L133' class='documenter-source'>source</a><br></p>
 <p><a id='Base.:==-Tuple{ClassField, ClassField}' href='#Base.:==-Tuple{ClassField, ClassField}'>#</a>
 <strong><code>Base.:==</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">==</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">a</script> and <script type="math/tex">b</script> are equal.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L213' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L213' class='documenter-source'>source</a><br></p>
 <p><a id='Base.intersect-Tuple{ClassField, ClassField}' href='#Base.intersect-Tuple{ClassField, ClassField}'>#</a>
 <strong><code>Base.intersect</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">intersect</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>The intersection of <script type="math/tex">a</script> and <script type="math/tex">b</script> as a class field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L165' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L165' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.prime_decomposition_type-Tuple{ClassField, NfAbsOrdIdl}' href='#Hecke.prime_decomposition_type-Tuple{ClassField, NfAbsOrdIdl}'>#</a>
 <strong><code>Hecke.prime_decomposition_type</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">prime_decomposition_type</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">NfAbsOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>For a prime <script type="math/tex">p</script> in the base ring of <script type="math/tex">r</script>, determine the splitting type of <script type="math/tex">p</script>  in <script type="math/tex">r</script>. ie. the tuple <script type="math/tex">(e, f, g)</script> giving the ramification degree, the inertia and the number of primes above <script type="math/tex">p</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L320' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L320' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.issubfield-Tuple{ClassField, ClassField}' href='#Hecke.issubfield-Tuple{ClassField, ClassField}'>#</a>
 <strong><code>Hecke.issubfield</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">issubfield</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">b</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Determines if <script type="math/tex">a</script> is a subfield of <script type="math/tex">b</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L190' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L190' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.islocal_norm-Tuple{ClassField, NfAbsOrdElem}' href='#Hecke.islocal_norm-Tuple{ClassField, NfAbsOrdElem}'>#</a>
 <strong><code>Hecke.islocal_norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">islocal_norm</span><span class="p">(</span><span class="n">r</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">a</script> is a local norm at all finite places in the extension implictly given by <script type="math/tex">r</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L305' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L305' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.islocal_norm-Tuple{ClassField, NfAbsOrdElem, NfAbsOrdIdl}' href='#Hecke.islocal_norm-Tuple{ClassField, NfAbsOrdElem, NfAbsOrdIdl}'>#</a>
 <strong><code>Hecke.islocal_norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">islocal_norm</span><span class="p">(</span><span class="n">r</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">NfAbsOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Tests if <script type="math/tex">a</script> is a local norm at <script type="math/tex">p</script> in the extension implictly given by <script type="math/tex">r</script>. Currently the conductor cannot have infinite places.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/class_fields.jl#L275' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/class_fields.jl#L275' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.normal_closure-Tuple{ClassField}' href='#Hecke.normal_closure-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.normal_closure</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">normal_closure</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassField</span>
 </code></pre></div>
 <p>For a ray class field <script type="math/tex">C</script> extending a normal base field <script type="math/tex">k</script>, compute the normal closure over <script type="math/tex">Q</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1129' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1129' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.subfields-Tuple{ClassField}' href='#Hecke.subfields-Tuple{ClassField}'>#</a>
 <strong><code>Hecke.subfields</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">subfields</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">ClassField</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Find all subfields of <script type="math/tex">C</script> as class fields. Note: this will not find all subfields over <script type="math/tex">Q</script>, but only the ones sharing the same base field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1115' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1115' class='documenter-source'>source</a><br></p>
 <p><a id='Hecke.subfields-Tuple{ClassField, Int64}' href='#Hecke.subfields-Tuple{ClassField, Int64}'>#</a>
 <strong><code>Hecke.subfields</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">subfields</span><span class="p">(</span><span class="n">C</span><span class="o">::</span><span class="kt">ClassField</span><span class="p">,</span> <span class="n">d</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="p">{</span><span class="kt">ClassField</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 <p>Find all subfields of <script type="math/tex">C</script> of degree <script type="math/tex">d</script> as class fields. Note: this will not find all subfields over <script type="math/tex">Q</script>, but only the ones sharing the same base field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/0b4acd26a80262c67cbb7e36d42fd88881d83dcf/src/RCF/conductor.jl#L1101' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/96757bdbf19e39270a89bee4435a0c9be20613fe/src/RCF/conductor.jl#L1101' class='documenter-source'>source</a><br></p>
                 
               
               
