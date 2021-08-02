@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#absolute-simple-fields" class="md-skip">
+        <a href="#internals" class="md-skip">
           Skip to content
         </a>
       
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/" class="md-nav__link">
+      <a href="../basics.md" class="md-nav__link">
         Creation and basics
       </a>
     </li>
@@ -292,6 +292,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Internals
@@ -307,6 +309,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -315,8 +319,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#types-of-number-fields" class="md-nav__link">
+    Types of number fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#absolute-simple-fields" class="md-nav__link">
-    Absolute Simple Fields
+    Absolute simple fields
   </a>
   
 </li>
@@ -837,6 +848,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -845,8 +858,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#types-of-number-fields" class="md-nav__link">
+    Types of number fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#absolute-simple-fields" class="md-nav__link">
-    Absolute Simple Fields
+    Absolute simple fields
   </a>
   
 </li>
@@ -864,25 +884,26 @@
               
                 
                 
-                  <h1>Internals</h1>
-                
-                <p>Number fields, in Hecke, come in several different types:</p>
+                <p><a id='Internals'></a></p>
+<p><a id='Internals-1'></a></p>
+<h1 id="internals">Internals</h1>
+<p><a id='Types-of-number-fields'></a></p>
+<p><a id='Types-of-number-fields-1'></a></p>
+<h2 id="types-of-number-fields">Types of number fields</h2>
+<p>Number fields, in Hecke, come in several different types:</p>
 <ul>
-<li><code>AnticNumberField</code>: a finite simple extension of the rational numbers <script type="math/tex">Q</script>
+<li><code>AnticNumberField</code>: a finite simple extension of the rational numbers <script type="math/tex">\mathbf{Q}</script>
 </li>
-<li><code>NfAbsNS</code>: a finite extension of <script type="math/tex">Q</script> given by several polynomials.</li>
-</ul>
-<p>We will refer to this as a non-simple field - even though mathematically  we can find a primitive elements.</p>
-<ul>
-<li><code>NfRel</code>: a finite simple extension of a number field. This is   actually parametried by the (element) type of the coefficient field.  The complete type of an extension of an absolute field (<code>AnticNumberField</code>)  is <code>NfRel{nf_elem}</code>. The next extension thus will be  <code>NfRel{NfRelElem{nf_elem}}</code>.</li>
+<li><code>NfAbsNS</code>: a finite extension of <script type="math/tex">\mathbf{Q}</script> given by several polynomials. We will refer to this as a non-simple field - even though mathematically we can find a primitive elements.</li>
+<li><code>NfRel</code>: a finite simple extension of a number field. This is  actually parametried by the (element) type of the coefficient field. The complete type of an extension of an absolute field (<code>AnticNumberField</code>) is <code>NfRel{nf_elem}</code>. The next extension thus will be <code>NfRel{NfRelElem{nf_elem}}</code>.</li>
 <li><code>NfRelNS</code>: extensions of number fields given by several polynomials.  This too will be refered to as a non-simple field.</li>
 </ul>
 <p>The simple types <code>AnticNumberField</code> and <code>NfRel</code> are also calle simple fields in the rest of this document, <code>NfRel</code> and <code>NfRelNS</code> are referred to as relative extensions while <code>AnticNumberField</code> and <code>NfAbsNS</code> are called absolute.</p>
 <p>Internally, simple fields are essentially just (univariate) polynomial quotients in a dense representation, while non-simple fields are multivariate quotient rings, thus have a sparse presentation. In general, simple fields allow much faster arithmetic, while  the non-simple fields give easy access to large degree fields.</p>
-<p><a id='Absolute-Simple-Fields'></a></p>
-<p><a id='Absolute-Simple-Fields-1'></a></p>
-<h2 id="absolute-simple-fields">Absolute Simple Fields</h2>
-<p>The most basic number field type is that of <code>AnticNumberField</code>. Internally this is essentially represented as a unvariate quotient with the arithmetic provided by the antic-c-library and implemented in Nemo.</p>
+<p><a id='Absolute-simple-fields'></a></p>
+<p><a id='Absolute-simple-fields-1'></a></p>
+<h2 id="absolute-simple-fields">Absolute simple fields</h2>
+<p>The most basic number field type is that of <code>AnticNumberField</code>. Internally this is essentially represented as a unvariate quotient with the arithmetic provided by the C-library antic with the binding provided by Nemo.</p>
                 
               
               

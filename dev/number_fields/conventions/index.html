@@ -18,7 +18,7 @@
     
     
       
-        <title>Pseudo-Matrices - Hecke</title>
+        <title>Conventions - Hecke</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#number-fields" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pseudo-Matrices
+              Conventions
             
           </span>
         </div>
@@ -202,14 +202,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Documentation
@@ -248,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../number_fields/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -260,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../number_fields/basics.md" class="md-nav__link">
+      <a href="../basics.md" class="md-nav__link">
         Creation and basics
       </a>
     </li>
@@ -272,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../number_fields/elements/" class="md-nav__link">
+      <a href="../elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -284,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../number_fields/internal/" class="md-nav__link">
+      <a href="../internal/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -651,14 +649,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       <label class="md-nav__link" for="__nav_2_7">
         Misc
@@ -698,65 +694,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Pseudo-Matrices
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../pmat/introduction/" class="md-nav__link">
         Pseudo-Matrices
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creation" class="md-nav__link">
-    Creation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -855,8 +797,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -865,22 +805,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creation" class="md-nav__link">
-    Creation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#number-fields" class="md-nav__link">
+    Number fields
   </a>
   
 </li>
@@ -898,74 +824,42 @@
               
                 
                 
-                <p><a id='PMatLink'></a></p>
-<p><a id='PMatLink-1'></a></p>
-<h1 id="introduction">Introduction</h1>
-<p>This chapter deals with pseudo-matrices. We follow the common terminology and conventions introduced in <a href="@cite">Cohen2</a>, however, we operate on rows, not on columns.</p>
-<p>Let <script type="math/tex">R</script> be a Dedekind domain, typically, the maximal order of some number field <script type="math/tex">K</script>, further fix some finite dimensional <script type="math/tex">K</script>-vectorspace <script type="math/tex">V</script> (with some basis), frequently <script type="math/tex">K^n</script> or the <script type="math/tex">K</script>-structure of some extension of <script type="math/tex">K</script>. Since in general <script type="math/tex">R</script> is not a PID, the <script type="math/tex">R</script>-modules in <script type="math/tex">V</script> are usually not free, but still projective. </p>
-<p>Any finitely generated <script type="math/tex">R</script>-module <script type="math/tex">M\subset V</script> can be represented as a pseudo-matrix <code>PMat</code> as follows: The structure theory of <script type="math/tex">R</script>-modules gives the existence of (fractional) <script type="math/tex">R</script>-ideals <script type="math/tex">\mathfrak A_i</script> and elements <script type="math/tex">\omega_i\in V</script> such that <script type="math/tex">M = \sum \mathfrak A_i \omega_i</script> and the sum is direct.</p>
-<p>Following Cohen we call modules of the form <script type="math/tex">\mathfrak A\omega</script> for some ideal <script type="math/tex">\mathfrak A</script> and <script type="math/tex">\omega \in V</script> a <em>pseudo element</em>. A system <script type="math/tex">(\mathfrak A_i, \omega_i)</script> is called a pseudo-generating system for <script type="math/tex">M</script> if <script type="math/tex">\langle \mathfrak A_i\omega_i|i\langle = M</script>. A pseudo-generating system is called a pseudo-basis if the  <script type="math/tex">\omega_i</script> are <script type="math/tex">K</script>-linear independent.</p>
-<p>A <em>pseudo-matrix</em> <script type="math/tex">X</script> is a tuple containing a vector of ideals <script type="math/tex">\mathfrak A_i</script> (<script type="math/tex">1\le i\le r</script>) and a matrix <script type="math/tex">U\in K^{r\times n}</script>. The <script type="math/tex">i</script>-th row together with the <script type="math/tex">i</script>-th ideal defines a pseudo-element, thus an <script type="math/tex">R</script>-module, all of them together generate a module <script type="math/tex">M</script>.</p>
-<p>A pseudo-matrix <script type="math/tex">X=((\mathfrak A_i)_i, U)</script> is said to be in pseudo-hnf if <script type="math/tex">U</script> is essentially upper triangular. Similar to the classical hnf, there is an algorithm that transforms any pseudo-matrix into one in pseudo-hnf while maintaining the module.</p>
-<p><a id='Creation'></a></p>
-<p><a id='Creation-1'></a></p>
-<h2 id="creation">Creation</h2>
-<p>In general to create a <code>PMat</code> one has to specify a matrix and a vector of ideals:</p>
-<p><a id='PseudoMatrix-Tuple{MatElem{nf_elem}, Vector{NfOrdIdl}}' href='#PseudoMatrix-Tuple{MatElem{nf_elem}, Vector{NfOrdIdl}}'>#</a>
-<strong><code>PseudoMatrix</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PseudoMatrix</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">Generic</span><span class="o">.</span><span class="kt">Mat</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">},</span> <span class="n">c</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">PMat</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">,</span> <span class="kt">NfOrdFracIdl</span><span class="p">}</span>
-</code></pre></div>
-<p>Returns the (row) pseudo matrix representing the <script type="math/tex">Z_k</script>-module  <script type="math/tex">\sum c_i m_i</script>  where <script type="math/tex">c_i</script> are the ideals in <script type="math/tex">c</script> and <script type="math/tex">m_i</script> the rows of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L277' class='documenter-source'>source</a><br></p>
-<p><a id='PseudoMatrix-Tuple{AbstractAlgebra.Generic.Mat{NfOrdElem}, Vector{NfOrdIdl}}' href='#PseudoMatrix-Tuple{AbstractAlgebra.Generic.Mat{NfOrdElem}, Vector{NfOrdIdl}}'>#</a>
-<strong><code>PseudoMatrix</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PseudoMatrix</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">Generic</span><span class="o">.</span><span class="kt">Mat</span><span class="p">{</span><span class="kt">NfOrdElem</span><span class="p">},</span> <span class="n">c</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">PMat</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">,</span> <span class="kt">NfOrdFracIdl</span><span class="p">}</span>
-</code></pre></div>
-<p>Returns the (row) pseudo matrix representing the <script type="math/tex">Z_k</script>-module  <script type="math/tex">\sum c_i m_i</script>  where <script type="math/tex">c_i</script> are the ideals in <script type="math/tex">c</script> and <script type="math/tex">m_i</script> the rows of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L290' class='documenter-source'>source</a><br></p>
-<p><a id='PseudoMatrix-Tuple{AbstractAlgebra.Generic.Mat{nf_elem}}' href='#PseudoMatrix-Tuple{AbstractAlgebra.Generic.Mat{nf_elem}}'>#</a>
-<strong><code>PseudoMatrix</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PseudoMatrix</span><span class="p">(</span><span class="n">m</span><span class="o">::</span><span class="kt">Generic</span><span class="o">.</span><span class="kt">Mat</span><span class="p">{</span><span class="kt">NfOrdElem</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">PMat</span><span class="p">{</span><span class="kt">nf_elem</span><span class="p">,</span> <span class="kt">NfOrdFracIdl</span><span class="p">}</span>
-</code></pre></div>
-<p>Returns the free (row) pseudo matrix representing the <script type="math/tex">Z_k</script>-module  <script type="math/tex">\sum Z_k m_i</script>  where <script type="math/tex">m_i</script> are the rows of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L304' class='documenter-source'>source</a><br></p>
-<p>(Those functions are also available as <code>pseudo_matrix</code>)</p>
-<p><a id='Operations'></a></p>
-<p><a id='Operations-1'></a></p>
-<h2 id="operations">Operations</h2>
-<p><a id='coefficient_ideals-Tuple{Hecke.PMat}' href='#coefficient_ideals-Tuple{Hecke.PMat}'>#</a>
-<strong><code>coefficient_ideals</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">coefficient_ideals</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span>
-</code></pre></div>
-<p>Returns the vector of coefficient ideals.    </p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L249' class='documenter-source'>source</a><br></p>
-<p><a id='matrix-Tuple{Hecke.PMat}' href='#matrix-Tuple{Hecke.PMat}'>#</a>
-<strong><code>matrix</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">matrix</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span>
-</code></pre></div>
-<p>Returns the matrix part of the <code>PMat</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L256' class='documenter-source'>source</a><br></p>
-<p><a id='base_ring-Tuple{Hecke.PMat}' href='#base_ring-Tuple{Hecke.PMat}'>#</a>
-<strong><code>base_ring</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">base_ring</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span>
-</code></pre></div>
-<p>The <code>PMat</code> <script type="math/tex">M</script> defines an <script type="math/tex">R</script>-module for soem maximal order <script type="math/tex">R</script>. This function returns the <script type="math/tex">R</script> that was used to defined <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L263' class='documenter-source'>source</a><br></p>
-<p><a id='pseudo_hnf-Tuple{Hecke.PMat{nf_elem, Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}}}' href='#pseudo_hnf-Tuple{Hecke.PMat{nf_elem, Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}}}'>#</a>
-<strong><code>pseudo_hnf</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">pseudo_hnf</span><span class="p">(</span><span class="n">P</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span>
-</code></pre></div>
-<p>Transforms <script type="math/tex">P</script> into pseudo-Hermite form as defined by Cohen. Essentially the matrix part of <script type="math/tex">P</script> will be upper triangular with some technical normalisation for the off-diagonal elements. This operation preserves the module.</p>
-<p>A optional second argument can be secified as a symbols, indicating the desiered shape of the echelon form. Possible are <code>:upperright</code> (the default) and <code>:lowerleft</code></p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L477' class='documenter-source'>source</a><br></p>
-<p><a id='pseudo_hnf_with_transform-Tuple{Hecke.PMat{nf_elem, Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}}}' href='#pseudo_hnf_with_transform-Tuple{Hecke.PMat{nf_elem, Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}}}'>#</a>
-<strong><code>pseudo_hnf_with_transform</code></strong> &mdash; <em>Method</em>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">pseudo_hnf_with_transform</span><span class="p">(</span><span class="n">P</span><span class="o">::</span><span class="kt">PMat</span><span class="p">)</span>
-</code></pre></div>
-<p>Transforms <script type="math/tex">P</script> into pseudo-Hermite form as defined by Cohen. Essentially the matrix part of <script type="math/tex">P</script> will be upper triangular with some technical normalisation for the off-diagonal elements. This operation preserves the module. The used transformation is returned as a second return value.</p>
-<p>A optional second argument can be secified as a symbols, indicating the desiered shape of the echelon form. Possible are <code>:upperright</code> (the default) and <code>:lowerleft</code></p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8763f0f3c3374f4c9a726047d9ce690d7b6a20f8/src/NfOrd/LinearAlgebra.jl#L503' class='documenter-source'>source</a><br></p>
-<h2 id="examples">Examples</h2>
+                  <h1>Conventions</h1>
+                
+                <p><a id='Number-fields'></a></p>
+<p><a id='Number-fields-1'></a></p>
+<h3 id="number-fields">Number fields</h3>
+<p>By an absolute number field we mean finite extensions of <script type="math/tex">\mathbf Q</script>, which is of type <code>AnticNumberField</code> and whose elements are of type <code>nf_elem</code>. Such an absolute number field <script type="math/tex">K</script> is always given in the form <script type="math/tex">K = \mathbf Q(\alpha) = \mathbf Q[X]/(f)</script>, where <script type="math/tex">f \in \mathbf Q[X]</script> is an irreducible polynomial. See <a href="../intro/#NumberFieldsLink">here</a> for more information on the different types of fields supported.</p>
+<p>We call <script type="math/tex">(1,\alpha,\alpha^2,\dotsc,\alpha^{d-1})</script>, where <script type="math/tex">d</script> is the degree <script type="math/tex">[K : \mathbf Q]</script> the <em>power basis</em> of <script type="math/tex">K</script>. If <script type="math/tex">\beta</script> is any element of <script type="math/tex">K</script>, then the <em>representation matrix</em> of <script type="math/tex">\beta</script> is the matrix representing <script type="math/tex">K \to K, \gamma \mapsto \beta \gamma</script> with respect to the power basis, that is,</p>
+<p>
+<script type="math/tex; mode=display">
+\beta \cdot (1,\alpha,\dotsc,\alpha^{d-1}) = M_\alpha (1, \alpha, \dotsc, \alpha^{d-1}).
+</script>
+</p>
+<p>Let <script type="math/tex">(r,s)</script> be the signature of <script type="math/tex">K</script>, that is, <script type="math/tex">K</script> has <script type="math/tex">r</script> real embeddings <script type="math/tex">\sigma_i \colon K \to \mathbf{R}</script>, <script type="math/tex">1 \leq i \leq r</script>, and <script type="math/tex">2s</script> complex embeddings <script type="math/tex">\sigma_i \colon K \to \mathbf{C}</script>, <script type="math/tex">1 \leq i \leq 2s</script>. In Hecke the complex embeddings are always ordered such that <script type="math/tex">\sigma_i = \overline{\sigma_{i+s}}</script> for <script type="math/tex">r + 1 \leq i \leq r + s</script>. The <script type="math/tex">\mathbf{Q}</script>-linear function</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{gather*}
+  K \longrightarrow \mathbf R^{d} \\
+  \alpha \longmapsto \Bigl( \sigma_1(\alpha), \dotsc, \sigma_r(\alpha), \sqrt{2}\operatorname{Re}\bigl(\sigma_{r+1}(\alpha)\bigr), \sqrt{2}\operatorname{Im}\bigl(\sigma_{r+1}(\alpha)\bigr), \dotsc, \sqrt{2}\operatorname{Re}\bigl(\sigma_{r+s}(\alpha)\bigr), \sqrt{2}\operatorname{Im}\bigl(\sigma_{r+s}(\alpha)\bigr) \Bigr)
+\end{gather*}
+</script>
+</p>
+<p>is called the <em>Minkowski map</em> (or <em>Minkowski embedding</em>).</p>
+<p>If <script type="math/tex">K = \mathbf Q(\alpha)</script> is an absolute number field, then an <em>order</em> <script type="math/tex">\mathcal O</script> of <script type="math/tex">K</script> is a subring of the ring of integers <script type="math/tex">\mathcal O_K</script>, which is free of rank <script type="math/tex">[ K : \mathbf Q]</script> as a <script type="math/tex">\mathbf Z</script>-module. The natural order <script type="math/tex">\mathbf Z[\alpha]</script> is called the <em>equation order</em> of <script type="math/tex">K</script>. In Hecke orders of absolute number fields are constructed (implicitely) by specifying a <script type="math/tex">\mathbf Z</script>-basis, which is refered to as the <em>basis</em> of <script type="math/tex">\mathcal O</script>. If <script type="math/tex">(\omega_1,\dotsc,\omega_d)</script> is the basis of <script type="math/tex">\mathcal O</script>, then the matrix <script type="math/tex">B \in \operatorname{Mat}_{d \times d}(\mathbf Q)</script> with</p>
+<p>is called the <em>basis matrix</em> of <script type="math/tex">\mathcal O</script>. We call <script type="math/tex">\det(B)</script> the <em>generalized index</em> of <script type="math/tex">\mathcal O</script>.  In case <script type="math/tex">\mathbf Z[\alpha] \subseteq \mathcal O</script>, the determinant <script type="math/tex">\det(B)^{-1}</script> is in fact equal to <script type="math/tex">[ \mathcal O : \mathbf Z[\alpha]]</script> and is called the <em>index</em> of <script type="math/tex">\mathcal O</script>. The matrix</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{pmatrix} 
+\sigma_1(\omega_1) & \dotsc & \sigma_r(\omega_1) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_1)) & \sqrt{2}\operatorname{Im}(\sigma_{r+1}(\omega_1)) & \dotsc & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_1)) \\\\
+\sigma_1(\omega_2) & \dotsc & \sigma_r(\omega_2) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_2)) & \sqrt{2}\operatorname{Im}(\sigma_{r+1}(\omega_2)) & \dotsc  & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_2)) \\\\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots\\\\
+\sigma_1(\omega_d) & \dotsc & \sigma_r(\omega_d) & \sqrt{2}\operatorname{Re}(\sigma_{r+1}(\omega_d)) & \sqrt{2}\operatorname{Im}(\sigma_{r+2}(\omega_d)) & \dotsc & \sqrt{2}\operatorname{Im}(\sigma_{r+s}(\omega_d))
+\end{pmatrix}
+\in \operatorname{Mat}_{d\times d}(\mathbf R).
+</script>
+</p>
+<p>is called the <em>Minkowski matrix</em> of <script type="math/tex">\mathcal O</script>.</p>
                 
               
               
@@ -981,41 +875,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../sparse/intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sparse Linear Algebra" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Sparse Linear Algebra
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../misc/" class="md-footer__link md-footer__link--next" aria-label="Next: Misc" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Misc
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
