@@ -953,7 +953,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">Localization</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">RationalFunctionField</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="o">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">degree</span><span class="p">))</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
 </code></pre></div>
 <p>Return the localization of <script type="math/tex">k[1/x]</script> at <script type="math/tex">(1/x)</script> inside the rational function field <script type="math/tex">k(x)</script>, i.e. the localization of the function field at the point at infinity, i.e. the valuation ring for valuation <script type="math/tex">-</script>degree<script type="math/tex">(x)</script>. This is the ring <script type="math/tex">k_\infty(x) = \{ f/g | \deg(f) \leq \deg(g)\}</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L506' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L506' class='documenter-source'>source</a><br></p>
 <hr />
 <details class="note"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">julia</span><span class="o">&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">RationalFunctionField</span><span class="p">(</span><span class="n">FlintQQ</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
 
@@ -990,39 +990,39 @@
 <div class="highlight"><pre><span></span><code> <span class="n">degree</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">)</span>
 </code></pre></div>
 <p>Return the degree of the given element, i.e. <code>degree(numerator) - degree(denominator)</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L79' class='documenter-source'>source</a><br></p>
 <p><a id='valuation-Tuple{KInftyElem}' href='#valuation-Tuple{KInftyElem}'>#</a>
 <strong><code>valuation</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">valuation</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">)</span>
 </code></pre></div>
 <p>Return the degree valuation of the given element, i.e. <code>-degree(a)</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L87' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L87' class='documenter-source'>source</a><br></p>
 <p>One can test whether a given element of a rational function field is in the degree localization.</p>
 <p>&lt;a id='in-Union{Tuple{T}, Tuple{AbstractAlgebra.Generic.Rat{T}, KInftyRing{T}}} where T&lt;:FieldElement' href='#in-Union{Tuple{T}, Tuple{AbstractAlgebra.Generic.Rat{T}, KInftyRing{T}}} where T&lt;:FieldElement'&gt;#</a>
 <strong><code>in</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">in</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">Generic</span><span class="o">.</span><span class="kt">Rat</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">R</span><span class="o">::</span><span class="kt">KInftyRing</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
 </code></pre></div>
 <p>Return <code>true</code> if the given element of the rational function field is an element of <code>k_\infty(x)</code>, i.e. if <code>degree(numerator) &lt;= degree(denominator)</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L107' class='documenter-source'>source</a><br></p>
 <p>All basic arithmetic operations are provided for elements of the degree localization. In addition the following are provided.</p>
 <p>&lt;a id='inv-Union{Tuple{KInftyElem{T}}, Tuple{T}, Tuple{KInftyElem{T}, Bool}} where T&lt;:FieldElement' href='#inv-Union{Tuple{KInftyElem{T}}, Tuple{T}, Tuple{KInftyElem{T}, Bool}} where T&lt;:FieldElement'&gt;#</a>
 <strong><code>inv</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code> <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>  <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
 </code></pre></div>
 <p>Returns the inverse element of <script type="math/tex">a</script> if <script type="math/tex">a</script> is a unit. If 'checked = false' the invertibility of <script type="math/tex">a</script> is not checked and the corresponding inverse element of the rational function field is returned.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L205' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L205' class='documenter-source'>source</a><br></p>
 <p>&lt;a id='divides-Union{Tuple{T}, Tuple{KInftyElem{T}, KInftyElem{T}}, Tuple{KInftyElem{T}, KInftyElem{T}, Bool}} where T&lt;:FieldElement' href='#divides-Union{Tuple{T}, Tuple{KInftyElem{T}, KInftyElem{T}}, Tuple{KInftyElem{T}, KInftyElem{T}, Bool}} where T&lt;:FieldElement'&gt;#</a>
 <strong><code>divides</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code> <span class="n">divides</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">FieldElement</span>
 </code></pre></div>
 <p>Returns tuple <code>(flag, c)</code> where <code>flag = true</code> if <script type="math/tex">b</script> divides <script type="math/tex">a</script> and <script type="math/tex">a = bc</script>, otherwise <code>flag = false</code> and <script type="math/tex">c = 0</script>. If <code>checked = false</code> the corresponding element of the rational function field is returned and it is not checked whether it is an element of the given localization.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L222' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L222' class='documenter-source'>source</a><br></p>
 <p>&lt;a id='divexact-Union{Tuple{T}, Tuple{KInftyElem{T}, KInftyElem{T}}, Tuple{KInftyElem{T}, KInftyElem{T}, Bool}} where T&lt;:FieldElement' href='#divexact-Union{Tuple{T}, Tuple{KInftyElem{T}, KInftyElem{T}}, Tuple{KInftyElem{T}, KInftyElem{T}, Bool}} where T&lt;:FieldElement'&gt;#</a>
 <strong><code>divexact</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code> <span class="n">divexact</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">b</span><span class="o">::</span><span class="kt">KInftyElem</span><span class="p">{</span><span class="kt">T</span><span class="p">},</span> <span class="n">checked</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>  <span class="k">where</span> <span class="p">{</span><span class="kt">T</span> <span class="o">&lt;:</span> <span class="kt">nf_elem</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns element 'c' of given localization such that <script type="math/tex">a = bc</script> if such element exists. If <code>checked = false</code> the corresponding element of the rational function field is returned and it is not checked whether it is an element of the given localization.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/befc4a72107ea5472a8cb4e895b0f11c23cd7eda/src/FunField/DegreeLocalization.jl#L244' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/e41cc8f14537b02b7497b3127ce2f24ad762969e/src/FunField/DegreeLocalization.jl#L244' class='documenter-source'>source</a><br></p>
 <p>As the degree localization is a Euclidean ring, all standard Euclidean functions, including <code>div</code>, <code>divrem</code>, <code>mod</code>, <code>gcd</code>, <code>gcdx</code>, are provided.</p>
                 
               
