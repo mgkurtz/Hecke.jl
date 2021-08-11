@@ -260,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../number_fields/basics.md" class="md-nav__link">
+      <a href="../../number_fields/fields/" class="md-nav__link">
         Creation and basics
       </a>
     </li>
@@ -814,6 +814,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://www.github.com/thofma/Hecke.jl" class="md-nav__link">
         Source
       </a>
@@ -882,13 +897,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Matrix</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="kt">Map</span><span class="p">{</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="kt">GrpAbFinGen</span><span class="p">}})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Given groups <script type="math/tex">G</script> and <script type="math/tex">H</script> that are created as direct products as well as a matrix <script type="math/tex">A</script> containing maps <script type="math/tex">A[i,j] : G_i \to H_j</script>, return the induced homomorphism.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/367c0b358e8b05aeb2d89a9c7b43b1e6847f1fba/src/GrpAb/GrpAbFinGen.jl#L678' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/4c7d80cabfbd03af569cfb2f89603d039c94df9f/src/GrpAb/GrpAbFinGen.jl#L678' class='documenter-source'>source</a><br></p>
 <p><a id='isisomorphic-Tuple{GrpAbFinGen, GrpAbFinGen}' href='#isisomorphic-Tuple{GrpAbFinGen, GrpAbFinGen}'>#</a>
 <strong><code>isisomorphic</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">G</script> and <script type="math/tex">H</script> are isomorphic.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/367c0b358e8b05aeb2d89a9c7b43b1e6847f1fba/src/GrpAb/GrpAbFinGen.jl#L575' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/4c7d80cabfbd03af569cfb2f89603d039c94df9f/src/GrpAb/GrpAbFinGen.jl#L575' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="go">GrpAb: Z^2</span>
 
