@@ -9,12 +9,11 @@
         <meta name="description" content="Hecke">
       
       
-      
         <meta name="author" content="Tommy Hofmann">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.1">
     
     
       
@@ -22,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
         
           
           
@@ -39,9 +38,8 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../assets/Documenter.css">
@@ -50,6 +48,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
     
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
 
@@ -67,7 +66,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="bluey-grey">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -83,6 +81,7 @@
     <div data-md-component="announce">
       
     </div>
+    
     
       
 
@@ -119,8 +118,7 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -594,7 +592,6 @@
       
         
 
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -987,7 +984,6 @@
                   <div class="md-sidebar__inner">
                     
 
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1041,8 +1037,8 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <p><a id='Basics'></a></p>
+
+<p><a id='Basics'></a></p>
 <p><a id='Basics-1'></a></p>
 <h1 id="basics">Basics</h1>
 <p><a id='Creation-of-spaces'></a></p>
@@ -1053,13 +1049,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">quadratic_space</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuadSpace</span>
 </code></pre></div>
 <p>Create the quadratic space over <code>K</code> with dimension <code>n</code> and Gram matrix equal to the identity matrix.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L16' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L16' class='documenter-source'>source</a><br></p>
 <p><a id='quadratic_space-Tuple{NumField, MatElem}' href='#quadratic_space-Tuple{NumField, MatElem}'>#</a>
 <strong><code>quadratic_space</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">quadratic_space</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">G</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuadSpace</span>
 </code></pre></div>
 <p>Create the quadratic space over <code>K</code> with Gram matrix <code>G</code>. The matrix <code>G</code> must be square and symmetric.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L28' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L28' class='documenter-source'>source</a><br></p>
 <p><a id='Attributes'></a></p>
 <p><a id='Attributes-1'></a></p>
 <h2 id="attributes">Attributes</h2>
@@ -1068,43 +1064,43 @@
 <div class="highlight"><pre><span></span><code><span class="n">rank</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Return the rank of the quadratic space <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L63' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L63' class='documenter-source'>source</a><br></p>
 <p><a id='dim-Tuple{Hecke.AbsSpace}' href='#dim-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>dim</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">dim</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Return the dimension of the space <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L70' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L70' class='documenter-source'>source</a><br></p>
 <p><a id='gram_matrix-Tuple{Hecke.AbsSpace}' href='#gram_matrix-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>gram_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">gram_matrix</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Return the Gram matrix of <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L77' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L77' class='documenter-source'>source</a><br></p>
 <p><a id='involution-Tuple{Hecke.AbsSpace}' href='#involution-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>involution</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">involution</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span>
 </code></pre></div>
 <p>Return the involution of <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L100' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L100' class='documenter-source'>source</a><br></p>
 <p><a id='isregular-Tuple{Hecke.AbsSpace}' href='#isregular-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>isregular</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isregular</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Return whether <code>V</code> is regular, that is, if the Gram matrix has full rank.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L114' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L114' class='documenter-source'>source</a><br></p>
 <p><a id='det-Tuple{Hecke.AbsSpace}' href='#det-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>det</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">det</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FieldElem</span>
 </code></pre></div>
 <p>Returns the determinant of the space <code>V</code> as an element of the fixed field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L149' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L149' class='documenter-source'>source</a><br></p>
 <p><a id='discriminant-Tuple{Hecke.AbsSpace}' href='#discriminant-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FieldElem</span>
 </code></pre></div>
 <p>Returns the discriminant of the space <code>V</code> as an element of the fixed field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L156' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L156' class='documenter-source'>source</a><br></p>
 <p><a id='Inner-products-and-diagonalization'></a></p>
 <p><a id='Inner-products-and-diagonalization-1'></a></p>
 <h2 id="inner-products-and-diagonalization">Inner products and diagonalization</h2>
@@ -1113,32 +1109,32 @@
 <div class="highlight"><pre><span></span><code><span class="n">gram_matrix</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">MatElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Returns the gram matrix of the rows of <code>M</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L187' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L187' class='documenter-source'>source</a><br></p>
 <p><a id='gram_matrix-Union{Tuple{U}, Tuple{T}, Tuple{Hecke.AbsSpace{T}, Array{Vector{U}, 1}}} where {T, U}' href='#gram_matrix-Union{Tuple{U}, Tuple{T}, Tuple{Hecke.AbsSpace{T}, Array{Vector{U}, 1}}} where {T, U}'>#</a>
 <strong><code>gram_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">gram_matrix</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">,</span> <span class="n">S</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Vector</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Returns the gram matrix of the sequence <code>S</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L202' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L202' class='documenter-source'>source</a><br></p>
 <p><a id='inner_product-Tuple{Hecke.AbsSpace, Vector{T} where T, Vector{T} where T}' href='#inner_product-Tuple{Hecke.AbsSpace, Vector{T} where T, Vector{T} where T}'>#</a>
 <strong><code>inner_product</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">inner_product</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">,</span> <span class="n">v</span><span class="o">::</span><span class="kt">Vector</span><span class="p">,</span> <span class="n">w</span><span class="o">::</span><span class="kt">Vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FieldElem</span>
 </code></pre></div>
 <p>Returns the inner product of <code>v</code> and <code>w</code> with respect to <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L220' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L220' class='documenter-source'>source</a><br></p>
 <p><a id='orthogonal_basis-Tuple{Hecke.AbsSpace}' href='#orthogonal_basis-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>orthogonal_basis</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">orthogonal_basis</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Returns a matrix <code>M</code>, such that the rows of <code>M</code> form an orthgonal basis of <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L233' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L233' class='documenter-source'>source</a><br></p>
 <p><a id='diagonal-Tuple{Hecke.AbsSpace}' href='#diagonal-Tuple{Hecke.AbsSpace}'>#</a>
 <strong><code>diagonal</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">diagonal</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">FieldElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns a vector of elements <script type="math/tex">a_1,\dotsc,a_n</script> such that <code>V</code> is isometric to the diagonal space <script type="math/tex">\langle a_1,\dotsc,a_n \rangle</script>.</p>
 <p>The elements will be contained in the fixed field of <code>V</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L243' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L243' class='documenter-source'>source</a><br></p>
 <p><a id='Equivalence'></a></p>
 <p><a id='Equivalence-1'></a></p>
 <h2 id="equivalence">Equivalence</h2>
@@ -1147,20 +1143,20 @@
 <div class="highlight"><pre><span></span><code><span class="n">hasse_invariant</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">QuadSpace</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the Hasse invariant of the quadratic space <code>V</code> at <code>p</code>. This is equal to the product of local Hilbert symbols <script type="math/tex">(a_i, a_j)_p</script>, <script type="math/tex">i < j</script>, where <script type="math/tex">V</script> is isometric to <script type="math/tex">\langle a_1,\dotsc,a_n\rangle</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L121' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L121' class='documenter-source'>source</a><br></p>
 <p><a id='witt_invariant-Tuple{Hecke.QuadSpace, Any}' href='#witt_invariant-Tuple{Hecke.QuadSpace, Any}'>#</a>
 <strong><code>witt_invariant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">witt_invariant</span><span class="p">(</span><span class="n">V</span><span class="o">::</span><span class="kt">QuadSpace</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the Witt invariant of the quadratic space <code>V</code> at <code>p</code>.</p>
 <p>See [Definition 3.2.1, Kir16].</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L230' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L230' class='documenter-source'>source</a><br></p>
 <p><a id='isequivalent-Tuple{Hecke.AbsSpace, Hecke.AbsSpace, Any}' href='#isequivalent-Tuple{Hecke.AbsSpace, Hecke.AbsSpace, Any}'>#</a>
 <strong><code>isequivalent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isequivalent</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsSpace</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <code>L</code> and <code>M</code> are equivalent over the completion at <code>p</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Spaces.jl#L341' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Spaces.jl#L341' class='documenter-source'>source</a><br></p>
 <p><a id='invariants-Tuple{Hecke.QuadSpace}' href='#invariants-Tuple{Hecke.QuadSpace}'>#</a>
 <strong><code>invariants</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">invariants</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">QuadSpace</span><span class="p">)</span>
@@ -1168,18 +1164,13 @@
 </code></pre></div>
 <p>Returns a tuple <code>(n, k, d, H, I)</code> of invariants of <code>M</code>, which determine the equivalence class completely. Here <code>n</code> is the dimension. The dimension of the kernel is <code>k</code>. The element <code>d</code> is the determinant of a Gram matrix of the non-degenerate part, <code>H</code> contains the non-trivial Hasse invariants and <code>I</code> contains for each real place the negative index of inertia.</p>
 <p>Note that <code>d</code> is determined only modulo squares.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L346' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L346' class='documenter-source'>source</a><br></p>
 <p><a id='isequivalent-Tuple{Hecke.QuadSpace, Hecke.QuadSpace}' href='#isequivalent-Tuple{Hecke.QuadSpace, Hecke.QuadSpace}'>#</a>
 <strong><code>isequivalent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isequivalent</span><span class="p">(</span><span class="n">M</span><span class="o">::</span><span class="kt">QuadSpace</span><span class="p">,</span> <span class="n">L</span><span class="o">::</span><span class="kt">QuadSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Tests if <code>M</code> and <code>L</code> are equivalent.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Spaces.jl#L366' class='documenter-source'>source</a><br></p>
-                
-              
-              
-                
-
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Spaces.jl#L366' class='documenter-source'>source</a><br></p>
 
               
             </article>
@@ -1188,8 +1179,7 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -1228,30 +1218,29 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/thofma" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://github.com/thofma" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1260,10 +1249,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a87c2adc.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       

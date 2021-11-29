@@ -9,12 +9,11 @@
         <meta name="description" content="Hecke">
       
       
-      
         <meta name="author" content="Tommy Hofmann">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.1">
     
     
       
@@ -22,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.816931ca.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
         
           
           
@@ -39,9 +38,8 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../assets/Documenter.css">
@@ -50,6 +48,7 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
     
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
     
       
 
@@ -67,7 +66,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="bluey-grey">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -83,6 +81,7 @@
     <div data-md-component="announce">
       
     </div>
+    
     
       
 
@@ -119,8 +118,7 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -608,7 +606,6 @@
       
         
 
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1049,7 +1046,6 @@
                   <div class="md-sidebar__inner">
                     
 
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1165,8 +1161,8 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <p><a id='Quadratic-and-hermitian-lattices'></a></p>
+
+<p><a id='Quadratic-and-hermitian-lattices'></a></p>
 <p><a id='Quadratic-and-hermitian-lattices-1'></a></p>
 <h1 id="quadratic-and-hermitian-lattices">Quadratic and hermitian lattices</h1>
 <p><a id='Creation-of-lattices'></a></p>
@@ -1178,28 +1174,28 @@
 </code></pre></div>
 <p>Given a number field <script type="math/tex">K</script> and a matrix <script type="math/tex">B</script>, returns the quadratic lattice spanned by the rows of <script type="math/tex">B</script> inside the quadratic space over <script type="math/tex">K</script> with gram matrix <script type="math/tex">F</script>.</p>
 <p>If <script type="math/tex">F</script> is not supplied, the gram matrix of the ambient space will be the identity matrix.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Lattices.jl#L48' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Lattices.jl#L48' class='documenter-source'>source</a><br></p>
 <p><a id='quadratic_lattice-Tuple{NumField, Hecke.PMat}' href='#quadratic_lattice-Tuple{NumField, Hecke.PMat}'>#</a>
 <strong><code>quadratic_lattice</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">quadratic_lattice</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">PMat</span><span class="p">;</span> <span class="n">gram_ambient_space</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QuadLat</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">K</script> and a pseudo-matrix <script type="math/tex">B</script>, returns the quadratic lattice spanned by the pseudo-matrix <script type="math/tex">B</script> inside the quadratic space over <script type="math/tex">K</script> with gram matrix <script type="math/tex">F</script>.</p>
 <p>If <script type="math/tex">F</script> is not supplied, the gram matrix of the ambient space will be the identity matrix.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Quad/Lattices.jl#L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Quad/Lattices.jl#L19' class='documenter-source'>source</a><br></p>
 <p><a id='hermitian_lattice-Tuple{NumField, MatElem}' href='#hermitian_lattice-Tuple{NumField, MatElem}'>#</a>
 <strong><code>hermitian_lattice</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">hermitian_lattice</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">MatElem</span><span class="p">;</span> <span class="n">gram_ambient_space</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HermLat</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">K</script> and a matrix <script type="math/tex">B</script>, returns the hermitian lattice spanned by the rows of <script type="math/tex">B</script> inside the hermitian space over <script type="math/tex">K</script> with gram matrix <script type="math/tex">F</script>.</p>
 <p>If <script type="math/tex">F</script> is not supplied, the gram matrix of the ambient space will be the identity matrix.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Lattices.jl#L57' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Lattices.jl#L57' class='documenter-source'>source</a><br></p>
 <p><a id='hermitian_lattice-Tuple{NumField, Hecke.PMat}' href='#hermitian_lattice-Tuple{NumField, Hecke.PMat}'>#</a>
 <strong><code>hermitian_lattice</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">hermitian_lattice</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">,</span> <span class="n">B</span><span class="o">::</span><span class="kt">PMat</span><span class="p">;</span> <span class="n">gram_ambient_space</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HermLat</span>
 </code></pre></div>
 <p>Given a number field <script type="math/tex">K</script> and a pseudo-matrix <script type="math/tex">B</script>, returns the hermitian lattice spanned by the pseudo-matrix <script type="math/tex">B</script> inside the hermitian space over <script type="math/tex">K</script> with gram matrix <script type="math/tex">F</script>.</p>
 <p>If <script type="math/tex">F</script> is not supplied, the gram matrix of the ambient space will be the identity matrix.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Lattices.jl#L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Lattices.jl#L19' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Basic-invariants'></a></p>
 <p><a id='Basic-invariants-1'></a></p>
@@ -1209,80 +1205,80 @@
 <div class="highlight"><pre><span></span><code><span class="n">ambient_space</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsSpace</span>
 </code></pre></div>
 <p>Returns the ambient space of <script type="math/tex">L</script>. If the ambient space is not known, an error is raised.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L39' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L39' class='documenter-source'>source</a><br></p>
 <p><a id='rational_span-Tuple{Hecke.AbsLat}' href='#rational_span-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>rational_span</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rational_span</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsSpace</span>
 </code></pre></div>
 <p>Returns the rational span of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L59' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L59' class='documenter-source'>source</a><br></p>
 <p><a id='diagonal-Tuple{Hecke.AbsLat}' href='#diagonal-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>diagonal</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">diagonal</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">Mat</span><span class="p">{</span><span class="kt">T</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the diagonal of <code>A</code> as an array.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/Misc/Matrix.jl#L1525' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/Misc/Matrix.jl#L1525' class='documenter-source'>source</a><br></p>
 <p><a id='fixed_field-Tuple{Hecke.AbsLat}' href='#fixed_field-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>fixed_field</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">fixed_field</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumField</span>
 </code></pre></div>
 <p>Returns the fixed field of the involution of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L135' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L135' class='documenter-source'>source</a><br></p>
 <p><a id='involution-Tuple{Hecke.AbsLat}' href='#involution-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>involution</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">involution</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Returns the involution of the rational span of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L142' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L142' class='documenter-source'>source</a><br></p>
 <p><a id='rank-Tuple{Hecke.AbsLat}' href='#rank-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>rank</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rank</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the rank of <script type="math/tex">L</script>, that is the dimension of the rational span of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L149' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L149' class='documenter-source'>source</a><br></p>
 <p><a id='degree-Tuple{Hecke.AbsLat}' href='#degree-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>degree</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">degree</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the dimension of the ambient space of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L156' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L156' class='documenter-source'>source</a><br></p>
 <p><a id='generators-Tuple{Hecke.AbsLat}' href='#generators-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>generators</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">generators</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">;</span> <span class="n">minimal</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">Vector</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns a set of generators of <script type="math/tex">L</script> over the base ring of <script type="math/tex">L</script>.</p>
 <p>If <code>minimal == true</code>, the number of generators is minimal. Note that computing minimal generators is expensive.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L200' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L200' class='documenter-source'>source</a><br></p>
 <p><a id='discriminant-Tuple{Hecke.AbsLat}' href='#discriminant-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdFracIdl</span>
 </code></pre></div>
 <p>Returns the discriminant of <script type="math/tex">L</script>, that is, the generalized index ideal <script type="math/tex">[L^\# : L]</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L299' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L299' class='documenter-source'>source</a><br></p>
 <p><a id='pseudo_matrix-Tuple{Hecke.AbsLat}' href='#pseudo_matrix-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>pseudo_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pseudo_matrix</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PMat</span>
 </code></pre></div>
 <p>Returns the basis pseudo-matrix of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L88' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L88' class='documenter-source'>source</a><br></p>
 <p><a id='coefficient_ideals-Tuple{Hecke.AbsLat}' href='#coefficient_ideals-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>coefficient_ideals</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">coefficient_ideals</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NfOrdIdl</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the coefficient ideals of the pseudo-basis of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L112' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L112' class='documenter-source'>source</a><br></p>
 <p><a id='absolute_basis-Tuple{Hecke.AbsLat}' href='#absolute_basis-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>absolute_basis</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_basis</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span>
 </code></pre></div>
 <p>Returns a <script type="math/tex">\mathbf{Z}</script>-basis of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L508' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L508' class='documenter-source'>source</a><br></p>
 <p><a id='absolute_basis_matrix-Tuple{Hecke.AbsLat}' href='#absolute_basis_matrix-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>absolute_basis_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_basis_matrix</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MatElem</span>
 </code></pre></div>
 <p>Returns a <script type="math/tex">\mathbf{Z}</script>-basis matrix of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L531' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L531' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Rational-invariants'></a></p>
 <p><a id='Rational-invariants-1'></a></p>
@@ -1292,27 +1288,27 @@
 <div class="highlight"><pre><span></span><code><span class="n">hasse_invariant</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the Hasse invariant of the rational span of <script type="math/tex">L</script> at <script type="math/tex">p</script>. The lattice must be quadratic.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L319' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L319' class='documenter-source'>source</a><br></p>
 <p><a id='witt_invariant-Tuple{QuadLat, NfAbsOrdIdl}' href='#witt_invariant-Tuple{QuadLat, NfAbsOrdIdl}'>#</a>
 <strong><code>witt_invariant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">witt_invariant</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Returns the Witt invariant of the rational span of <script type="math/tex">L</script> at <script type="math/tex">p</script>. The lattice must be quadratic.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L327' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L327' class='documenter-source'>source</a><br></p>
 <p><a id='isrationally_equivalent-Tuple{Hecke.AbsLat, Hecke.AbsLat, NfAbsOrdIdl}' href='#isrationally_equivalent-Tuple{Hecke.AbsLat, Hecke.AbsLat, NfAbsOrdIdl}'>#</a>
 <strong><code>isrationally_equivalent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isrationally_equivalent</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">InfPlc</span><span class="p">,</span> <span class="kt">NfOrdIdl</span><span class="p">})</span>
                                                                      <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the rational spans of <script type="math/tex">L</script> and <script type="math/tex">M</script> are equivalent over the completion at <script type="math/tex">\mathfrak p</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L341' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L341' class='documenter-source'>source</a><br></p>
 <p><a id='isrationally_equivalent-Tuple{Hecke.AbsLat, Hecke.AbsLat}' href='#isrationally_equivalent-Tuple{Hecke.AbsLat, Hecke.AbsLat}'>#</a>
 <strong><code>isrationally_equivalent</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isrationally_equivalent</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span>
                                         <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the rational spans of <script type="math/tex">L</script> and <script type="math/tex">M</script> are equivalent.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L358' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L358' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Definiteness'></a></p>
 <p><a id='Definiteness-1'></a></p>
@@ -1322,25 +1318,25 @@
 <div class="highlight"><pre><span></span><code><span class="n">ispositive_definite</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the rational span of <script type="math/tex">L</script> is positive definite.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L374' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L374' class='documenter-source'>source</a><br></p>
 <p><a id='isnegative_definite-Tuple{Hecke.AbsLat}' href='#isnegative_definite-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>isnegative_definite</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isnegative_definite</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the rational span of <script type="math/tex">L</script> is negative definite.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L381' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L381' class='documenter-source'>source</a><br></p>
 <p><a id='isdefinite-Tuple{Hecke.AbsLat}' href='#isdefinite-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>isdefinite</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isdefinite</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the rational span of <script type="math/tex">L</script> is definite.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L388' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L388' class='documenter-source'>source</a><br></p>
 <p><a id='can_scale_totally_positive-Tuple{Hecke.AbsLat}' href='#can_scale_totally_positive-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>can_scale_totally_positive</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">can_scale_totally_positive</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
 <p>Returns whether there is a totally positive rescaled lattice of <script type="math/tex">L</script>. If so, the second return value is an element <script type="math/tex">a</script> such that <script type="math/tex">L^a</script> is totally positive.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L395' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L395' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Module-operations'></a></p>
 <p><a id='Module-operations-1'></a></p>
@@ -1350,31 +1346,31 @@
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
 <p>Returns the lattice <script type="math/tex">aM</script> inside the ambient space of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L465' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L465' class='documenter-source'>source</a><br></p>
 <p><a id='*-Tuple{NfOrdIdl, Hecke.AbsLat}' href='#*-Tuple{NfOrdIdl, Hecke.AbsLat}'>#</a>
 <strong><code>*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdIdl</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
 <p>Returns the lattice <script type="math/tex">aM</script> inside the ambient space of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L480' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L480' class='documenter-source'>source</a><br></p>
 <p><a id='*-Tuple{Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}, Hecke.AbsLat}' href='#*-Tuple{Hecke.NfAbsOrdFracIdl{AnticNumberField, nf_elem}, Hecke.AbsLat}'>#</a>
 <strong><code>*</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdFracIdl</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
 <p>Returns the lattice <script type="math/tex">aM</script> inside the ambient space of <script type="math/tex">M</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L491' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L491' class='documenter-source'>source</a><br></p>
 <p><a id='rescale-Tuple{Hecke.AbsLat, NumFieldElem}' href='#rescale-Tuple{Hecke.AbsLat, NumFieldElem}'>#</a>
 <strong><code>rescale</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rescale</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
 <p>Returns the rescaled lattice <script type="math/tex">L^a</script>. Note that this has a different ambient space than <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L586' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L586' class='documenter-source'>source</a><br></p>
 <p><a id='dual-Tuple{Hecke.AbsLat}' href='#dual-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>dual</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">dual</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsLat</span>
 </code></pre></div>
 <p>Returns the dual lattice of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L617' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L617' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Invariants'></a></p>
 <p><a id='Invariants-1'></a></p>
@@ -1384,31 +1380,31 @@
 <div class="highlight"><pre><span></span><code><span class="n">norm</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdFracIdl</span>
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">L</script>. This is a fractional ideal of the fixed field of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L560' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L560' class='documenter-source'>source</a><br></p>
 <p><a id='scale-Tuple{Hecke.AbsLat}' href='#scale-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>scale</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">scale</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdFracIdl</span>
 </code></pre></div>
 <p>Returns the scale of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L573' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L573' class='documenter-source'>source</a><br></p>
 <p><a id='isintegral-Tuple{Hecke.AbsLat}' href='#isintegral-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>isintegral</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isintegral</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the lattice <script type="math/tex">L</script> is integral.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L602' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L602' class='documenter-source'>source</a><br></p>
 <p><a id='volume-Tuple{Hecke.AbsLat}' href='#volume-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>volume</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">volume</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfOrdFracIdl</span>
 </code></pre></div>
 <p>Returns the volume of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L630' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L630' class='documenter-source'>source</a><br></p>
 <p><a id='ismodular-Tuple{Hecke.AbsLat}' href='#ismodular-Tuple{Hecke.AbsLat}'>#</a>
 <strong><code>ismodular</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ismodular</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">NfOrdFracIdl</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">L</script> is modular. In this case, the second return value is a fractional ideal <script type="math/tex">\mathfrak a</script> such that <script type="math/tex">\mathfrak a L^\# = L</script>, where <script type="math/tex">L^\#</script> is the dual of <script type="math/tex">L</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L645' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L645' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Local-properties'></a></p>
 <p><a id='Local-properties-1'></a></p>
@@ -1423,7 +1419,7 @@
 <li>If <code>type == :supermodule</code>, the lattice <script type="math/tex">L</script> will be a superlattice of <script type="math/tex">M</script>.</li>
 <li>If <code>type == :any</code>, there may not be any containment relation between <script type="math/tex">M</script> and <script type="math/tex">L</script>.</li>
 </ul>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L698' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L698' class='documenter-source'>source</a><br></p>
 <p><a id='jordan_decomposition-Tuple{Hecke.AbsLat, NfOrdIdl}' href='#jordan_decomposition-Tuple{Hecke.AbsLat, NfOrdIdl}'>#</a>
 <strong><code>jordan_decomposition</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">jordan_decomposition</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">NfOrdIdl</span><span class="p">)</span>
@@ -1431,13 +1427,13 @@
 </code></pre></div>
 <p>Returns a Jordan decomposition of the completion of <script type="math/tex">L</script> at <script type="math/tex">\mathfrak p</script>.</p>
 <p>The return value consists of three lists <script type="math/tex">(M_i)_i</script>, <script type="math/tex">(G_i)_i</script> and <script type="math/tex">(s_i)_i</script> of the same length <script type="math/tex">r</script>. The completions of the row spans of the matrices <script type="math/tex">M_i</script> yield a Jordan decomposition of <script type="math/tex">L_{\mathfrak{p}}</script> into modular sublattices <script type="math/tex">L_i</script> with gram matrices <script type="math/tex">G_i</script> and scale of <script type="math/tex">\mathfrak{p}</script>-adic valuation <script type="math/tex">s_i</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L746' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L746' class='documenter-source'>source</a><br></p>
 <p><a id='islocally_isometric-Tuple{Hecke.AbsLat, Hecke.AbsLat, NfOrdIdl}' href='#islocally_isometric-Tuple{Hecke.AbsLat, Hecke.AbsLat, NfOrdIdl}'>#</a>
 <strong><code>islocally_isometric</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">islocally_isometric</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">M</span><span class="o">::</span><span class="kt">AbsLat</span><span class="p">,</span> <span class="n">p</span><span class="o">::</span><span class="kt">NfOrdIdl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether the completions of <script type="math/tex">L</script> and <script type="math/tex">M</script> at the prime ideal <script type="math/tex">\mathfrak{p}</script> are locally isometric.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Lattices.jl#L765' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Lattices.jl#L765' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Genera'></a></p>
 <p><a id='Genera-1'></a></p>
@@ -1451,13 +1447,13 @@
 </code></pre></div>
 <p>Returns the genus of <script type="math/tex">L</script> at the prime ideal <script type="math/tex">\mathfrak p</script>.</p>
 <p>See [Kir16, Definition 8.3.1].</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L607' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L607' class='documenter-source'>source</a><br></p>
 <p><a id='genus-Tuple{HermLat}' href='#genus-Tuple{HermLat}'>#</a>
 <strong><code>genus</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">genus</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">HermLat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GenusHerm</span>
 </code></pre></div>
 <p>Given a Hermitian lattice, return the genus it belongs to.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L1021' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L1021' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Properties-of-genera'></a></p>
 <p><a id='Properties-of-genera-1'></a></p>
@@ -1467,43 +1463,43 @@
 <div class="highlight"><pre><span></span><code><span class="n">rank</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Given a genus symbol <script type="math/tex">G</script>, return the rank of a lattice in <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L117' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L117' class='documenter-source'>source</a><br></p>
 <p><a id='rank-Tuple{Hecke.LocalGenusHerm, Int64}' href='#rank-Tuple{Hecke.LocalGenusHerm, Int64}'>#</a>
 <strong><code>rank</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rank</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">,</span> <span class="n">i</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
 <p>Given a genus symbol for Hermitian lattices over <script type="math/tex">E/K</script>, return the rank of the <script type="math/tex">i</script>th Jordan block of <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L109' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L109' class='documenter-source'>source</a><br></p>
 <p><a id='ranks-Tuple{Hecke.LocalGenusHerm}' href='#ranks-Tuple{Hecke.LocalGenusHerm}'>#</a>
 <strong><code>ranks</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ranks</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span>
 </code></pre></div>
 <p>Given a genus symbol for Hermitian lattices over <script type="math/tex">E/K</script>, return the ranks of the Jordan blocks of <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L126' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L126' class='documenter-source'>source</a><br></p>
 <p><a id='det-Tuple{Hecke.LocalGenusHerm}' href='#det-Tuple{Hecke.LocalGenusHerm}'>#</a>
 <strong><code>det</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">det</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 </code></pre></div>
 <p>Given a genus symbol <script type="math/tex">G</script>, return the determinant of a lattice in <script type="math/tex">G</script>. This will be <code>1</code> or <code>-1</code> depending on whether the determinant is a local norm or not.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L186' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L186' class='documenter-source'>source</a><br></p>
 <p><a id='det_representative-Tuple{Hecke.LocalGenusHerm}' href='#det_representative-Tuple{Hecke.LocalGenusHerm}'>#</a>
 <strong><code>det_representative</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">det_representative</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
 <p>Return a representative for the norm class of the determinant of <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L335' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L335' class='documenter-source'>source</a><br></p>
 <p><a id='gram_matrix-Tuple{Hecke.LocalGenusHerm}' href='#gram_matrix-Tuple{Hecke.LocalGenusHerm}'>#</a>
 <strong><code>gram_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">gram_matrix</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span>
 </code></pre></div>
 <p>Return a matrix <script type="math/tex">M</script>, such that a lattice with Gram matrix <script type="math/tex">M</script> is an element of the given genus.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L362' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L362' class='documenter-source'>source</a><br></p>
 <p><a id='primes-Tuple{Hecke.GenusHerm}' href='#primes-Tuple{Hecke.GenusHerm}'>#</a>
 <strong><code>primes</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">primes</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NfOrdIdl</span><span class="p">}</span>
 </code></pre></div>
 <p>Return the primes of a global genus symbol.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L1064' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L1064' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Check-if-lattice-is-contained-in-genus'></a></p>
 <p><a id='Check-if-lattice-is-contained-in-genus-1'></a></p>
@@ -1513,13 +1509,13 @@
 <div class="highlight"><pre><span></span><code><span class="k">in</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">HermLat</span><span class="p">,</span> <span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Test if the lattice <script type="math/tex">L</script> is contained in the local genus <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L674' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L674' class='documenter-source'>source</a><br></p>
 <p><a id='in-Tuple{HermLat, Hecke.GenusHerm}' href='#in-Tuple{HermLat, Hecke.GenusHerm}'>#</a>
 <strong><code>in</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">in</span><span class="p">(</span><span class="n">L</span><span class="o">::</span><span class="kt">HermLat</span><span class="p">,</span> <span class="n">G</span><span class="o">::</span><span class="kt">GenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Test if the lattice <script type="math/tex">L</script> is contained in the genus <script type="math/tex">G</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L962' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L962' class='documenter-source'>source</a><br></p>
 <hr />
 <p><a id='Creating-representatives'></a></p>
 <p><a id='Creating-representatives-1'></a></p>
@@ -1529,12 +1525,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">representative</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">LocalGenusHerm</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HermLat</span>
 </code></pre></div>
 <p>Given a local genus, return a Hermitian lattice contained in this genus.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/9173136cc8fa3680f5f3244cce4fe5ea147c3a73/src/QuadForm/Herm/Genus.jl#L475' class='documenter-source'>source</a><br></p>
-                
-              
-              
-                
-
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/055e68d8a886003f134f97320d27d0ca50e0490e/src/QuadForm/Herm/Genus.jl#L475' class='documenter-source'>source</a><br></p>
 
               
             </article>
@@ -1543,8 +1534,7 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -1583,30 +1573,29 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/thofma" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://github.com/thofma" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1615,10 +1604,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a87c2adc.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
