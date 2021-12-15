@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.82f3c0b9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -1050,11 +1050,11 @@
 <div class="highlight"><pre><span></span><code>  <span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NumFieldOrd</span><span class="p">)(</span><span class="n">a</span><span class="o">::</span><span class="kt">IntegerUnion</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumFieldOrdElem</span>
 </code></pre></div>
 <p>Given an element <script type="math/tex">a</script> of type <code>fmpz</code> or <code>Integer</code>, this function coerces the element into <script type="math/tex">\mathcal O</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L131' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L131' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code>  (O::NfAbsOrd)(arr::Vector{fmpz})
 </code></pre></div>
 <p>Returns the element of <script type="math/tex">\mathcal O</script> with coefficient vector <code>arr</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L141' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L141' class='documenter-source'>source</a><br></p>
 <p><a id='Basic-properties'></a></p>
 <p><a id='Basic-properties-1'></a></p>
 <h2 id="basic-properties">Basic properties</h2>
@@ -1063,39 +1063,39 @@
 <div class="highlight"><pre><span></span><code><span class="n">parent</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumFieldOrd</span>
 </code></pre></div>
 <p>Returns the order of which <script type="math/tex">a</script> is an element.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L7' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L7' class='documenter-source'>source</a><br></p>
 <p><a id='elem_in_nf-Tuple{NfOrdElem}' href='#elem_in_nf-Tuple{NfOrdElem}'>#</a>
 <strong><code>elem_in_nf</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">elem_in_nf</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumFieldElem</span>
 </code></pre></div>
 <p>Returns the element <script type="math/tex">a</script> considered as an element of the ambient number field.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L20' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L20' class='documenter-source'>source</a><br></p>
 <p><a id='coordinates-Tuple{NfOrdElem}' href='#coordinates-Tuple{NfOrdElem}'>#</a>
 <strong><code>coordinates</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">coordinates</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">fmpz</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the coefficient vector of <script type="math/tex">a</script> with respect to the basis of the order.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L199' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L199' class='documenter-source'>source</a><br></p>
 <p><a id='discriminant-Tuple{Vector{NfOrdElem}}' href='#discriminant-Tuple{Vector{NfOrdElem}}'>#</a>
 <strong><code>discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">B</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldOrdElem</span><span class="p">})</span>
 </code></pre></div>
 <p>Returns the discriminant of the family <script type="math/tex">B</script> of algebraic numbers, i.e. <script type="math/tex">det((tr(B[i]*B[j]))_{i, j})^2</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L350' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L350' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code>discriminant(E::EllCrv{T}) -&gt; T
 </code></pre></div>
 <p>Computes the discriminant of <script type="math/tex">E</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/EllCrv/EllCrv.jl#L463' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/EllCrv/EllCrv.jl#L463' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code>discriminant(O::AlgssRelOrd)
 </code></pre></div>
 <p>Returns the discriminant of <script type="math/tex">O</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/AlgAssRelOrd/Order.jl#L411' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/AlgAssRelOrd/Order.jl#L411' class='documenter-source'>source</a><br></p>
 <p><a id='==-Tuple{NfOrdElem, NfOrdElem}' href='#==-Tuple{NfOrdElem, NfOrdElem}'>#</a>
 <strong><code>==</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">==</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">,</span> <span class="n">y</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Returns whether <script type="math/tex">x</script> and <script type="math/tex">y</script> are equal.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L388' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L388' class='documenter-source'>source</a><br></p>
 <p><a id='Arithmetic'></a></p>
 <p><a id='Arithmetic-1'></a></p>
 <h2 id="arithmetic">Arithmetic</h2>
@@ -1118,108 +1118,108 @@
 <div class="highlight"><pre><span></span><code><span class="n">representation_matrix</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_mat</span>
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L436' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L436' class='documenter-source'>source</a><br></p>
 <p><a id='representation_matrix-Tuple{NfOrdElem, AnticNumberField}' href='#representation_matrix-Tuple{NfOrdElem, AnticNumberField}'>#</a>
 <strong><code>representation_matrix</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">representation_matrix</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">K</span><span class="o">::</span><span class="kt">AnticNumberField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FakeFmpqMat</span>
 </code></pre></div>
 <p>Returns the representation matrix of the element <script type="math/tex">a</script> considered as an element of the ambient number field <script type="math/tex">K</script>. It is assumed that <script type="math/tex">K</script> is the ambient number field of the order of <script type="math/tex">a</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L452' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L452' class='documenter-source'>source</a><br></p>
 <p><a id='tr-Tuple{NumFieldOrdElem}' href='#tr-Tuple{NumFieldOrdElem}'>#</a>
 <strong><code>tr</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">tr</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span>
 </code></pre></div>
 <p>Returns the trace of <script type="math/tex">a</script> as an element of the base ring.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L302' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L302' class='documenter-source'>source</a><br></p>
 <p><a id='norm-Tuple{NumFieldOrdElem}' href='#norm-Tuple{NumFieldOrdElem}'>#</a>
 <strong><code>norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span>
 </code></pre></div>
 <p>Returns the norm of <script type="math/tex">a</script> as an element in the base ring.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L326' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L326' class='documenter-source'>source</a><br></p>
 <p><a id='absolute_norm-Tuple{NfAbsOrdElem}' href='#absolute_norm-Tuple{NfAbsOrdElem}'>#</a>
 <strong><code>absolute_norm</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_norm</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Return the absolute norm as an integer.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L336' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L336' class='documenter-source'>source</a><br></p>
 <p><a id='absolute_tr-Tuple{NfAbsOrdElem}' href='#absolute_tr-Tuple{NfAbsOrdElem}'>#</a>
 <strong><code>absolute_tr</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">absolute_tr</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Return the absolute trace as an integer.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L312' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L312' class='documenter-source'>source</a><br></p>
 <p><a id='rand-Tuple{NfOrd, Int64}' href='#rand-Tuple{NfOrd, Int64}'>#</a>
 <strong><code>rand</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rand</span><span class="p">(</span><span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">IntegerUnion</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NfAbsOrdElem</span>
 </code></pre></div>
 <p>Computes a coefficient vector with entries uniformly distributed in <script type="math/tex">\{-n,\dotsc,-1,0,1,\dotsc,n\}</script> and returns the corresponding element of the order <script type="math/tex">\mathcal O</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L567' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L567' class='documenter-source'>source</a><br></p>
 <p><a id='minkowski_map-Tuple{NfOrdElem, Int64}' href='#minkowski_map-Tuple{NfOrdElem, Int64}'>#</a>
 <strong><code>minkowski_map</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">minkowski_map</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">arb</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the image of <script type="math/tex">a</script> under the Minkowski embedding. Every entry of the array returned is of type <code>arb</code> with radius less then <code>2^-abs_tol</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L402' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L402' class='documenter-source'>source</a><br></p>
 <p><a id='conjugates_arb-Tuple{NfOrdElem, Int64}' href='#conjugates_arb-Tuple{NfOrdElem, Int64}'>#</a>
 <strong><code>conjugates_arb</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conjugates_arb</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">acb</span><span class="p">}</span>
 </code></pre></div>
 <p>Compute the conjugates of <script type="math/tex">x</script> as elements of type <code>acb</code>. Recall that we order the complex conjugates <script type="math/tex">\sigma_{r+1}(x),...,\sigma_{r+2s}(x)</script> such that <script type="math/tex">\sigma_{i}(x) = \overline{\sigma_{i + s}(x)}</script> for <script type="math/tex">r + 2 \leq i \leq r + s</script>.</p>
 <p>Every entry <script type="math/tex">y</script> of the array returned satisfies <code>radius(real(y)) &lt; 2^-abs_tol</code>, <code>radius(imag(y)) &lt; 2^-abs_tol</code> respectively.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L421' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L421' class='documenter-source'>source</a><br></p>
 <p><a id='conjugates_arb_log-Tuple{NfOrdElem, Int64}' href='#conjugates_arb_log-Tuple{NfOrdElem, Int64}'>#</a>
 <strong><code>conjugates_arb_log</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conjugates_arb_log</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">arb</span><span class="p">}</span>
 </code></pre></div>
 <p>Returns the elements <script type="math/tex">(\log(\lvert \sigma_1(x) \rvert),\dotsc,\log(\lvert\sigma_r(x) \rvert), \dotsc,2\log(\lvert \sigma_{r+1}(x) \rvert),\dotsc, 2\log(\lvert \sigma_{r+s}(x)\rvert))</script> as elements of type <code>arb</code> radius less then <code>2^-abs_tol</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L438' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L438' class='documenter-source'>source</a><br></p>
 <p><a id='t2-Tuple{NfOrdElem, Int64}' href='#t2-Tuple{NfOrdElem, Int64}'>#</a>
 <strong><code>t2</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">t2</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">NumFieldOrdElem</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arb</span>
 </code></pre></div>
 <p>Return the <script type="math/tex">T_2</script>-norm of <script type="math/tex">x</script>. The radius of the result will be less than <code>2^-abs_tol</code>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L457' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L457' class='documenter-source'>source</a><br></p>
 <p><a id='minpoly-Tuple{NfOrdElem}' href='#minpoly-Tuple{NfOrdElem}'>#</a>
 <strong><code>minpoly</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">minpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_poly</span>
 </code></pre></div>
 <p>The minimal polynomial of <script type="math/tex">a</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L230' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L230' class='documenter-source'>source</a><br></p>
 <p><a id='charpoly-Tuple{NfOrdElem}' href='#charpoly-Tuple{NfOrdElem}'>#</a>
 <strong><code>charpoly</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">charpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_poly</span>
 <span class="n">charpoly</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfAbsOrdElem</span><span class="p">,</span> <span class="n">FlintZZ</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz_poly</span>
 </code></pre></div>
 <p>The characteristic polynomial of <script type="math/tex">a</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L220' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L220' class='documenter-source'>source</a><br></p>
 <p><a id='factor-Tuple{NfOrdElem}' href='#factor-Tuple{NfOrdElem}'>#</a>
 <strong><code>factor</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">factor</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NfOrdElem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Fac</span><span class="p">{</span><span class="kt">NfOrdElem</span><span class="p">}</span>
 </code></pre></div>
 <p>Computes a factorization of <script type="math/tex">a</script> into irreducible elements. The return value is a factorization <code>fac</code>, which satisfies <code>a = unit(fac) * prod(p^e for (p, e) in fac)</code>.</p>
 <p>The function requires that <script type="math/tex">a</script> is non-zero and that all prime ideals containing <script type="math/tex">a</script> are principal, which is for example satisfied if class group of the order of <script type="math/tex">a</script> is trivial.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfOrd/Elem.jl#L604' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfOrd/Elem.jl#L604' class='documenter-source'>source</a><br></p>
 <p><a id='denominator-Tuple{NumFieldElem, Hecke.NfRelOrd}' href='#denominator-Tuple{NumFieldElem, Hecke.NfRelOrd}'>#</a>
 <strong><code>denominator</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">denominator</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">NumFieldElem</span><span class="p">,</span> <span class="n">O</span><span class="o">::</span><span class="kt">NfOrd</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fmpz</span>
 </code></pre></div>
 <p>Returns the smallest positive integer <script type="math/tex">k</script> such that <script type="math/tex">k \cdot a</script> is contained in <script type="math/tex">\mathcal O</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NfRelOrd/NfRelOrd.jl#L975' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NfRelOrd/NfRelOrd.jl#L975' class='documenter-source'>source</a><br></p>
 <p><a id='discriminant-Tuple{Vector{NfAbsOrdElem}}' href='#discriminant-Tuple{Vector{NfAbsOrdElem}}'>#</a>
 <strong><code>discriminant</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">discriminant</span><span class="p">(</span><span class="n">B</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldOrdElem</span><span class="p">})</span>
 </code></pre></div>
 <p>Returns the discriminant of the family <script type="math/tex">B</script> of algebraic numbers, i.e. <script type="math/tex">det((tr(B[i]*B[j]))_{i, j})^2</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/NumFieldOrd/NumFieldOrdElem.jl#L350' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/NumFieldOrd/NumFieldOrdElem.jl#L350' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code>discriminant(E::EllCrv{T}) -&gt; T
 </code></pre></div>
 <p>Computes the discriminant of <script type="math/tex">E</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/EllCrv/EllCrv.jl#L463' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/EllCrv/EllCrv.jl#L463' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code>discriminant(O::AlgssRelOrd)
 </code></pre></div>
 <p>Returns the discriminant of <script type="math/tex">O</script>.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/3b36d2991c4e9a34b2e5b35719ef98121087a027/src/AlgAssRelOrd/Order.jl#L411' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/59cc28831c63761fcb5d8f87fe1db1253beb31cf/src/AlgAssRelOrd/Order.jl#L411' class='documenter-source'>source</a><br></p>
 
               
             </article>
@@ -1298,10 +1298,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.17f42bbf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
