@@ -376,6 +376,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,6 +1055,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1068,7 +1082,7 @@
 <p><a id='Complex-embedding'></a></p>
 <p><a id='Complex-embedding-1'></a></p>
 <h1 id="complex-embedding">Complex embedding</h1>
-<p>Functionality for working with complex embeddings of a number field <script type="math/tex">K</script>, that is, ring morphisms, <script type="math/tex">K \to \mathbf{C}</script> is provided for all possible number field types.</p>
+<p>Functionality for working with complex embeddings of a number field <script type="math/tex">L</script>, that is, with ring morphisms <script type="math/tex">L \to \mathbf{C}</script> is provided for all possible number field types.</p>
 <p><a id='Construction-of-complex-embeddings'></a></p>
 <p><a id='Construction-of-complex-embeddings-1'></a></p>
 <h2 id="construction-of-complex-embeddings">Construction of complex embeddings</h2>
@@ -1076,7 +1090,7 @@
 <strong><code>complex_embeddings</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">complex_embeddings</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">;</span> <span class="n">conjugates</span><span class="o">::</span><span class="kt">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldEmb</span><span class="p">}</span>
 </code></pre></div>
-<p>Return the complex of complex_embeddings of <script type="math/tex">K</script>. If <code>conjugates</code> is <code>false</code>, only one imaginary embedding per conjugated pairs is returned.</p>
+<p>Return the complex embeddings of <script type="math/tex">K</script>. If <code>conjugates</code> is <code>false</code>, only one imaginary embedding per conjugated pairs is returned.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">quadratic_field</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
 
@@ -1089,12 +1103,12 @@
 <span class="go">1-element Vector{Hecke.NumFieldEmbNfAbs}:</span>
 <span class="go"> Embedding corresponding to ≈ 0.00 + 1.73 * i</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L3' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L3' class='documenter-source'>source</a><br></p>
 <p><a id='real_embeddings-Tuple{NumField}' href='#real_embeddings-Tuple{NumField}'>#</a>
 <strong><code>real_embeddings</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">real_embeddings</span><span class="p">(</span><span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="kt">NumFieldEmb</span><span class="p">}</span>
 </code></pre></div>
-<p>Return the real complex_embeddings of <script type="math/tex">K</script>.</p>
+<p>Return the real embeddings of <script type="math/tex">K</script>.</p>
 <p><strong>Examples</strong></p>
 <div class="highlight"><pre><span></span><code>julia&gt; K, a = quadratic_field(3);
 
@@ -1103,7 +1117,7 @@ julia&gt; real_embeddings(K)
  Embedding corresponding to ≈ -1.73
  Embedding corresponding to ≈ 1.73
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L26' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L26' class='documenter-source'>source</a><br></p>
 <p><a id='Properties'></a></p>
 <p><a id='Properties-1'></a></p>
 <h2 id="properties">Properties</h2>
@@ -1118,7 +1132,7 @@ julia&gt; real_embeddings(K)
 julia&gt; number_field(e)
 Imaginary quadratic field defined by x^2 + 3
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L49' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L49' class='documenter-source'>source</a><br></p>
 <p><a id='isreal-Tuple{Hecke.NumFieldEmb}' href='#isreal-Tuple{Hecke.NumFieldEmb}'>#</a>
 <strong><code>isreal</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isreal</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">NumFieldEmb</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
@@ -1130,7 +1144,7 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="gp">julia&gt;</span> <span class="n">isreal</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 <span class="go">true</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L65' class='documenter-source'>source</a><br></p>
 <p><a id='isimaginary-Tuple{Hecke.NumFieldEmb}' href='#isimaginary-Tuple{Hecke.NumFieldEmb}'>#</a>
 <strong><code>isimaginary</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isimaginary</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">NumFieldEmb</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
@@ -1142,7 +1156,7 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="gp">julia&gt;</span> <span class="n">isimaginary</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 <span class="go">true</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L81' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L81' class='documenter-source'>source</a><br></p>
 <p><a id='Conjugated-embedding'></a></p>
 <p><a id='Conjugated-embedding-1'></a></p>
 <h2 id="conjugated-embedding">Conjugated embedding</h2>
@@ -1157,7 +1171,7 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="gp">julia&gt;</span> <span class="n">conj</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="go">true</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L97' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L97' class='documenter-source'>source</a><br></p>
 <p><a id='Evaluating-elements-at-complex-embeddings'></a></p>
 <p><a id='Evaluating-elements-at-complex-embeddings-1'></a></p>
 <h2 id="evaluating-elements-at-complex-embeddings">Evaluating elements at complex embeddings</h2>
@@ -1184,11 +1198,11 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="gp">julia&gt;</span> <span class="n">fn</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="go">[+/- 3.99e-77] + [1.73205080756887729353 +/- 5.41e-21]*im</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L208' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L208' class='documenter-source'>source</a><br></p>
 <p><a id='Restriction'></a></p>
 <p><a id='Restriction-1'></a></p>
 <h2 id="restriction">Restriction</h2>
-<p>Given a complex embedding <script type="math/tex">f \colon K \to \mathbf{C}</script> and a subfield <script type="math/tex">\iota \colon k \to K</script>, the embedding <script type="math/tex">f</script> naturally restricts to a complex embedding of <script type="math/tex">K</script>. Computing this restriction is supported in case <script type="math/tex">k</script> appears as a base field of (a base field) of <script type="math/tex">K</script> or <script type="math/tex">\iota</script> is provided:</p>
+<p>Given a subfield <script type="math/tex">\iota \colon k \to K</script>, any embedding <script type="math/tex">f \colon K \to \mathbf{C}</script> naturally restricts to a complex embedding of <script type="math/tex">K</script>. Computing this restriction is supported in case <script type="math/tex">k</script> appears as a base field of (a base field) of <script type="math/tex">K</script> or <script type="math/tex">\iota</script> is provided:</p>
 <p><a id='restrict-Tuple{Hecke.NumFieldEmb, NumField}' href='#restrict-Tuple{Hecke.NumFieldEmb, NumField}'>#</a>
 <strong><code>restrict</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">restrict</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">NumFieldEmb</span><span class="p">,</span> <span class="n">K</span><span class="o">::</span><span class="kt">NumField</span><span class="p">)</span>
@@ -1206,7 +1220,7 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="go">Real quadratic field defined by x^2 - 3</span>
 <span class="go">corresponding to ≈ -1.73</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L115' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L115' class='documenter-source'>source</a><br></p>
 <p><a id='restrict-Tuple{Hecke.NumFieldEmb, Hecke.NumFieldMor}' href='#restrict-Tuple{Hecke.NumFieldEmb, Hecke.NumFieldMor}'>#</a>
 <strong><code>restrict</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">restrict</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">NumFieldEmb</span><span class="p">,</span> <span class="n">g</span><span class="o">::</span><span class="kt">NumFieldMor</span><span class="p">)</span>
@@ -1225,7 +1239,7 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="go">Number field over Rational Field with defining polynomial x^2 + x - 1</span>
 <span class="go">corresponding to ≈ 0.62</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L138' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L138' class='documenter-source'>source</a><br></p>
 <p><a id='Extension'></a></p>
 <p><a id='Extension-1'></a></p>
 <h2 id="extension">Extension</h2>
@@ -1247,7 +1261,38 @@ Imaginary quadratic field defined by x^2 + 3
 <span class="go"> Embedding corresponding to ≈ 0.31 + 0.95 * i</span>
 <span class="go"> Embedding corresponding to ≈ 0.31 - 0.95 * i</span>
 </code></pre></div>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/72ac7ccdc3d3ebf7aaaabd3d890f01b70085583f/src/NumField/ComplexEmbeddings.jl#L173' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/012a6b47148959187756c6645782b36e0b26acdb/src/NumField/ComplexEmbeddings.jl#L173' class='documenter-source'>source</a><br></p>
+<p><a id='Example'></a></p>
+<p><a id='Example-1'></a></p>
+<h2 id="example">Example</h2>
+<p>As mentioned, this functionality works for all types of number fields. Here is an example of an absolute non-simple number field.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">Qx</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[</span><span class="s">&quot;x&quot;</span><span class="p">];</span>
+
+<span class="gp">julia&gt;</span> <span class="n">K</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">number_field</span><span class="p">([</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">],</span> <span class="s">&quot;a&quot;</span><span class="p">);</span>
+
+<span class="gp">julia&gt;</span> <span class="n">emb</span> <span class="o">=</span> <span class="n">complex_embeddings</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
+<span class="go">6-element Vector{Hecke.NumFieldEmbNfAbsNS}:</span>
+<span class="go"> Embedding corresponding to ≈ [ 1.00 * i, -1.26]</span>
+<span class="go"> Embedding corresponding to ≈ [ 1.00 * i, 0.63 + 1.09 * i]</span>
+<span class="go"> Embedding corresponding to ≈ [ -1.00 * i, 0.63 + 1.09 * i]</span>
+<span class="go"> Embedding corresponding to ≈ [ -1.00 * i, -1.26]</span>
+<span class="go"> Embedding corresponding to ≈ [ -1.00 * i, 0.63 - 1.09 * i]</span>
+<span class="go"> Embedding corresponding to ≈ [ 1.00 * i, 0.63 - 1.09 * i]</span>
+
+<span class="gp">julia&gt;</span> <span class="n">k</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">quadratic_field</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="gp">julia&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">hom</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="gp">julia&gt;</span> <span class="n">restrict</span><span class="p">(</span><span class="n">emb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span>
+<span class="go">Embedding of</span>
+<span class="go">Imaginary quadratic field defined by x^2 + 1</span>
+<span class="go">corresponding to ≈ 1.00 * i</span>
+
+<span class="gp">julia&gt;</span> <span class="n">restrict</span><span class="p">(</span><span class="n">emb</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span>
+<span class="go">Embedding of</span>
+<span class="go">Imaginary quadratic field defined by x^2 + 1</span>
+<span class="go">corresponding to ≈ -1.00 * i</span>
+</code></pre></div>
 
               
             </article>
