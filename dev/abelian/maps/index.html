@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d6be258b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -858,6 +858,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../misc/conjugacy/" class="md-nav__link">
+        Conjugacy of integral matrices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../misc/" class="md-nav__link">
         Misc
       </a>
@@ -1007,13 +1021,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">hom</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">A</span><span class="o">::</span><span class="kt">Matrix</span><span class="p">{</span> <span class="o">&lt;:</span> <span class="kt">Map</span><span class="p">{</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="kt">GrpAbFinGen</span><span class="p">}})</span> <span class="o">-&gt;</span> <span class="n">Map</span>
 </code></pre></div>
 <p>Given groups <script type="math/tex">G</script> and <script type="math/tex">H</script> that are created as direct products as well as a matrix <script type="math/tex">A</script> containing maps <script type="math/tex">A[i,j] : G_i \to H_j</script>, return the induced homomorphism.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/33ba3220741a742700bc70d9d163568945f829fb/src/GrpAb/GrpAbFinGen.jl#L714' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8108534b9199d92567e09835c1cbec1df7fd0958/src/GrpAb/GrpAbFinGen.jl#L714' class='documenter-source'>source</a><br></p>
 <p><a id='isisomorphic-Tuple{GrpAbFinGen, GrpAbFinGen}' href='#isisomorphic-Tuple{GrpAbFinGen, GrpAbFinGen}'>#</a>
 <strong><code>isisomorphic</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">isisomorphic</span><span class="p">(</span><span class="n">G</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">,</span> <span class="n">H</span><span class="o">::</span><span class="kt">GrpAbFinGen</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
 </code></pre></div>
 <p>Checks if <script type="math/tex">G</script> and <script type="math/tex">H</script> are isomorphic.</p>
-<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/33ba3220741a742700bc70d9d163568945f829fb/src/GrpAb/GrpAbFinGen.jl#L582' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/thofma/Hecke.jl/blob/8108534b9199d92567e09835c1cbec1df7fd0958/src/GrpAb/GrpAbFinGen.jl#L582' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span><code><span class="gp">julia&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">free_abelian_group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="go">GrpAb: Z^2</span>
 
@@ -1132,10 +1146,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
