@@ -1,5 +1,7 @@
 [
 {"version": "stable", "title": "stable", "aliases": []},
+{"version": "v0.13", "title": "v0.13", "aliases": []},
+{"version": "v0.12", "title": "v0.12", "aliases": []},
 {"version": "v0.11", "title": "v0.11", "aliases": []},
 {"version": "v0.10", "title": "v0.10", "aliases": []},
 {"version": "v0.9", "title": "v0.9", "aliases": []},
