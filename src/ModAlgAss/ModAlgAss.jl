@@ -2,6 +2,15 @@ export Amodule
 
 add_assert_scope(:ModLattice)
 
+@doc Markdown.doc"""
+    ModAlgAss{S, T, U}
+
+Module given by the actions (matrices of type `S`) of the basis of an
+`algebra::U` over a `base_ring::S` or by actions of some generators.
+
+See [`Amodule(::AbsAlgAss, ::Vector{<:MatElem})`](@ref) and
+[`Amodule(::Vector{<:MatElem})`](@ref) for ways to construct a `ModAlgAss`.
+"""
 @attributes mutable struct ModAlgAss{S, T, U}
   base_ring::S
   dim::Int
@@ -18,6 +27,7 @@ add_assert_scope(:ModLattice)
   isfree::Int
   free_rank::Int
 
+  # See `Amodule` constructor below
   function ModAlgAss{T, U}(algebra::U; action_of_basis::Vector{T} = T[], action_of_gens::Vector{T} = T[]) where {T, U}
     S = typeof(base_ring(algebra))
     z = new{S, T, U}()
@@ -47,6 +57,7 @@ add_assert_scope(:ModLattice)
     return z
   end
 
+  # See `Amodule` constructor below
   function ModAlgAss{T}(;action_of_gens::Vector{T} = T[]) where {T}
     K = base_ring(action_of_gens[1])
     U = matrix_algebra_type(K)
@@ -107,7 +118,7 @@ end
 @doc Markdown.doc"""
     Amodule(A::AbsAlgAss, M::Vector{<:MatElem})
 
-Given an algebra $A$ over a field $K$ and a list of $\dim(A)$ of square
+Given an algebra $A$ over a field $K$ and a list of $\dim(A)$ square
 matrices over $K$, construct the $A$-module with `basis(A)[i]` acting
 via `M[i]` from the right.
 """
@@ -123,7 +134,7 @@ Given a list `M` of square matrices over a field $K$, construct the module
 for the free algebra with the generators acting via `M[i]` from the right.
 
 Note that the free algebra will not be constructed and the resulting
-object has no assocated algebra.
+object has no associated algebra.
 """
 function Amodule(M::Vector{<:MatElem})
   return ModAlgAss{eltype(M)}(action_of_gens = M)
@@ -138,14 +149,14 @@ end
 @doc Markdown.doc"""
     has_algebra(V::ModAlgAss) -> Bool
 
-Returns whether the module was defined explicitely using an algebra.
+Return whether the module was defined explicitly using an algebra.
 """
 has_algebra(V::ModAlgAss) = isdefined(V, :algebra)
 
 @doc Markdown.doc"""
     has_matrix_action(V::ModAlgAss) -> Bool
 
-Returns whether the action on the module is given by matrices.
+Return whether the action on the module is given by matrices.
 """
 function has_matrix_action(V::ModAlgAss{S, T, U}) where {S, T, U}
   if T <: MatElem
@@ -193,8 +204,8 @@ end
 @doc Markdown.doc"""
     action(V::ModAlgAss{_, MatElem, _}, x::AbsAlgAssElem)
 
-Given a $A$-module $V$ for an algebra $A$ with action given by matrices, and an
-element $x$ of $A$, returns the action of $x$.
+Given an $A$-module $V$ for an algebra $A$ with action given by matrices, and an
+element $x$ of $A$, return the action of $x$.
 """
 function action(V::ModAlgAss{<:Any, <: MatElem, <:Any}, x::AbsAlgAssElem)
   @req parent(x) == algebra(V) "Algebra of module must be parent of element"
@@ -224,7 +235,7 @@ end
 @doc Markdown.doc"""
     action(V::ModAlgAss) -> Vector
 
-Given a module $V$, returns the action on $V$. If no algebra is defined,
+Given a module $V$, return the action on $V$. If no algebra is defined,
 these will be generators, otherwise these will be the action of `basis(A)`.
 """
 function action(V::ModAlgAss)
