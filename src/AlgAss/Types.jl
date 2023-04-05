@@ -1,7 +1,17 @@
 export AlgAss, AlgAssElem, AlgGrp, AlgGrpElem, AlgMat, AlgMatElem
 
+"""
+    AbsAlgAss{T} <: Ring
+
+Abstract associative algebra with elements defined via coefficients of type `T`.
+"""
 abstract type AbsAlgAss{T} <: Ring end
 
+"""
+    AbsAlgAssElem{T} <: RingElem
+
+Element defined via coefficients of type `T` of an abstract associative algebra.
+"""
 abstract type AbsAlgAssElem{T} <: RingElem end
 
 ################################################################################
@@ -10,7 +20,11 @@ abstract type AbsAlgAssElem{T} <: RingElem end
 #
 ################################################################################
 
-# Associative algebras defined by structure constants (multiplication table)
+"""
+    AlgAss{T} <: AbsAlgAss{T}
+
+Associative algebra defined by structure constants (multiplication table)
+"""
 @attributes mutable struct AlgAss{T} <: AbsAlgAss{T}
   base_ring::Ring
   mult_table::Array{T, 3} # e_i*e_j = sum_k mult_table[i, j, k]*e_k
@@ -79,6 +93,11 @@ end
 
 end
 
+"""
+    AlgAssElem{T} <: AbsAlgAssElem{T}
+
+Element defined via coefficients of type `T` of an associative algebra.
+"""
 mutable struct AlgAssElem{T, S} <: AbsAlgAssElem{T}
   parent::S
   coeffs::Vector{T}
@@ -129,6 +148,13 @@ end
 ################################################################################
 
 # Group rings
+"""
+    AlgGrp{T, S, R} <: AbsAlgAss{T}
+
+Group algebra ``K[G]``.
+
+`T = elem_type(K)`, `S = typeof(G)`, `R = elem_type(G)`.
+"""
 @attributes mutable struct AlgGrp{T, S, R} <: AbsAlgAss{T}
   base_ring::Ring
   group::S
@@ -203,6 +229,11 @@ end
 
 const AlgGrpDict = IdDict()
 
+"""
+    AlgGrpElem{T, S} <: AbsAlgAssElem{T}
+
+Element of an `AlgGrp`.
+"""
 mutable struct AlgGrpElem{T, S} <: AbsAlgAssElem{T}
   parent::S
   coeffs::Vector{T}
