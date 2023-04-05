@@ -1551,8 +1551,7 @@ end
 #function product_of_components(A::AbsAlgAss)
 
 @doc raw"""
-    product_of_components_with_projection(A::AbsAlgAss, a::Vector{Int})
-                                                                   -> AbsAlgAss
+    product_of_components(A::AbsAlgAss, a::Vector{Int}) -> AbsAlgAss
 
 Return the direct product of the simple components of $A$ specified by `a`, where
 the ordering is with respect to the ordering returned by `decompose(A)`.

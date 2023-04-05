@@ -9,10 +9,11 @@ We have algebras in Hecke, which is nice.
 ## Creation and basic properties
 
 ```@docs
+AbsAlgAss
 AlgAss
+AlgGrp
 MatrixAlgebra # AbstractAlgebra.Generic
 matrix_algebra # Hecke
-AlgGrp
 ```
 
 ### Modules
