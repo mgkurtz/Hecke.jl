@@ -12,13 +12,14 @@ We have algebras in Hecke, which is nice.
 AbsAlgAss
 AlgAss
 AlgGrp
-MatrixAlgebra # AbstractAlgebra.Generic
-matrix_algebra # Hecke
+group_algebra
+getindex(::Ring, ::Group)
+matrix_algebra
 regular_matrix_algebra
 ```
 
 Further methods:
-```@docs
+```
 CrossedProductAlgebra
 ```
 
@@ -97,6 +98,69 @@ coefficient_ring(::ModAlgAss)
 has_algebra(::ModAlgAss)
 has_matrix_action(::ModAlgAss)
 action
+```
+
+#### Meataxe
+
+```@docs
+# meataxe
+closure
+composition_series
+composition_factors_with_multiplicity
+minimal_submodules
+maximal_submodules
+submodules
+```
+
+#### Lattices
+
+```@docs
+lattice
+natural_lattice
+endomorphism_ring
+reduction
+change_coefficient_ring
+```
+
+### Ideals
+
+```@docs
+ideal
+ideal_from_gens
+basis(a::AbsAlgAss)
+basis_matrix
+is_right_ideal
+is_left_ideal
+```
+
+### Ramification
+
+```@docs
+is_split
+schur_index
+```
+
+### Orders
+
+### Elements
+
+```@docs
+matrix
+coefficients
+representation_matrix
+tr
+trred
+norm
+normred
+trred_matrix
+```
+
+```@docs
+is_integral
+is_divisible
+is_invertible
+minpoly
+charpoly
 ```
 
 ### Example
