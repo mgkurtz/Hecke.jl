@@ -125,7 +125,8 @@ change_coefficient_ring
 ### Ideals
 
 ```@docs
-ideal
+ideal(::AbsAlgAss, x)
+ideal(::AbsAlgAss, x, y)
 ideal_from_gens
 basis(a::AbsAlgAss)
 basis_matrix
