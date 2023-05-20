@@ -25,6 +25,10 @@ pages = [
                        "orders/ideals.md",
                        "orders/frac_ideals.md"
                      ],
+         "Algebras" => [ "algebras/introduction.md",
+                         "algebras/algebras.md",
+                         "algebras/elements.md"
+                       ],
          "Quadratic and hermitian forms" => [ "quad_forms/introduction.md",
                                               "quad_forms/basics.md",
                                               "quad_forms/lattices.md",
