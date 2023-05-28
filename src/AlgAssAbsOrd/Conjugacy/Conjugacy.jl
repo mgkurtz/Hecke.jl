@@ -441,161 +441,93 @@ end
 #
 ################################################################################
 
-_basis_of_commutator_algebra(A::T) where T <: MatElem = _basis_of_commutator_algebra(A, A)
+_basis_of_commutator_algebra(As) = _basis_of_commutator_algebra(As, As)
 
-_basis_of_commutator_algebra(As::Vector) = _basis_of_commutator_algebra(As, As)
+_basis_of_commutator_algebra(A::MatrixElem, B::MatrixElem) =
+  _basis_of_commutator_algebra(Ref(A), Ref(B))
 
-function _basis_of_integral_commutator_algebra(A::QQMatrix, B::QQMatrix)
-  # Compute using saturation
-  @assert nrows(A) == ncols(A)
-  @assert nrows(B) == ncols(B)
-  @assert isone(denominator(A))
-  @assert isone(denominator(B))
-  linind = transpose(LinearIndices((nrows(A), nrows(B))))
-  n = nrows(A)
-  m = nrows(B)
-  z = zero_matrix(FlintQQ, n*m, n*m)
-  for i in 1:m
-    for j in 1:n
-      for k in 1:n
-        z[linind[i, j], linind[i, k]] += FlintZZ(A[k, j])
-      end
-      for k in 1:m
-        z[linind[i, j], linind[k, j]] -= FlintZZ(B[i, k])
-      end
-    end
-  end
-  r, K = right_kernel(z)
-  KK = change_base_ring(FlintZZ, denominator(K) * K)
-  KK = transpose(saturate(transpose(KK)))
-  res = QQMatrix[]
-  for k in 1:ncols(K)
-    cartind = cartesian_product_iterator([1:x for x in (n, m)], inplace = true)
-    M = zero_matrix(FlintQQ, m, n)
-    for (l, v) in enumerate(cartind)
-        M[v[2], v[1]] = KK[l, k]
-    end
-    @assert M * A == B * M
-    push!(res, M)
-  end
-  return res
-end
+_basis_of_integral_commutator_algebra(A::QQMatrix, B::QQMatrix) =
+  _basis_of_integral_commutator_algebra(Ref(A), Ref(B))
 
-function _basis_of_commutator_algebra(A::MatElem, B::MatElem)
-  @assert nrows(A) == ncols(A)
-  @assert nrows(B) == ncols(B)
-  @assert base_ring(A) === base_ring(B)
-  linind = transpose(LinearIndices((nrows(A), nrows(B))))
-  n = nrows(A)
-  m = nrows(B)
-  z = zero_matrix(base_ring(A), n*m, n*m)
-  for i in 1:m
-    for j in 1:n
-      for k in 1:n
-        z[linind[i, j], linind[i, k]] += A[k, j]
-      end
-      for k in 1:m
-        z[linind[i, j], linind[k, j]] -= B[i, k]
-      end
-    end
-  end
-  r, K = right_kernel(z)
-  res = typeof(A)[]
-  for k in 1:ncols(K)
-    cartind = cartesian_product_iterator([1:x for x in (n, m)], inplace = true)
-    M = zero_matrix(base_ring(A), m, n)
-    for (l, v) in enumerate(cartind)
-      M[v[2], v[1]] = K[l, k]
-    end
-    @assert M * A == B * M
-    push!(res, M)
-  end
-  return res
-end
+@doc raw"""
+    _basis_of_commutator_algebra(As, Bs) -> Vector{T} where T <: MatElem
 
-function _basis_of_commutator_algebra(As::Vector{T}, Bs::Vector{T}) where T <: MatElem
-  F = base_ring(As[1])
-  n = nrows(As[1])
-  m = nrows(Bs[1])
-  @assert length(As) == length(Bs)
-  @assert all(M -> base_ring(M) === F, union(As, Bs))
-  @assert all(M -> size(M) == (n, n), As)
-  @assert all(M -> size(M) == (m, m), Bs)
-  linind = transpose(LinearIndices((n, m)))
-  zz = zero_matrix(F, 0, n*m)
-  for (A, B) in zip(As, Bs)
-    z = zero_matrix(F, n*m, n*m)
-    for i in 1:m
-      for j in 1:n
-        for k in 1:n
-          z[linind[i, j], linind[i, k]] += A[k, j]
-        end
-        for k in 1:m
-          z[linind[i, j], linind[k, j]] -= B[i, k]
-        end
-      end
-    end
-    zz = vcat(zz, z)
-  end
-  r, K = right_kernel(zz)
+Basis of the vector space of all $M$ which satisfy $MA = BM$ for $(A, B)$ in `zip(As, Bs)`.
+
+For `As` being $n\times n$-matrices and `Bs` being $m\times m$-matrices, the result will consist of $m\times n$-matrices. For `As == Bs` this is an algebra.
+"""
+function _basis_of_commutator_algebra(As, Bs) where T <: MatElem
+  K = _basis_of_commutator_algebra_as_cols(As, Bs)
+  F = base_ring(first(As))
+  n = nrows(first(As))
+  m = nrows(first(Bs))
+  # res = eltype(As)[matrix(F, m, n, k) for k in eachcol(K)] # currently unsupported
   res = eltype(As)[]
-  for k in 1:ncols(K)
-    cartind = cartesian_product_iterator([1:x for x in (n, m)],
-                                         inplace = true)
+  cartind = CartesianIndices((n, m))
+  for k in axes(K, 2)
     M = zero_matrix(F, m, n)
-    for (l, v) in enumerate(cartind)
-      M[v[2], v[1]] = K[l, k]
-    end
-    for i in 1:length(As)
-      M * As[i] == Bs[i] * M
+    for (l, cr) in enumerate(cartind)
+      M[cr[2], cr[1]] = K[l, k]
     end
     push!(res, M)
   end
+  for M in res, (A, B) in zip(As, Bs) @assert M * A == B * M end
   return res
 end
 
-function _basis_of_integral_commutator_algebra(As::Vector{QQMatrix},
-                                               Bs::Vector{QQMatrix})
-  # Compute using saturation
-  n = nrows(As[1])
-  m = nrows(Bs[1])
-  @assert length(As) == length(Bs)
-  @assert all(M -> size(M) == (n, n), As)
-  @assert all(M -> size(M) == (m, m), Bs)
+function _basis_of_integral_commutator_algebra(As, Bs)
+  @assert eltype(As) === eltype(Bs) === QQMatrix
   @assert all(x -> isone(denominator(x)), As)
   @assert all(x -> isone(denominator(x)), Bs)
-  linind = transpose(LinearIndices((n,m)))
-  zz = zero_matrix(FlintQQ, 0, n*m)
-  for (A, B) in zip(As, Bs)
-    z = zero_matrix(FlintQQ, n*m, n*m)
-    for i in 1:m
-      for j in 1:n
-        for k in 1:n
-          z[linind[i, j], linind[i, k]] += A[k, j]
-        end
-        for k in 1:m
-          z[linind[i, j], linind[k, j]] -= B[i, k]
-        end
-      end
-    end
-    zz = vcat(zz, z)
-  end
-  r, K = right_kernel(zz)
-  KK = change_base_ring(FlintZZ, denominator(K) * K)
-  KK = transpose(saturate(transpose(KK)))
+  K = transpose(_basis_of_commutator_algebra_as_cols(As, Bs))
+  K = change_base_ring(FlintZZ, denominator(K) * K)
+  K = saturate(K)
+  n = nrows(first(As))
+  m = nrows(first(Bs))
+  # res = QQMatrix[matrix(FlintQQ, m, n, k) for k in eachrow(K)] # currently unsupported
   res = QQMatrix[]
-  for k in 1:ncols(K)
-    cartind = cartesian_product_iterator([1:x for x in (n, m)], inplace = true)
+  for k in axes(K, 1)
+    cartind = CartesianIndices((n, m))
     M = zero_matrix(FlintQQ, m, n)
-    for (l, v) in enumerate(cartind)
-        M[v[2], v[1]] = KK[l, k]
-    end
-    for i in 1:length(As)
-      M * As[i] == Bs[i] * M
+    for (l, cr) in enumerate(cartind)
+      M[cr[2], cr[1]] = K[k, l]
     end
     push!(res, M)
   end
+  for M in res, (A, B) in zip(As, Bs) @assert M * A == B * M end
   return res
+end
+
+
+
+# For all `(A, B) in zip(As, Bs), i in 1:m, j in 1:n` we need
+# (M*A)[i, j] == (B*M)[i, j]. This is equivalent to
+# sum(M[i, k] * A[k, j] for k in 1:n) == sum(B[i, k] * M[k, j] for k in 1:m).
+# Rewriting `M` as vector `x` with `M[i, k] == x[linind[i, k]]` and using
+# `e(i)` as notation for the i-th unit vector, this is equivalent to
+# z_{A, B, i, j} * x == 0 with z_{A, B, i, j} =
+#   sum(A[k, j] * e(linind[i, k]) for k in 1:n) −
+#   sum(B[i, k] * e(linind[k, j]) for k in 1:m).
+#
+# Return matrix with the columns forming a basis of the solution space to
+# z_{A, B, i, j} * x == 0 for all (A, B) in zip(As, Bs), i in 1:m, j in 1:n.
+function _basis_of_commutator_algebra_as_cols(As, Bs) where T <: MatElem
+  @assert length(As) == length(Bs) >= 1
+  F = base_ring(first(As))
+  @assert all(M -> base_ring(M) === F, union(As, Bs))
+  n = nrows(first(As))
+  @assert all(M -> size(M) == (n, n), As)
+  m = nrows(first(Bs))
+  @assert all(M -> size(M) == (m, m), Bs)
+  linind = transpose(LinearIndices((n, m)))
+  z = sparse_matrix(F, 0, n*m)
+  for (A, B) in zip(As, Bs), i in 1:m, j in 1:n
+    m_times_a = sparse_row(F, [(linind[i, k], A[k, j]) for k in 1:n])
+    b_times_m = sparse_row(F, [(linind[k, j], B[i, k]) for k in 1:m])
+    Hecke._add_row_to_rref!(z, m_times_a - b_times_m)
+  end
+  _, K = right_kernel(z)
+  return K
 end
 
 ################################################################################
