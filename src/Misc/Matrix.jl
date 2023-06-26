@@ -144,18 +144,40 @@ julia> saturate(ZZ[1 2;3 4;5 6])
 
 ```
 """
-function saturate(A::ZZMatrix) :: ZZMatrix
-  # Let AU = [H 0matrix] in HNF and HS = A = [H 0matrix]U⁻¹
-  # We have S == U⁻¹[1:rank(H), :] in ZZ with trivial elementary divisors.
-  # For any invertible H' with H'H = 1, also S = H'HS = H'A.
-  H = hnf!(transpose(A))
-  H = transpose(H[1:rank(H), :])
-  S = solve(H, A)
-  @assert rank(S) == rank(H)
-  return S
+saturate(A::ZZMatrix) = transpose(column_saturate(transpose(A)))
+column_saturate(A::ZZMatrix) = hnf_with_column_saturate_and_rank(A)[2]
+function hnf_with_column_saturate_and_rank(A::ZZMatrix) :: Tuple{ZZMatrix, ZZMatrix, Int}
+  # Let UA = [H; 0matrix] in HNF and SH = A = U⁻¹[H; 0matrix].
+  # We have S == U⁻¹[:, 1:rank(H)] in ZZ with trivial elementary divisors.
+  # For any invertible H' with HH' = 1, also S = SHH' = AH'.
+  H = hnf(A)
+  k, p = pivots_of_ref(H)
+  ps = 1:findlast(p) # `findall(p)` impossible in `view`
+  return H, solve_left(view(H, 1:k, ps), view(A, :, ps)), k
 end
 
-transpose!(A::Union{ZZMatrix, QQMatrix}) = transpose!(A, A)
+# H must be in row echolon form
+function pivots_of_ref(H::MatrixElem) :: Tuple{Int, BitVector}
+  p = falses(ncols(H))
+  i = 1
+  for j in axes(H, 2)
+    i == nrows(H)+1 && break
+    is_zero_entry(H, i, j) || (p[j] = true; i+=1)
+  end
+  return i-1, p
+end
+function rank_of_ref(H::MatrixElem)
+  i = 1
+  for j in axes(H, 2)
+    i == nrows(H)+1 && break
+    is_zero_entry(H, i, j) || (i+=1)
+  end
+  return i-1
+end
+pivot_cols_of_ref(H::MatrixElem) = findall(pivots_of_ref(H)[2])
+non_pivot_cols_of_ref(H::MatrixElem) = findall(!, pivots_of_ref(H)[2])
+
+transpose!(A::Union{ZZMatrix, QQMatrix}) = is_square(A) ? transpose!(A, A) : transpose(A)
 
 function transpose!(A::ZZMatrix, B::ZZMatrix)
   ccall((:fmpz_mat_transpose, libflint), Nothing,
